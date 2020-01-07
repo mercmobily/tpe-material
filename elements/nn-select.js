@@ -1,5 +1,5 @@
 import { css } from 'lit-element'
-import { AddHasValueAttributeMixin } from '../../../mixins/AddHasValueAttributeMixin'
+import { AddHasValueAttributeMixin } from '../mixins/AddHasValueAttributeMixin'
 import { inputLabel, inputField, floatingLabel } from '../style-patterns.js'
 
 export const NnSelect = (base) => {

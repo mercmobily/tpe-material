@@ -1,6 +1,6 @@
 import resolve from 'rollup-plugin-node-resolve'
 // import allFiles from './rollup/allFiles.js'
-import babel from 'rollup-plugin-babel'
+// import babel from 'rollup-plugin-babel'
 import minify from 'rollup-plugin-babel-minify'
 
 module.exports = [
