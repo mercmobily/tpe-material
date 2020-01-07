@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+  <title>NativeValidatorMixin.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="public/stylesheets/normalize.css" />
+  <link rel="stylesheet" media="all" href="../tpe.css" />
+</head>
+<body>
+  <div class="container">
+      <div class="header">
+        <div class="topbar">
+          <div id="logo" alt="TPE">
+          </div>
+          <h3>NativeValidatorMixin.js</h3>
+          <!-- <img id="logo" src="/images/TPE_logo_white.png" height="60px" alt="TPE" > -->
+          <div class="links">
+            <a href="https://github.com/mobily-enterprises/tpe" target="_blank" title="View on GitHub">
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+          </div>
+        </div>
+
+        
+      </div>
+      <div class="main">
+        
+          <div class="toc">
+            <ul>
+              
+                
+                
+                  <li>
+                      <a class="source " href="../index.html">
+                          index
+                      </a>
+                  </li>
+                
+              
+                
+                
+                  <li>
+                      <a class="source " href="../quickstart-designers.html">
+                          quickstart designers
+                      </a>
+                  </li>
+                
+              
+                
+                
+                  <li>
+                      <a class="source " href="../tutorials-designers.html">
+                          tutorials designers
+                      </a>
+                  </li>
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+                  <li>
+                      <a class="source " href="../quickstart-developers.html">
+                          quickstart developers
+                      </a>
+                  </li>
+                
+              
+                
+                
+                  <li>
+                      <a class="source " href="../tutorials-developers.html">
+                          tutorials developers
+                      </a>
+                  </li>
+                
+              
+                
+                
+              
+                
+                
+                  <li>
+                      <a class="source " href="../elements.html">
+                          elements
+                      </a>
+                  </li>
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+                  <li>
+                      <a class="source  current " href="../mixins.html">
+                          mixins
+                      </a>
+                  </li>
+                
+              
+                
+                
+                  <li>
+                      <a class="source  indented " href="AddHasValueAttributeMixin.html">
+                          AddHasValueAttributeMixin.js
+                      </a>
+                  </li>
+                
+              
+                
+                
+                  <li>
+                      <a class="source  indented " href="FormElementMixin.html">
+                          FormElementMixin.js
+                      </a>
+                  </li>
+                
+              
+                
+                
+                  <li>
+                      <a class="source  indented " href="InputMixin.html">
+                          InputMixin.js
+                      </a>
+                  </li>
+                
+              
+                
+                
+                  <li>
+                      <a class="source  indented " href="LabelsMixin.html">
+                          LabelsMixin.js
+                      </a>
+                  </li>
+                
+              
+                
+                
+                  <li>
+                      <a class="source  indented " href="NativeReflectorMixin.html">
+                          NativeReflectorMixin.js
+                      </a>
+                  </li>
+                
+              
+                
+                
+                  <li>
+                      <a class="source  indented  current " href="NativeValidatorMixin.html">
+                          NativeValidatorMixin.js
+                      </a>
+                  </li>
+                
+              
+                
+                
+                  <li>
+                      <a class="source  indented " href="StyleableMixin.html">
+                          StyleableMixin.js
+                      </a>
+                  </li>
+                
+              
+                
+                
+                  <li>
+                      <a class="source  indented " href="SyntheticValidatorMixin.html">
+                          SyntheticValidatorMixin.js
+                      </a>
+                  </li>
+                
+              
+                
+                
+                  <li>
+                      <a class="source  indented " href="ThemeableMixin.html">
+                          ThemeableMixin.js
+                      </a>
+                  </li>
+                
+              
+                
+                
+                  <li>
+                      <a class="source " href="../appendices.html">
+                          appendices
+                      </a>
+                  </li>
+                
+              
+                
+                
+              
+                
+                
+                  <li>
+                      <a class="source " href="../material-theme.html">
+                          material theme
+                      </a>
+                  </li>
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+            </ul>
+          </div>
+        
+        <div class="contentPage">
+          
+            
+            
+            
+              <div class='highlight'><pre><span class="hljs-keyword">import</span> { html, css } <span class="hljs-keyword">from</span> <span class="hljs-string">'lit-element'</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> NativeValidatorMixin = <span class="hljs-function">(<span class="hljs-params">base</span>) =&gt;</span> {
+  <span class="hljs-keyword">return</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Base</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">base</span> </span>{
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">get</span> properties () {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">nativeErrorMessages</span>: {
+          <span class="hljs-attr">type</span>: <span class="hljs-built_in">Boolean</span>,
+          <span class="hljs-attr">attribute</span>: <span class="hljs-string">'native-error-messages'</span>
+        },
+        <span class="hljs-attr">shownValidationMessage</span>: {
+          <span class="hljs-attr">type</span>: <span class="hljs-built_in">String</span>,
+          <span class="hljs-attr">attribute</span>: <span class="hljs-literal">false</span>
+        },
+        <span class="hljs-attr">validator</span>: { <span class="hljs-attr">type</span>: <span class="hljs-built_in">Function</span> },
+        <span class="hljs-attr">validationMessages</span>: {
+          <span class="hljs-attr">type</span>: <span class="hljs-built_in">Object</span>,
+          <span class="hljs-attr">attribute</span>: <span class="hljs-string">'validition-messages'</span>
+        },
+        <span class="hljs-attr">validationMessagePosition</span>: {
+          <span class="hljs-attr">type</span>: <span class="hljs-built_in">String</span>,
+          <span class="hljs-attr">attribute</span>: <span class="hljs-string">'validation-message-position'</span>
+        }
+      }
+    }
+
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">get</span> styles () {
+      <span class="hljs-keyword">return</span> [
+        <span class="hljs-keyword">super</span>.styles || [],
+        css`<span class="css">
+
+          <span class="hljs-selector-tag">span</span><span class="hljs-selector-class">.error-message</span> {
+            <span class="hljs-attribute">color</span>: red;
+          }
+
+          <span class="hljs-selector-pseudo">:invalid</span> {
+            <span class="hljs-attribute">background-color</span>: pink;
+            <span class="hljs-attribute">border</span>: <span class="hljs-built_in">var</span>(--native-validator-mixin-input-border-invalid, 1px solid #bb7777);
+          }
+        `</span>
+      ]
+    }
+
+    <span class="hljs-keyword">constructor</span> () {
+      <span class="hljs-keyword">super</span>()
+      <span class="hljs-keyword">this</span>.validator = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-string">''</span>
+      <span class="hljs-keyword">this</span>.nativeValidationKeys = [
+        <span class="hljs-string">'badInput'</span>,
+        <span class="hljs-string">'customError'</span>,
+        <span class="hljs-string">'patternMismatch'</span>,
+        <span class="hljs-string">'rangeOverflow'</span>,
+        <span class="hljs-string">'rangeUnderflow'</span>,
+        <span class="hljs-string">'stepMismatch'</span>,
+        <span class="hljs-string">'valueMissing'</span>,
+        <span class="hljs-string">'tooLong'</span>,
+        <span class="hljs-string">'tooShort'</span>,
+        <span class="hljs-string">'typeMismatch'</span>
+      ]
+      <span class="hljs-keyword">this</span>.validationMessages = {}
+      <span class="hljs-keyword">this</span>.validationMessagePosition = <span class="hljs-string">'before'</span>
+      <span class="hljs-keyword">this</span>._showPrettyError = <span class="hljs-literal">false</span>
+    }
+
+    <span class="hljs-keyword">get</span> skipProperties () {
+      <span class="hljs-keyword">return</span> [...super.skipProperties, <span class="hljs-string">'checkValidity'</span>, <span class="hljs-string">'reportValidity'</span>, <span class="hljs-string">'setCustomValidity'</span>]
+    }
+
+    <span class="hljs-keyword">get</span> validationMessageTemplate () {
+      <span class="hljs-keyword">return</span> html`<span class="xml">
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"error-message"</span>&gt;</span>
+          </span><span class="hljs-subst">${<span class="hljs-keyword">this</span>.shownValidationMessage}</span><span class="xml">
+        <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      `</span>
+    }
+
+    <span class="hljs-keyword">get</span> ifValidationMessageBefore () {
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.validationMessagePosition === <span class="hljs-string">'after'</span>) <span class="hljs-keyword">return</span> <span class="hljs-string">''</span>
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.validationMessageTemplate
+    }
+
+    <span class="hljs-keyword">get</span> ifValidationMessageAfter () {
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.validationMessagePosition === <span class="hljs-string">'before'</span>) <span class="hljs-keyword">return</span> <span class="hljs-string">''</span>
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.validationMessageTemplate
+    }
+
+    setCustomValidity (m) {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.native.setCustomValidity(m)
+    }
+
+    reportValidity () {</pre></div>
+            
+          
+            
+            <p>Run custom validator. Note that custom validator
+will only ever run on filed without an existing customError.</p>
+
+            
+              <div class='highlight'><pre>      <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.native.validity.customError) {
+        <span class="hljs-keyword">const</span> ownErrorMessage = <span class="hljs-keyword">this</span>.validator()
+        <span class="hljs-keyword">if</span> (ownErrorMessage) <span class="hljs-keyword">this</span>.setCustomValidity(ownErrorMessage)
+      }</pre></div>
+            
+          
+            
+            <p>Hide the fancy error message by default</p>
+
+            
+              <div class='highlight'><pre>      <span class="hljs-keyword">this</span>.shownValidationMessage = <span class="hljs-string">''</span></pre></div>
+            
+          
+            
+            <p>Run reportValidity which will display the native
+error messages.
+Suppress the pretty error messages</p>
+
+            
+              <div class='highlight'><pre>      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.nativeErrorMessages) {
+        <span class="hljs-keyword">this</span>._showPrettyError = <span class="hljs-literal">false</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.native.reportValidity()
+      } <span class="hljs-keyword">else</span> {</pre></div>
+            
+          
+            
+            <p>Since pretty errors will be shown, it will actually
+return checkValidity() which will not show the
+error messages</p>
+
+            
+              <div class='highlight'><pre>        <span class="hljs-keyword">this</span>._showPrettyError = <span class="hljs-literal">true</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.native.checkValidity()
+      }
+    }
+
+    checkValidity () {
+      <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.native.validity.customError) {
+        <span class="hljs-keyword">const</span> ownErrorMessage = <span class="hljs-keyword">this</span>.validator()
+        <span class="hljs-keyword">if</span> (ownErrorMessage) <span class="hljs-keyword">this</span>.setCustomValidity(ownErrorMessage)
+      }
+
+      <span class="hljs-keyword">this</span>._showPrettyError = <span class="hljs-literal">false</span>
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.native.checkValidity()
+    }
+
+    firstUpdated () {
+      <span class="hljs-keyword">super</span>.firstUpdated()
+      <span class="hljs-keyword">this</span>.native.oninput = <span class="hljs-function">(<span class="hljs-params">e</span>) =&gt;</span> {
+        <span class="hljs-keyword">this</span>.setCustomValidity(<span class="hljs-string">''</span>)
+        <span class="hljs-keyword">this</span>.reportValidity()
+      }
+
+      <span class="hljs-keyword">this</span>.native.oninvalid = <span class="hljs-function">(<span class="hljs-params">e</span>) =&gt;</span> {</pre></div>
+            
+          
+            
+            <p>No pretty error to be shown (probably running checkValidity())</p>
+
+            
+              <div class='highlight'><pre>        <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>._showPrettyError) <span class="hljs-keyword">return</span>
+
+        <span class="hljs-keyword">const</span> validity = e.target.validity</pre></div>
+            
+          
+            
+            <p>Find which one flag in validity is raised</p>
+
+            
+              <div class='highlight'><pre>        <span class="hljs-keyword">let</span> found
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> k <span class="hljs-keyword">of</span> <span class="hljs-keyword">this</span>.nativeValidationKeys) {
+          <span class="hljs-keyword">if</span> (validity[k]) {
+            found = k
+            <span class="hljs-keyword">break</span>
+          }
+        }</pre></div>
+            
+          
+            
+            <p>Assign shownValidationMessage
+Allow translating with specific function</p>
+
+            
+              <div class='highlight'><pre>        <span class="hljs-keyword">const</span> translator = <span class="hljs-keyword">this</span>.validationMessages[found]
+        <span class="hljs-keyword">if</span> (translator) {
+          <span class="hljs-keyword">this</span>.shownValidationMessage = (<span class="hljs-keyword">typeof</span> translator === <span class="hljs-string">'function'</span>)
+            ? translator(e.target.validationMessage)
+            : translator
+        } <span class="hljs-keyword">else</span> {
+          <span class="hljs-keyword">this</span>.shownValidationMessage = e.target.validationMessage
+        }
+      }
+    }
+  }
+}</pre></div>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="bottombar">
+
+    </div>
+  </div>
+</body>
+</html>

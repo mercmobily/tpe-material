@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+  <title>ee-autocomplete.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="public/stylesheets/normalize.css" />
+  <link rel="stylesheet" media="all" href="../tpe.css" />
+</head>
+<body>
+  <div class="container">
+      <div class="header">
+        <div class="topbar">
+          <div id="logo" alt="TPE">
+          </div>
+          <h3>ee-autocomplete.js</h3>
+          <!-- <img id="logo" src="/images/TPE_logo_white.png" height="60px" alt="TPE" > -->
+          <div class="links">
+            <a href="https://github.com/mobily-enterprises/tpe" target="_blank" title="View on GitHub">
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+          </div>
+        </div>
+
+        
+      </div>
+      <div class="main">
+        
+          <div class="toc">
+            <ul>
+              
+                
+                
+                  <li>
+                      <a class="source " href="../index.html">
+                          index
+                      </a>
+                  </li>
+                
+              
+                
+                
+                  <li>
+                      <a class="source " href="../quickstart-designers.html">
+                          quickstart designers
+                      </a>
+                  </li>
+                
+              
+                
+                
+                  <li>
+                      <a class="source " href="../tutorials-designers.html">
+                          tutorials designers
+                      </a>
+                  </li>
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+                  <li>
+                      <a class="source " href="../quickstart-developers.html">
+                          quickstart developers
+                      </a>
+                  </li>
+                
+              
+                
+                
+                  <li>
+                      <a class="source " href="../tutorials-developers.html">
+                          tutorials developers
+                      </a>
+                  </li>
+                
+              
+                
+                
+              
+                
+                
+                  <li>
+                      <a class="source  current " href="../elements.html">
+                          elements
+                      </a>
+                  </li>
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+                  <li>
+                      <a class="source " href="../mixins.html">
+                          mixins
+                      </a>
+                  </li>
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+                  <li>
+                      <a class="source " href="../appendices.html">
+                          appendices
+                      </a>
+                  </li>
+                
+              
+                
+                
+              
+                
+                
+                  <li>
+                      <a class="source " href="../material-theme.html">
+                          material theme
+                      </a>
+                  </li>
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+                
+                
+              
+            </ul>
+          </div>
+        
+        <div class="contentPage">
+          
+            
+            
+            
+              <div class='highlight'><pre><span class="hljs-keyword">import</span> { LitElement, html, css } <span class="hljs-keyword">from</span> <span class="hljs-string">'lit-element'</span>
+<span class="hljs-keyword">import</span> { StyleableMixin } <span class="hljs-keyword">from</span> <span class="hljs-string">'./mixins/StyleableMixin.js'</span>
+<span class="hljs-keyword">import</span> { ThemeableMixin } <span class="hljs-keyword">from</span> <span class="hljs-string">'./mixins/ThemeableMixin.js'</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">'./ee-autocomplete-item-li'</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EeAutocomplete</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ThemeableMixin</span>('<span class="hljs-title">ee</span>-<span class="hljs-title">autocomplete</span>')(<span class="hljs-title">StyleableMixin</span>(<span class="hljs-title">LitElement</span>)) </span>{
+  <span class="hljs-keyword">static</span> <span class="hljs-keyword">get</span> styles () {
+    <span class="hljs-keyword">return</span> [
+      <span class="hljs-keyword">super</span>.styles,
+      css`<span class="css">
+        <span class="hljs-selector-pseudo">:host</span> {
+          <span class="hljs-attribute">display</span>: block;
+          <span class="hljs-attribute">position</span>: relative;
+        }
+
+        <span class="hljs-selector-id">#suggestions</span> {
+          <span class="hljs-attribute">box-sizing</span>: border-box;
+          <span class="hljs-attribute">background-color</span>: white;
+          <span class="hljs-attribute">position</span>: absolute;
+          <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1000</span>;
+          <span class="hljs-attribute">max-height</span>: <span class="hljs-number">480px</span>;
+          <span class="hljs-attribute">overflow-y</span>: scroll;
+          <span class="hljs-attribute">top</span>: <span class="hljs-number">90%</span>;
+          <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">2px</span> <span class="hljs-number">2px</span> <span class="hljs-number">6px</span> <span class="hljs-number">0</span> <span class="hljs-built_in">rgba</span>(0, 0, 0, 0.2), <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">2px</span> <span class="hljs-number">2px</span> <span class="hljs-built_in">rgba</span>(0, 0, 0, 0.05);
+        }
+
+        <span class="hljs-selector-id">#suggestions</span><span class="hljs-selector-attr">[populated]</span> {
+          <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+          <span class="hljs-attribute">padding</span>: <span class="hljs-number">10px</span>;
+        }
+
+        <span class="hljs-selector-id">#suggestions</span> &gt; *<span class="hljs-selector-attr">[selected]</span>, <span class="hljs-selector-id">#suggestions</span> &gt; *<span class="hljs-selector-pseudo">:focus</span>, <span class="hljs-selector-id">#suggestions</span> &gt; *<span class="hljs-selector-pseudo">:hover</span>  {
+          <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#eee</span>;
+        }
+
+        <span class="hljs-selector-attr">[hidden]</span> {
+          <span class="hljs-attribute">display</span>: none <span class="hljs-meta">!important</span>;
+        }
+      `</span>
+    ]
+  }
+
+  <span class="hljs-keyword">static</span> <span class="hljs-keyword">get</span> properties () {
+    <span class="hljs-keyword">return</span> {
+      <span class="hljs-attr">url</span>: {
+        <span class="hljs-attr">type</span>: <span class="hljs-built_in">String</span>
+      },
+      <span class="hljs-attr">informational</span>: {
+        <span class="hljs-attr">type</span>: <span class="hljs-built_in">Boolean</span>
+      },
+      <span class="hljs-attr">target</span>: {
+        <span class="hljs-attr">type</span>: <span class="hljs-built_in">String</span>
+      },
+      <span class="hljs-attr">targetForId</span>: {
+        <span class="hljs-attr">type</span>: <span class="hljs-built_in">String</span>,
+        <span class="hljs-attr">attribute</span>: <span class="hljs-string">'target-for-id'</span>
+      },
+      <span class="hljs-attr">picked</span>: {
+        <span class="hljs-attr">type</span>: <span class="hljs-built_in">Boolean</span>,
+        <span class="hljs-attr">reflect</span>: <span class="hljs-literal">true</span>
+      },
+      <span class="hljs-attr">suggestions</span>: {
+        <span class="hljs-attr">type</span>: <span class="hljs-built_in">Array</span>,
+        <span class="hljs-attr">attribute</span>: <span class="hljs-literal">false</span>
+      },
+      <span class="hljs-attr">itemElement</span>: {
+        <span class="hljs-attr">type</span>: <span class="hljs-built_in">String</span>,
+        <span class="hljs-attr">attribute</span>: <span class="hljs-string">'item-element'</span>
+      },
+      <span class="hljs-attr">itemElementConfig</span>: {
+        <span class="hljs-attr">type</span>: <span class="hljs-built_in">Object</span>,
+        <span class="hljs-attr">attribute</span>: <span class="hljs-string">'item-element-config'</span>
+      },
+      <span class="hljs-attr">itemElementAttributes</span>: {
+        <span class="hljs-attr">type</span>: <span class="hljs-built_in">Object</span>,
+        <span class="hljs-attr">attribute</span>: <span class="hljs-string">'item-element-attributes'</span>
+      }
+    }
+  }
+
+  <span class="hljs-keyword">constructor</span> () {
+    <span class="hljs-keyword">super</span>()
+    <span class="hljs-keyword">this</span>.url = <span class="hljs-string">''</span>
+    <span class="hljs-keyword">this</span>.target = <span class="hljs-literal">null</span>
+    <span class="hljs-keyword">this</span>.targetForId = <span class="hljs-literal">null</span>
+    <span class="hljs-keyword">this</span>.suggestions = []
+    <span class="hljs-keyword">this</span>.itemElement = <span class="hljs-string">'ee-autocomplete-item-li'</span>
+    <span class="hljs-keyword">this</span>.itemElementConfig = {}
+    <span class="hljs-keyword">this</span>.itemElementAttributes = {}
+
+    <span class="hljs-keyword">this</span>._boundInputEvent = <span class="hljs-keyword">this</span>._inputEvent.bind(<span class="hljs-keyword">this</span>)
+    <span class="hljs-keyword">this</span>._boundKeydownEvent = <span class="hljs-keyword">this</span>._keydownEvent.bind(<span class="hljs-keyword">this</span>)
+  }</pre></div>
+            
+          
+            
+            <p>If if’s not set, return the first child
+If it’s set:
+  If it’s a string, return the #element
+  If it’s an object, return it directly (assumption that it’s an element)</p>
+
+            
+              <div class='highlight'><pre>  _findTarget (target) {
+    <span class="hljs-keyword">if</span> (target !== <span class="hljs-literal">null</span>) {
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> target === <span class="hljs-string">'string'</span>) <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.querySelector(<span class="hljs-string">`#<span class="hljs-subst">${target}</span>`</span>)
+      <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> target === <span class="hljs-string">'object'</span>) <span class="hljs-keyword">return</span> target
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.children[<span class="hljs-number">0</span>]
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>
+  }</pre></div>
+            
+          
+            
+            <p>If if’s not set, don’t do anything
+If it’s set:
+  If it’s an empty string, look for the first [name] element without no-submit,
+  If it’s a string, return the #element
+  If it’s an object, return it  directly (assumption that it’s an element)</p>
+
+            
+              <div class='highlight'><pre>  _findTargetForId (target) {
+    <span class="hljs-keyword">if</span> (target !== <span class="hljs-string">'null'</span>) {
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> target === <span class="hljs-string">'string'</span>) {
+        <span class="hljs-keyword">return</span> target === <span class="hljs-string">''</span>
+          ? <span class="hljs-keyword">this</span>.querySelector(<span class="hljs-string">'[name]:not([no-submit])'</span>)
+          : <span class="hljs-keyword">this</span>.querySelector(<span class="hljs-string">`#<span class="hljs-subst">${target}</span>`</span>)
+      } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> target === <span class="hljs-string">'object'</span>) <span class="hljs-keyword">return</span> target
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>
+  }
+
+  connectedCallback () {
+    <span class="hljs-keyword">super</span>.connectedCallback()
+
+    <span class="hljs-keyword">this</span>.targetElement = <span class="hljs-keyword">this</span>._findTarget(<span class="hljs-keyword">this</span>.target)
+    <span class="hljs-keyword">this</span>.targetForId = <span class="hljs-keyword">this</span>._findTargetForId(<span class="hljs-keyword">this</span>.targetForId)</pre></div>
+            
+          
+            
+            <p>The target for Id is the true source of the value
+in case of ID submission. So, two things must happen:</p>
+<p>1) If it has a value already (it might have been set by a data load before the autocomplete), then picked is true
+2) Its value needs to be observed, so that if a value is set at any point, picked becomes true</p>
+
+            
+              <div class='highlight'><pre>    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.targetForId) {
+      <span class="hljs-keyword">this</span>.picked = !!<span class="hljs-keyword">this</span>.targetForId.getAttribute(<span class="hljs-string">'value'</span>)
+
+      <span class="hljs-keyword">const</span> thisObserver = <span class="hljs-keyword">new</span> MutationObserver(<span class="hljs-function">(<span class="hljs-params">mutations</span>) =&gt;</span> {
+        mutations.forEach(<span class="hljs-function">(<span class="hljs-params">mutation</span>) =&gt;</span> {
+          <span class="hljs-keyword">if</span> (mutation.type === <span class="hljs-string">'attributes'</span> &amp;&amp; mutation.attributeName === <span class="hljs-string">'value'</span>) {
+            <span class="hljs-keyword">this</span>.picked = !!<span class="hljs-keyword">this</span>.targetForId.getAttribute(<span class="hljs-string">'value'</span>)
+          }
+        })
+      })
+      thisObserver.observe(<span class="hljs-keyword">this</span>.targetForId, { <span class="hljs-attr">attributes</span>: <span class="hljs-literal">true</span> })
+    }
+
+    <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.targetElement) {
+      <span class="hljs-built_in">console</span>.error(<span class="hljs-string">'Target element not found'</span>)
+      <span class="hljs-keyword">return</span>
+    }
+
+    <span class="hljs-keyword">this</span>.targetElement.addEventListener(<span class="hljs-string">'input'</span>, <span class="hljs-keyword">this</span>._boundInputEvent)
+    <span class="hljs-keyword">this</span>.targetElement.addEventListener(<span class="hljs-string">'keydown'</span>, <span class="hljs-keyword">this</span>._boundKeydownEvent)</pre></div>
+            
+          
+            
+            <p>API USE: If the target input element implements multiInputApi,
+then set the basic parameters for all
+picked items (element name, config and attributes)</p>
+
+            
+              <div class='highlight'><pre>    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.targetElement.multiInputApi) {
+      <span class="hljs-keyword">this</span>.targetElement.setPickedElement(<span class="hljs-keyword">this</span>.itemElement, <span class="hljs-keyword">this</span>.itemElementConfig, <span class="hljs-keyword">this</span>.itemElementAttributes)
+    }</pre></div>
+            
+          
+            
+            <p>Setup ARIA attributes on target</p>
+
+            
+              <div class='highlight'><pre>    <span class="hljs-keyword">this</span>.targetElement.setAttribute(<span class="hljs-string">'aria-autocomplete'</span>, <span class="hljs-string">'list'</span>)
+    <span class="hljs-keyword">this</span>.targetElement.setAttribute(<span class="hljs-string">'aria-controls'</span>, <span class="hljs-string">'suggestions'</span>)
+    <span class="hljs-keyword">this</span>.targetElement.toggleAttribute(<span class="hljs-string">'aria-activedescendant'</span>, <span class="hljs-literal">true</span>)</pre></div>
+            
+          
+            
+            <p>Setup ARIA attributes on ee-autocomplete</p>
+
+            
+              <div class='highlight'><pre>    <span class="hljs-keyword">this</span>.setAttribute(<span class="hljs-string">'role'</span>, <span class="hljs-string">'combobox'</span>)
+    <span class="hljs-keyword">this</span>.setAttribute(<span class="hljs-string">'aria-owns'</span>, <span class="hljs-string">'suggestions'</span>)
+  }
+
+  disconnectedCallback () {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.targetElement) <span class="hljs-keyword">return</span>
+
+    <span class="hljs-keyword">this</span>.targetElement.removeEventListener(<span class="hljs-string">'input'</span>, <span class="hljs-keyword">this</span>._boundInputEvent)
+    <span class="hljs-keyword">this</span>.targetElement.removeEventListener(<span class="hljs-string">'keydown'</span>, <span class="hljs-keyword">this</span>._boundKeydownEvent)
+  }
+
+  render () {
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.themeRender) <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.themeRender()
+    <span class="hljs-keyword">return</span> html`<span class="xml">
+      <span class="hljs-tag">&lt;<span class="hljs-name">slot</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"</span></span></span><span class="hljs-subst">${<span class="hljs-keyword">this</span>._picked}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"suggestions"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"listbox"</span> @<span class="hljs-attr">keydown</span>=</span></span><span class="hljs-subst">${<span class="hljs-keyword">this</span>._handleKeyEvents}</span><span class="xml"><span class="hljs-tag">&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    `</span>
+  }
+
+  _keydownEvent (e) {
+    <span class="hljs-keyword">switch</span> (e.key) {
+    <span class="hljs-keyword">case</span> <span class="hljs-string">'Escape'</span>:
+      <span class="hljs-keyword">this</span>._dismissSuggestions()
+      <span class="hljs-keyword">break</span>
+    <span class="hljs-keyword">case</span> <span class="hljs-string">'KeyDown'</span>:
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.suggestions.length) {
+        <span class="hljs-keyword">const</span> suggestionsDiv = <span class="hljs-keyword">this</span>.shadowRoot.querySelector(<span class="hljs-string">'#suggestions'</span>)
+        suggestionsDiv.firstChild.focus()
+      }
+    }
+  }
+
+  pickFirst () {
+    <span class="hljs-keyword">const</span> suggestionsDiv = <span class="hljs-keyword">this</span>.shadowRoot.querySelector(<span class="hljs-string">'#suggestions'</span>)
+    suggestionsDiv.querySelector(<span class="hljs-string">'[selected]'</span>).click()
+  }
+
+  focusNext () {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.suggestions.length) <span class="hljs-keyword">return</span>
+    <span class="hljs-keyword">const</span> suggestionsDiv = <span class="hljs-keyword">this</span>.shadowRoot.querySelector(<span class="hljs-string">'#suggestions'</span>)
+    <span class="hljs-keyword">let</span> selected = suggestionsDiv.querySelector(<span class="hljs-string">'[selected]'</span>) || suggestionsDiv.firstElementChild
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.suggestions.length &gt; <span class="hljs-number">1</span>) {
+      selected.toggleAttribute(<span class="hljs-string">'selected'</span>, <span class="hljs-literal">false</span>)
+      selected = selected.nextElementSibling || selected.previousElementSibling
+    }
+    <span class="hljs-keyword">if</span> (selected) selected.focus()
+  }
+
+  _picked (e) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.informational || !<span class="hljs-keyword">this</span>.targetElement) <span class="hljs-keyword">return</span>
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.targetElement.multiInputApi) {
+      <span class="hljs-keyword">this</span>.targetElement.pickedElement(e.target.data)
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">this</span>.targetElement.value = e.target.textValue
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.targetForId) {
+        <span class="hljs-keyword">this</span>.targetForId.value = e.target.idValue
+        <span class="hljs-keyword">this</span>.picked = <span class="hljs-literal">true</span>
+      }
+    }
+    <span class="hljs-keyword">this</span>._dismissSuggestions()
+    <span class="hljs-keyword">this</span>.targetElement.focus()</pre></div>
+            
+          
+            
+            <p>Dispatch input event since input happened</p>
+
+            
+              <div class='highlight'><pre>    <span class="hljs-keyword">const</span> inputEvent = <span class="hljs-keyword">new</span> CustomEvent(<span class="hljs-string">'input'</span>, { <span class="hljs-attr">composed</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">bubbles</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">cancelable</span>: <span class="hljs-literal">false</span>, <span class="hljs-attr">detail</span>: { <span class="hljs-attr">synthetic</span>: <span class="hljs-literal">true</span> } })
+    <span class="hljs-keyword">this</span>.targetElement.dispatchEvent(inputEvent)
+  }
+
+  <span class="hljs-keyword">async</span> updated (cp) {
+    <span class="hljs-keyword">if</span> (!cp.has(<span class="hljs-string">'suggestions'</span>)) <span class="hljs-keyword">return</span>
+
+    <span class="hljs-keyword">const</span> suggestionsDiv = <span class="hljs-keyword">this</span>.shadowRoot.querySelector(<span class="hljs-string">'#suggestions'</span>)
+
+    <span class="hljs-keyword">while</span> (suggestionsDiv.firstChild) { suggestionsDiv.removeChild(suggestionsDiv.firstChild) }
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>._autocompleteInFlight) <span class="hljs-keyword">return</span>
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.targetElement.multiInputApi) {
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.targetElement.textInputValue === <span class="hljs-string">''</span>) {
+        suggestionsDiv.toggleAttribute(<span class="hljs-string">'populated'</span>, <span class="hljs-literal">false</span>)
+        <span class="hljs-keyword">return</span>
+      }
+    }
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> suggestion <span class="hljs-keyword">of</span> <span class="hljs-keyword">this</span>.suggestions) {
+      <span class="hljs-keyword">const</span> el = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-keyword">this</span>.itemElement)
+      el.config = { ...el.config, ...this.itemElementConfig }
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> k <span class="hljs-keyword">of</span> <span class="hljs-built_in">Object</span>.keys(<span class="hljs-keyword">this</span>.itemElementAttributes)) el.setAttribute(k, <span class="hljs-keyword">this</span>.itemElementAttributes[k])
+      el.data = suggestion
+      el.onkeydown = <span class="hljs-keyword">this</span>._handleKeyEvents.bind(<span class="hljs-keyword">this</span>)</pre></div>
+            
+          
+            
+            <p>Make span focusable AND in the tab list</p>
+
+            
+              <div class='highlight'><pre>      el.setAttribute(<span class="hljs-string">'tabindex'</span>, <span class="hljs-number">0</span>)
+      suggestionsDiv.appendChild(el)
+    }</pre></div>
+            
+          
+            
+            <p>Only 1 response and it’s a plain text input? Autocomplete if text fully matches
+beginning of the only result</p>
+
+            
+              <div class='highlight'><pre>    <span class="hljs-keyword">if</span> (
+      <span class="hljs-keyword">this</span>.suggestions.length === <span class="hljs-number">1</span> &amp;&amp;
+      !<span class="hljs-keyword">this</span>.targetElement.multiInputApi &amp;&amp;
+      <span class="hljs-keyword">typeof</span> <span class="hljs-keyword">this</span>.targetElement.setSelectionRange === <span class="hljs-string">'function'</span>
+    ) {
+      <span class="hljs-keyword">const</span> firstOption = suggestionsDiv.firstChild
+      <span class="hljs-keyword">const</span> textValue = firstOption.textValue
+      <span class="hljs-keyword">if</span> (textValue.toUpperCase().startsWith(<span class="hljs-keyword">this</span>.targetElement.value.toUpperCase())) {
+        <span class="hljs-keyword">const</span> oldValue = <span class="hljs-keyword">this</span>.targetElement.value
+        <span class="hljs-keyword">this</span>.targetElement.value = textValue
+        <span class="hljs-keyword">this</span>.targetElement.setSelectionRange(oldValue.length, textValue.length)
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.targetForId) {
+          <span class="hljs-keyword">this</span>.targetForId.value = firstOption.idValue
+          <span class="hljs-keyword">this</span>.picked = <span class="hljs-literal">true</span>
+        }
+      }
+    }
+
+    <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.suggestions.length) {
+      suggestionsDiv.toggleAttribute(<span class="hljs-string">'populated'</span>, <span class="hljs-literal">false</span>)
+    }
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.suggestions.length) {
+      suggestionsDiv.toggleAttribute(<span class="hljs-string">'populated'</span>, <span class="hljs-literal">true</span>)
+      suggestionsDiv.firstChild.toggleAttribute(<span class="hljs-string">'selected'</span>, <span class="hljs-literal">true</span>)
+    }
+  }
+
+  _dismissSuggestions () {
+    <span class="hljs-keyword">const</span> suggestionsDiv = <span class="hljs-keyword">this</span>.shadowRoot.querySelector(<span class="hljs-string">'#suggestions'</span>)
+    suggestionsDiv.toggleAttribute(<span class="hljs-string">'populated'</span>, <span class="hljs-literal">false</span>)
+    <span class="hljs-keyword">this</span>.suggestions = []
+  }
+
+  _handleKeyEvents (e) {
+    <span class="hljs-keyword">const</span> target = e.currentTarget
+
+    <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.suggestions.length || !target.parentElement) <span class="hljs-keyword">return</span>
+
+    <span class="hljs-keyword">switch</span> (e.key) {
+    <span class="hljs-keyword">case</span> <span class="hljs-string">'ArrowUp'</span>:
+      e.preventDefault()
+      target.previousElementSibling
+        ? target.previousElementSibling.focus()
+        : target.parentElement.lastElementChild.focus()
+      <span class="hljs-keyword">break</span>
+    <span class="hljs-keyword">case</span> <span class="hljs-string">'ArrowDown'</span>:
+      e.preventDefault()
+      target.nextElementSibling
+        ? target.nextElementSibling.focus()
+        : target.parentElement.firstElementChild.focus()
+      <span class="hljs-keyword">break</span>
+    <span class="hljs-keyword">case</span> <span class="hljs-string">'Tab'</span>:
+    <span class="hljs-keyword">case</span> <span class="hljs-string">'Enter'</span>:
+      <span class="hljs-keyword">this</span>._picked(e)
+      e.preventDefault()
+      <span class="hljs-keyword">this</span>.targetElement.focus()
+      <span class="hljs-keyword">break</span>
+    <span class="hljs-keyword">case</span> <span class="hljs-string">'Escape'</span>:
+      <span class="hljs-keyword">this</span>._dismissSuggestions()
+      <span class="hljs-keyword">this</span>.targetElement.focus()
+      <span class="hljs-keyword">break</span>
+    }
+  }
+
+  <span class="hljs-keyword">async</span> _inputEvent (e) {</pre></div>
+            
+          
+            
+            <p>This is a synthetic event triggered by autocomplete itself
+once a selection was made: ignore</p>
+
+            
+              <div class='highlight'><pre>    <span class="hljs-keyword">if</span> (e.detail &amp;&amp; e.detail.synthetic) <span class="hljs-keyword">return</span></pre></div>
+            
+          
+            
+            <p>Nothing can nor should happen without a target</p>
+
+            
+              <div class='highlight'><pre>    <span class="hljs-keyword">const</span> target = <span class="hljs-keyword">this</span>.targetElement
+    <span class="hljs-keyword">if</span> (!target) <span class="hljs-keyword">return</span></pre></div>
+            
+          
+            
+            <p>There is more input: a new query will be made,
+so the list is now stale</p>
+
+            
+              <div class='highlight'><pre>    <span class="hljs-keyword">this</span>._dismissSuggestions()</pre></div>
+            
+          
+            
+            <p>If the target element is not valid, don’t take off at all
+TAKEN OUT as autocomplete might be necessary to actually make
+it valid
+if (!target.validity.valid) {
+ this.suggestions = []
+ return
+}</p>
+<p>Check if it’s inflight. If so, queue up an autocomplete
+with the same ‘e’</p>
+
+            
+              <div class='highlight'><pre>    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>._autocompleteInFlight) {
+      <span class="hljs-keyword">this</span>._attemptedAutocompleteFlight = e
+      <span class="hljs-keyword">return</span>
+    }
+    <span class="hljs-keyword">this</span>._autocompleteInFlight = <span class="hljs-literal">true</span>
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.targetForId) {
+      <span class="hljs-keyword">this</span>.targetForId.value = <span class="hljs-string">''</span>
+      <span class="hljs-keyword">this</span>.picked = <span class="hljs-literal">false</span>
+    }</pre></div>
+            
+          
+            
+            <p>Set the url, which will also depend on recordId</p>
+
+            
+              <div class='highlight'><pre>    <span class="hljs-keyword">const</span> value = target.autocompleteValue || target.value
+    <span class="hljs-keyword">const</span> url = <span class="hljs-keyword">this</span>.url + value
+
+    <span class="hljs-keyword">const</span> fetchOptions = {
+      <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
+      <span class="hljs-attr">redirect</span>: <span class="hljs-string">'follow'</span> <span class="hljs-comment">// manual, *follow, error</span>
+    }</pre></div>
+            
+          
+            
+            <p>Attempt the submission</p>
+
+            
+              <div class='highlight'><pre>    <span class="hljs-keyword">let</span> networkError = <span class="hljs-literal">false</span>
+    <span class="hljs-keyword">let</span> response
+    <span class="hljs-keyword">try</span> {
+      response = <span class="hljs-keyword">await</span> fetch(url, fetchOptions)
+    } <span class="hljs-keyword">catch</span> (e) {
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'ERROR!'</span>, e)
+      networkError = <span class="hljs-literal">true</span>
+    }</pre></div>
+            
+          
+            
+            <p>CASE #1: network error.</p>
+
+            
+              <div class='highlight'><pre>    <span class="hljs-keyword">if</span> (networkError) {
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Network error!'</span>)</pre></div>
+            
+          
+            
+            <p>Emit event to make it possible to tell the user via UI about the problem</p>
+
+            
+              <div class='highlight'><pre>      <span class="hljs-keyword">const</span> event = <span class="hljs-keyword">new</span> CustomEvent(<span class="hljs-string">'autocomplete-error'</span>, { <span class="hljs-attr">detail</span>: { <span class="hljs-attr">type</span>: <span class="hljs-string">'network'</span> }, <span class="hljs-attr">bubbles</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">composed</span>: <span class="hljs-literal">true</span> })
+      <span class="hljs-keyword">this</span>.dispatchEvent(event)</pre></div>
+            
+          
+            
+            <p>CASE #2: HTTP error.
+Invalidate the problem fields</p>
+
+            
+              <div class='highlight'><pre>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (!response.ok) {
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Fetch error!'</span>)
+
+      <span class="hljs-keyword">const</span> errs = <span class="hljs-keyword">await</span> response.json()</pre></div>
+            
+          
+            
+            <p>Emit event to make it possible to tell the user via UI about the problem</p>
+
+            
+              <div class='highlight'><pre>      <span class="hljs-keyword">const</span> event = <span class="hljs-keyword">new</span> CustomEvent(<span class="hljs-string">'autocomplete-error'</span>, { <span class="hljs-attr">detail</span>: { <span class="hljs-attr">type</span>: <span class="hljs-string">'http'</span>, response, errs }, <span class="hljs-attr">bubbles</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">composed</span>: <span class="hljs-literal">true</span> })
+      <span class="hljs-keyword">this</span>.dispatchEvent(event)</pre></div>
+            
+          
+            
+            <p>CASE #3: NO error. Set fields to their
+new values</p>
+
+            
+              <div class='highlight'><pre>    } <span class="hljs-keyword">else</span> {</pre></div>
+            
+          
+            
+            <p>Convert the result to JSON</p>
+
+            
+              <div class='highlight'><pre>      <span class="hljs-keyword">const</span> v = <span class="hljs-keyword">await</span> response.json()</pre></div>
+            
+          
+            
+            <p>Emit event to make it possible to tell the user via UI about the problem</p>
+
+            
+              <div class='highlight'><pre>      <span class="hljs-keyword">const</span> event = <span class="hljs-keyword">new</span> CustomEvent(<span class="hljs-string">'form-ok'</span>, { <span class="hljs-attr">detail</span>: { response }, <span class="hljs-attr">bubbles</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">composed</span>: <span class="hljs-literal">true</span> })
+      <span class="hljs-keyword">this</span>.dispatchEvent(event)
+
+      <span class="hljs-keyword">this</span>.suggestions = v
+    }
+
+    <span class="hljs-keyword">this</span>._autocompleteInFlight = <span class="hljs-literal">false</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>._attemptedAutocompleteFlight) {
+      <span class="hljs-keyword">const</span> oldE = <span class="hljs-keyword">this</span>._attemptedAutocompleteFlight
+      <span class="hljs-keyword">this</span>._attemptedAutocompleteFlight = <span class="hljs-literal">false</span>
+      <span class="hljs-keyword">this</span>._inputEvent(oldE)
+    }
+  }
+}
+customElements.define(<span class="hljs-string">'ee-autocomplete'</span>, EeAutocomplete)</pre></div>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="bottombar">
+
+    </div>
+  </div>
+</body>
+</html>
