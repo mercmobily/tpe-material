@@ -78,6 +78,7 @@ export const Global = (base) => {
             --mat-form-element-min-width: 280px;
             --mat-background: white;
             --mat-background-dark: #ccc;
+            --mat-label-background: transparent;
           }
 
           :host([hidden]) {

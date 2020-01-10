@@ -26,12 +26,12 @@ export const hoverStyle = css`
 export const focusStyle = css`
   :host([has-focus]), :host([has-focus][outlined]) {
     --mat-theme-border: 2px solid var(--mat-primary-color);
-    --mat-background: var(--mat-background-light);
+    /* --mat-background: var(--mat-background-light); */
     --mat-label-color: var(--mat-primary-color);
   }
 
   :host([has-focus]) #native {
-    padding-bottom: 5px;
+    padding-bottom: -1px;
   }
 `
 
@@ -55,7 +55,7 @@ export const inputField = css`
   }
 
   :host([dense]) #native {
-    padding: 8px 8px 6px;
+    padding: 8px 8px 0;
   }
 
   :host([outlined]) {
@@ -86,7 +86,7 @@ export const inputField = css`
     background-color: var(--mat-background, #eee);
     width: 100%;
     font-size: 14px;
-    padding: 20px 16px 6px;
+    padding: 20px 16px 0;
     height: var(--mat-form-element-height);
     box-shadow: var(--mat-theme-box-shadow);
     transition: background-color 0.3s ease-in-out,
@@ -125,9 +125,10 @@ export const inputLabel = css`
     margin-left: 8px;
     min-width: fit-content;
     white-space: nowrap;
-    top: calc(50% - 5px);
-    left: 12px;
+    --half-height: calc(var(--mat-form-element-height) / 2);
+    top: var(--half-height);
     transform: translateY(-50%);
+    left: 12px;
     will-change: transform, background-color;
     transition: all 0.3s ease-in-out;
   }
@@ -146,22 +147,21 @@ export const floatingLabel = css`
   :host([has-value]) label,
   #native:focus ~ label,
   #native:placeholder-shown ~ label {
-    transform: translateY(-130%) scale(0.8);
+    transform: translateY(calc(var(--half-height) / -1)) translateX(-10px) scale(0.8);
     transition: all 0.3s ease-in-out, background 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    margin-left: -4px;
   }
 
   :host([dense][has-value]) label,
   :host([dense]) #native:focus ~ label,
   :host([dense]) #native:placeholder-shown ~ label {
-    background: var(--mat-background, white)
+    background: var(--mat-label-background, transparent)
   }
 
   :host([outlined]:not([dense][has-value]) label,
   :host([outlined]:not([dense]) #native:focus ~ label,
   :host([outlined]:not([dense]) #native:placeholder-shown ~ label {
-    transform: translateY(-170%) scale(0.8);
-    background: var(--mat-background, white);
+    transform: translateY(calc(var(--half-height) / -1)) translateX(-10px) scale(0.8);;
+    background: var(--mat-label-background, transparent);
   }
 `
 
