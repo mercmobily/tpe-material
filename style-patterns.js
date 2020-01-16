@@ -160,7 +160,7 @@ export const floatingLabel = css`
   :host([outlined]:not([dense][has-value]) label,
   :host([outlined]:not([dense]) #native:focus ~ label,
   :host([outlined]:not([dense]) #native:placeholder-shown ~ label {
-    transform: translateY(calc(var(--half-height) / -1)) translateX(-10px) scale(0.8);;
+    transform: translateY(calc(var(--half-height) / -1)) translateX(-10px) scale(0.8);
     background: var(--mat-label-background, transparent);
   }
 `

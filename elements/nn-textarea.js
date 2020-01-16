@@ -1,8 +1,9 @@
 import { css } from 'lit-element'
+import { AddHasValueAttributeMixin } from '../mixins/AddHasValueAttributeMixin'
 import { inputField, inputLabel, floatingLabel, errorMessage } from '../style-patterns.js'
 
 export const NnTextArea = (base) => {
-  return class Base extends base {
+  return class Base extends AddHasValueAttributeMixin(base) {
     // Style depends on CSS being able to find label as sibling of the #native element.
     // CSS can select next siblings, but not previous.  This guarantees label is rendered after #native in the shadowDOM
     static get properties () {
@@ -36,12 +37,6 @@ export const NnTextArea = (base) => {
             min-height: 80px;
             max-height: 80px;
             resize: none;
-          }
-
-          :host([has-value]) label,
-          #native:focus ~ label,
-          #native:placeholder-shown ~ label {
-            transform: translateY(-200%);
           }
         `
       ]
