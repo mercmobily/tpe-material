@@ -35,8 +35,9 @@ export const NnTextArea = (base) => {
             font-family: var(--mat-font-family);
             padding-top: 12px;
             min-height: 80px;
-            max-height: 80px;
-            resize: none;
+            height: 100%;
+            /* max-height: 80px; */
+            resize: vertical;
           }
         `
       ]
