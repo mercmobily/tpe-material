@@ -31,13 +31,12 @@ export const NnTextArea = (base) => {
             --mat-form-element-height: 80px;
           }
           /* Following material design guidelines, non-resizeable textarea */
-          textarea {
+          textarea#native {
             font-family: var(--mat-font-family);
             padding-top: 12px;
             min-height: 80px;
-            height: 100%;
-            /* max-height: 80px; */
-            resize: vertical;
+            height: unset;
+            padding-top: 30px;
           }
         `
       ]
