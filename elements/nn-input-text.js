@@ -1,9 +1,26 @@
 import { css } from 'lit-element'
+import { classMap } from 'lit-html/directives/class-map'
 import { AddHasValueAttributeMixin } from '../mixins/AddHasValueAttributeMixin'
 import { inputLabel, inputField, floatingLabel, errorMessage } from '../style-patterns.js'
 
 export const NnInputText = (base) => {
   return class Base extends AddHasValueAttributeMixin(base) {
+    // render () {
+    //   if (this.themeRender) return this.themeRender()
+    //   const class = {
+    //     'has-value': !!this.value,
+    //     'has-leading': !!this.leading,
+    //     'has-trailing': !!this.trailing
+    //   };
+    //   return html`
+    //     ${this.ifLabelBefore}
+    //     ${this.ifValidationMessageBefore}
+    //     <input class=${classMap(class)} type="text" id="native" real-time-event="input">
+    //     ${this.ifValidationMessageAfter}
+    //     ${this.ifLabelAfter}
+    //     <slot id="datalist-slot" name="datalist"></slot>
+    //   `
+    // }
     // Style depends on CSS being able to find label as sibling of the #native element.
     // CSS can select next siblings, but not previous.  This guarantees label is rendered after #native in the shadowDOM
     static get properties () {
@@ -36,11 +53,11 @@ export const NnInputText = (base) => {
         floatingLabel,
         errorMessage,
         css`
-          :host([has-leading]) #native {
+          #native[has-leading] {
             padding-left: 36px;
           }
 
-          :host([has-trailing]) #native {
+          #native[has-trailing] {
             padding-right: 36px;
           }
 

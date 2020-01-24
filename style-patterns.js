@@ -55,7 +55,7 @@ export const inputField = css`
   }
 
   :host([dense]) #native {
-    padding: 8px 8px 0;
+    padding: var(--mat-form-element-padding, 14px 10px 0);
   }
 
   :host([outlined]) {
@@ -79,19 +79,16 @@ export const inputField = css`
     display: block;
     border-radius: var(--mat-input-border-radius, 4px 4px 0 0);
     border-width: 0;
-    border-style: none;
+    border-style: solid;
     border-color: transparent;
     border-bottom: var(--mat-input-border, var(--mat-theme-border));
     color: var(--mat-input-color, inherit);
     background-color: var(--mat-background, #eee);
     width: 100%;
     font-size: 14px;
-    padding: 20px 16px 0;
+    padding:  var(--mat-form-element-padding, 20px 16px 0);
     height: var(--mat-form-element-height);
     box-shadow: var(--mat-theme-box-shadow);
-    transition: background-color 0.3s ease-in-out,
-      color 0.3s ease-in-out,
-      box-shadow 0.3s ease-in-out;
   }
 
   #native:focus,
@@ -129,8 +126,8 @@ export const inputLabel = css`
     top: var(--half-height);
     transform: translateY(-50%);
     left: 12px;
-    will-change: transform, background-color;
-    transition: all 0.3s ease-in-out;
+    will-change: transform;
+    transition: transform 0.1s ease-in-out;
   }
 
   #native:invalid + label,
@@ -139,7 +136,7 @@ export const inputLabel = css`
     --mat-label-color: darkred;
   }
 
-  ${requiredLabelAsterisk}
+  /* ${requiredLabelAsterisk} */
 `
 
 export const floatingLabel = css`
@@ -148,7 +145,7 @@ export const floatingLabel = css`
   #native:focus ~ label,
   #native:placeholder-shown ~ label {
     transform: translateY(calc(var(--half-height) / -1)) translateX(-10px) scale(0.8);
-    transition: all 0.3s ease-in-out, background 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.1s ease-in-out, background 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   :host([dense][has-value]) label,
@@ -171,7 +168,6 @@ export const fixedLabel = css`
   #native:placeholder-shown ~ label {
     top: 12px !important;
     transform: translateY(-50%) scale(0.8);
-    transition: all 0.3s ease-in-out;
   }
 
 `
@@ -180,19 +176,15 @@ export const errorMessage = css`
   span.error-message {
     position: absolute;
     bottom: 0;
-    transform: translateY(100%);
     left: 16px;
     font-size: 80%;
-    white-space:nowrap;
+    white-space: nowrap;
     opacity: 0;
-    will-change: transform, opacity;
-    transition: all 0.3s ease-in-out;
+    line-height: 0.8;
   }
 
   #native:invalid ~ span.error-message {
     opacity: 1;
-    transform: translateY(10%);
-    transition: all 0.3s ease-in-out;
   }
 `
 
