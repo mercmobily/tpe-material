@@ -64,15 +64,15 @@ export const NnInputText = (base) => {
           ::slotted([slot=leading]),
           ::slotted([slot=trailing]) {
             position: absolute;
-            top: 16px;
-            left: 16px;
-            height: 24px;
-            width: 24px;
+            top: var( --mat-input-icon-top, 16px);
+            left: var( --mat-input-icon-left, 16px);
+            height: var( --mat-input-icon-height, 24px);
+            width: var( --mat-input-icon-width, 24px);
           }
 
           ::slotted([slot=trailing]) {
             left: unset;
-            right: 16px;
+            right: var( --mat-input-icon-right, 16px);
           }
 
           :host([has-leading]:not([has-value])) label{
