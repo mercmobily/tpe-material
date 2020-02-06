@@ -38,16 +38,26 @@ export const NnButton = (base) => {
             vertical-align: middle;
           }
 
+          #native:disabled {
+            filter: saturate(0);
+            opacity: 0.85;
+          }
+
+          #native:disabled:hover {
+            background-color: initial !important;
+          }
+
           button:hover {
             filter: brightness(130%);
           }
 
-          button:active, button:focus {
+          button:active {
             outline: none;
           }
 
           button:focus {
             border-color: var(--mat-primary-color, rgba(255, 255, 255, 0.7));
+            background-color: var(--mat-primary-color-light);
             filter: brightness(115%);
           }
 

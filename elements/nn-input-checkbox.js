@@ -43,7 +43,7 @@ export const NnInputCheckBox = (base) => {
             user-select: none;
           }
 
-          :host::after {
+          :host::after:not(:disabled) {
             content: '';
             user-select: none;
             position: absolute;
@@ -56,7 +56,7 @@ export const NnInputCheckBox = (base) => {
             z-index: 0;
           }
 
-          :host(:hover)::after {
+          :host(:hover:not(:disabled))::after {
             background: var(--mat-primary-color);
             opacity: 0.1;
             transform: scale(4);
@@ -98,7 +98,7 @@ export const NnInputCheckBox = (base) => {
             transition: background-color 0.3s ease-in-out;
           }
 
-          :host(:hover) label::before {
+          :host(:hover:not(:disabled)) label::before {
             filter: brightness(135%);
             transition: filter 0.3s ease-in-out;
             box-shadow: var(--mat-theme-box-shadow2);
@@ -110,7 +110,7 @@ export const NnInputCheckBox = (base) => {
             filter: brightness(135%);
           }
 
-          #native:not([checked]):hover ~ label::before {
+          #native:not([checked]):hover:not(:disabled) ~ label::before {
             filter: brightness(150%);
             background-color: var(--mat-primary-color);
             transition: background-color 0.3s ease-in-out;

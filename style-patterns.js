@@ -106,6 +106,15 @@ export const inputField = css`
     border-color: var(--mat-error-text);
   }
 
+  #native:disabled {
+    filter: saturate(0);
+    opacity: 0.85;
+  }
+
+  #native:disabled:hover {
+    background-color: initial !important;
+  }
+
   ${hoverStyle}
   ${focusStyle}
 `
