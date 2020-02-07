@@ -12,8 +12,6 @@ export const requiredLabelAsterisk = css`
   }
 `
 
-// export const requiredStyle
-// export const invalidStyle
 export const hoverStyle = css`
   :host(:hover) {
     --mat-theme-box-shadow: var(--mat-theme-box-shadow2);
@@ -26,7 +24,6 @@ export const hoverStyle = css`
 export const focusStyle = css`
   :host([has-focus]), :host([has-focus][outlined]) {
     --mat-theme-border: 2px solid var(--mat-primary-color);
-    /* --mat-background: var(--mat-background-light); */
     --mat-label-color: var(--mat-primary-color);
   }
 
