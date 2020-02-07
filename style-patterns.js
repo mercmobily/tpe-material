@@ -144,8 +144,6 @@ export const inputLabel = css`
     background-color: none;
     --mat-label-color: darkred;
   }
-
-  /* ${requiredLabelAsterisk} */
 `
 
 export const floatingLabel = css`

@@ -1,6 +1,6 @@
 {
   "name": "tpe-material",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Material theme for The Platform Elements",
   "main": "material.js",
   "scripts": {
