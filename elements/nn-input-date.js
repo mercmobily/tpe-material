@@ -1,5 +1,3 @@
-import { fixedLabel, errorMessage, inputField, inputLabel } from '../style-patterns.js'
-
 export const NnInputDate = (base) => {
   return class Base extends base {
     // Style depends on CSS being able to find label as sibling of the #native element.
@@ -20,10 +18,10 @@ export const NnInputDate = (base) => {
     static get styles () {
       return [
         super.styles,
-        inputField,
-        inputLabel,
-        fixedLabel,
-        errorMessage
+        super.stylePatterns.inputField,
+        super.stylePatterns.inputLabel,
+        super.stylePatterns.fixedLabel,
+        super.stylePatterns.errorMessage
       ]
     }
   }

@@ -1,11 +1,9 @@
-import { css } from 'lit-element'
-
 export const EeFab = (base) => {
   return class Base extends base {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
           button:focus, button:active {
             outline:0 ;
           }

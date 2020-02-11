@@ -1,6 +1,3 @@
-import { css } from 'lit-element'
-import { errorMessage, hideNativeWidget, requiredLabelAsterisk } from '../style-patterns.js'
-
 export const NnInputRadio = (base) => {
   return class Base extends base {
     // Style depends on CSS being able to find label as sibling of the #native element.
@@ -19,18 +16,18 @@ export const NnInputRadio = (base) => {
       this.label = ''
     }
 
-    firstUpdated() {
+    firstUpdated () {
       if (super.firstUpdated) super.firstUpdated()
-      this.shadowRoot.querySelector('label').addEventListener('click', (e) => {e.preventDefault()})
+      this.shadowRoot.querySelector('label').addEventListener('click', (e) => { e.preventDefault() })
     }
 
     static get styles () {
       return [
         super.styles,
-        errorMessage,
-        hideNativeWidget,
-        requiredLabelAsterisk,
-        css`
+        super.stylePatterns.errorMessage,
+        super.stylePatterns.hideNativeWidget,
+        super.stylePatterns.requiredLabelAsterisk,
+        super.lit.css`
           :host {
             display: block;
             position: relative;

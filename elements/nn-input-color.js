@@ -1,14 +1,11 @@
-import { css } from 'lit-element'
-import { hoverStyle, focusStyle } from '../style-patterns'
-
 export const NnInputColor = (base) => {
   return class Base extends base {
     static get styles () {
       return [
         super.styles,
-        hoverStyle,
-        focusStyle,
-        css`
+        super.stylePatterns.hoverStyle,
+        super.stylePatterns.focusStyle,
+        super.lit.css`
          :host {
             position: relative;
             padding: 0 12px;

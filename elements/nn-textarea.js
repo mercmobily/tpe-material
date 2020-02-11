@@ -1,6 +1,4 @@
-import { css } from 'lit-element'
 import { AddHasValueAttributeMixin } from '../mixins/AddHasValueAttributeMixin'
-import { inputField, inputLabel, floatingLabel, errorMessage } from '../style-patterns.js'
 
 export const NnTextArea = (base) => {
   return class Base extends AddHasValueAttributeMixin(base) {
@@ -22,11 +20,11 @@ export const NnTextArea = (base) => {
     static get styles () {
       return [
         super.styles,
-        inputField,
-        inputLabel,
-        floatingLabel,
-        errorMessage,
-        css`
+        super.stylePatterns.inputField,
+        super.stylePatterns.inputLabel,
+        super.stylePatterns.floatingLabel,
+        super.stylePatterns.errorMessage,
+        super.lit.css`
           :host {
             --mat-form-element-height: 80px;
           }

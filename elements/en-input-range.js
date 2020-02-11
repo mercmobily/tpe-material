@@ -1,6 +1,3 @@
-import { css } from 'lit-element'
-import { inputField, errorMessage } from '../style-patterns.js'
-
 export const EnInputRange = (base) => {
   return class Base extends base {
     // Style depends on CSS being able to find label as sibling of the #native element.
@@ -21,9 +18,9 @@ export const EnInputRange = (base) => {
     static get styles () {
       return [
         super.styles,
-        inputField,
-        errorMessage,
-        css`
+        super.stylePatterns.inputField,
+        super.stylePatterns.errorMessage,
+        super.lit.css`
 
         ::slotted(#range-amount) {}
         `

@@ -1,11 +1,9 @@
-import { css } from 'lit-element'
-
 export const EeTabs = (base) => {
   return class Base extends base {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
         :host {
           --ee-tabs-selected-color: var(--mat-primary-color);
           --ee-tabs-color: var(--mat-primary-text);
@@ -16,7 +14,7 @@ export const EeTabs = (base) => {
         }
 
         :host nav > ::slotted(*) {
-          border-bottom: 0 !important; 
+          border-bottom: 0 !important;
           transition: all 0.3s ease-in-out;
           position: relative;
           box-sizing: border-box;
@@ -43,9 +41,9 @@ export const EeTabs = (base) => {
           left: 50%;
           right: 50%;
           height: 1px;
-          background-color: var(--ee-tabs-selected-color); 
+          background-color: var(--ee-tabs-selected-color);
         }
-        
+
         :host nav > ::slotted(*:focus)::after,
         :host nav > ::slotted(*:hover)::after {
           height: 1px;
@@ -56,7 +54,7 @@ export const EeTabs = (base) => {
 
         :host nav > ::slotted(*[active])::after {
           content: '';
-          background-color: var(--ee-tabs-selected-color); 
+          background-color: var(--ee-tabs-selected-color);
           left: 0.5px;
           right: 0.5px;
           bottom: 0;

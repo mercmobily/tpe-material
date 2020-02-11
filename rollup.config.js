@@ -6,7 +6,7 @@ import minify from 'rollup-plugin-babel-minify'
 module.exports = [
 
   {
-    input: './material.js',
+    input: './material-babel.js',
     output: {
       file: 'distr/material.js', // IIFE ONE FILE
       format: 'iife'

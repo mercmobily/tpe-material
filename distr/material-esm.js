@@ -1,202 +1,232 @@
-/**
- * @license
- * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
- * This code may only be used under the BSD style license found at
- * http://polymer.github.io/LICENSE.txt
- * The complete set of authors may be found at
- * http://polymer.github.io/AUTHORS.txt
- * The complete set of contributors may be found at
- * http://polymer.github.io/CONTRIBUTORS.txt
- * Code distributed by Google as part of the polymer project is also
- * subject to an additional IP rights grant found at
- * http://polymer.github.io/PATENTS.txt
- */
-/**
- * An expression marker with embedded unique key to avoid collision with
- * possible text in templates.
- */
-const marker = `{{lit-${String(Math.random()).slice(2)}}}`;
-
-/**
- * @license
- * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
- * This code may only be used under the BSD style license found at
- * http://polymer.github.io/LICENSE.txt
- * The complete set of authors may be found at
- * http://polymer.github.io/AUTHORS.txt
- * The complete set of contributors may be found at
- * http://polymer.github.io/CONTRIBUTORS.txt
- * Code distributed by Google as part of the polymer project is also
- * subject to an additional IP rights grant found at
- * http://polymer.github.io/PATENTS.txt
- */
-// Detect event listener options support. If the `capture` property is read
-// from the options object, then options are supported. If not, then the thrid
-// argument to add/removeEventListener is interpreted as the boolean capture
-// value so we should only pass the `capture` property.
-let eventOptionsSupported = false;
-try {
-    const options = {
-        get capture() {
-            eventOptionsSupported = true;
-            return false;
-        }
-    };
-    // tslint:disable-next-line:no-any
-    window.addEventListener('test', options, options);
-    // tslint:disable-next-line:no-any
-    window.removeEventListener('test', options, options);
-}
-catch (_e) {
-}
-
-/**
- * @license
- * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
- * This code may only be used under the BSD style license found at
- * http://polymer.github.io/LICENSE.txt
- * The complete set of authors may be found at
- * http://polymer.github.io/AUTHORS.txt
- * The complete set of contributors may be found at
- * http://polymer.github.io/CONTRIBUTORS.txt
- * Code distributed by Google as part of the polymer project is also
- * subject to an additional IP rights grant found at
- * http://polymer.github.io/PATENTS.txt
- */
-// IMPORTANT: do not change the property name or the assignment expression.
-// This line will be used in regexes to search for lit-html usage.
-// TODO(justinfagnani): inject version number at build time
-(window['litHtmlVersions'] || (window['litHtmlVersions'] = [])).push('1.1.2');
-
-/**
- * @license
- * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
- * This code may only be used under the BSD style license found at
- * http://polymer.github.io/LICENSE.txt
- * The complete set of authors may be found at
- * http://polymer.github.io/AUTHORS.txt
- * The complete set of contributors may be found at
- * http://polymer.github.io/CONTRIBUTORS.txt
- * Code distributed by Google as part of the polymer project is also
- * subject to an additional IP rights grant found at
- * http://polymer.github.io/PATENTS.txt
- */
-if (typeof window.ShadyCSS === 'undefined') ;
-else if (typeof window.ShadyCSS.prepareTemplateDom === 'undefined') {
-    console.warn(`Incompatible ShadyCSS version detected. ` +
-        `Please update to at least @webcomponents/webcomponentsjs@2.0.2 and ` +
-        `@webcomponents/shadycss@1.3.1.`);
-}
-
-/**
- * @license
- * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
- * This code may only be used under the BSD style license found at
- * http://polymer.github.io/LICENSE.txt
- * The complete set of authors may be found at
- * http://polymer.github.io/AUTHORS.txt
- * The complete set of contributors may be found at
- * http://polymer.github.io/CONTRIBUTORS.txt
- * Code distributed by Google as part of the polymer project is also
- * subject to an additional IP rights grant found at
- * http://polymer.github.io/PATENTS.txt
- */
-/**
- * When using Closure Compiler, JSCompiler_renameProperty(property, object) is
- * replaced at compile time by the munged name for object[property]. We cannot
- * alias this function, so we have to use a small shim that has the same
- * behavior when not compiling.
- */
-window.JSCompiler_renameProperty =
-    (prop, _obj) => prop;
-
-/**
-@license
-Copyright (c) 2019 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at
-http://polymer.github.io/LICENSE.txt The complete set of authors may be found at
-http://polymer.github.io/AUTHORS.txt The complete set of contributors may be
-found at http://polymer.github.io/CONTRIBUTORS.txt Code distributed by Google as
-part of the polymer project is also subject to an additional IP rights grant
-found at http://polymer.github.io/PATENTS.txt
-*/
-const supportsAdoptingStyleSheets = ('adoptedStyleSheets' in Document.prototype) &&
-    ('replace' in CSSStyleSheet.prototype);
-const constructionToken = Symbol();
-class CSSResult {
-    constructor(cssText, safeToken) {
-        if (safeToken !== constructionToken) {
-            throw new Error('CSSResult is not constructable. Use `unsafeCSS` or `css` instead.');
-        }
-        this.cssText = cssText;
-    }
-    // Note, this is a getter so that it's lazy. In practice, this means
-    // stylesheets are not created until the first element instance is made.
-    get styleSheet() {
-        if (this._styleSheet === undefined) {
-            // Note, if `adoptedStyleSheets` is supported then we assume CSSStyleSheet
-            // is constructable.
-            if (supportsAdoptingStyleSheets) {
-                this._styleSheet = new CSSStyleSheet();
-                this._styleSheet.replaceSync(this.cssText);
-            }
-            else {
-                this._styleSheet = null;
-            }
-        }
-        return this._styleSheet;
-    }
-    toString() {
-        return this.cssText;
-    }
-}
-const textFromCSSResult = (value) => {
-    if (value instanceof CSSResult) {
-        return value.cssText;
-    }
-    else if (typeof value === 'number') {
-        return value;
-    }
-    else {
-        throw new Error(`Value passed to 'css' function must be a 'css' function result: ${value}. Use 'unsafeCSS' to pass non-literal values, but
-            take care to ensure page security.`);
-    }
-};
-/**
- * Template tag which which can be used with LitElement's `style` property to
- * set element styles. For security reasons, only literal string values may be
- * used. To incorporate non-literal values `unsafeCSS` may be used inside a
- * template string part.
- */
-const css = (strings, ...values) => {
-    const cssText = values.reduce((acc, v, idx) => acc + textFromCSSResult(v) + strings[idx + 1], strings[0]);
-    return new CSSResult(cssText, constructionToken);
-};
-
-/**
- * @license
- * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
- * This code may only be used under the BSD style license found at
- * http://polymer.github.io/LICENSE.txt
- * The complete set of authors may be found at
- * http://polymer.github.io/AUTHORS.txt
- * The complete set of contributors may be found at
- * http://polymer.github.io/CONTRIBUTORS.txt
- * Code distributed by Google as part of the polymer project is also
- * subject to an additional IP rights grant found at
- * http://polymer.github.io/PATENTS.txt
- */
-// IMPORTANT: do not change the property name or the assignment expression.
-// This line will be used in regexes to search for LitElement usage.
-// TODO(justinfagnani): inject version number at build time
-(window['litElementVersions'] || (window['litElementVersions'] = []))
-    .push('2.2.1');
-
 // In Material Design color tool: https://material.io/tools/color/#!/?view.left=0&view.right=0&primary.color=616161&secondary.color=512DA8
 
-const Global = (base) => {
+const Common = (base) => {
   return class Base extends base {
+    static get stylePatterns () {
+      const css = super.lit.css;
+      return {
+        // This is a light implementation of material guidelines.
+        // It does not aim to be a complete, comprehensive, Material Design components library, but to showcase the flexiblity of the TPE theming system.
+        // Guidelines can be found in: https://material.io/components
+
+        requiredLabelAsterisk: css`
+          #native:required ~ label div#label-text::after {
+            content: '*';
+            padding-left: 2px;
+            position: relative;
+          }
+        `,
+
+        hoverStyle: css`
+          :host(:hover) {
+            --mat-theme-box-shadow: var(--mat-theme-box-shadow2);
+          }
+
+          :host([disabled]:hover) {
+            --mat-theme-box-shadow: none;
+          }
+        `,
+        focusStyle: css`
+          :host([has-focus]), :host([has-focus][outlined]) {
+            --mat-theme-border: 2px solid var(--mat-primary-color);
+            --mat-label-color: var(--mat-primary-color);
+          }
+
+          :host([has-focus]) #native {
+            padding-bottom: -1px;
+          }
+        `,
+
+        inputField: css`
+          :host {
+            position: relative;
+            padding: 0 12px;
+            padding-bottom: 16px;
+            margin: 5px;
+            min-width: var(--mat-form-element-min-width, fit-content);
+            font-family: var(--font-family);
+          }
+
+          :host([disabled]) {
+            --mat-input-color: var(--mat-boundaries-color, #999)
+          }
+
+          :host([dense]) {
+            --mat-form-element-height: 40px;
+            padding-bottom: 8px;
+          }
+
+          :host([dense]) #native {
+            padding: var(--mat-form-element-padding, 14px 10px 0);
+          }
+
+          :host([outlined]) {
+            --mat-background: white;
+            --mat-background-dark: white;
+            --mat-theme-border: 2px solid #ccc;
+          }
+
+          :host([outlined]) #native {
+            border-bottom: unset;
+            border: var(--mat-input-border, var(--mat-theme-border));
+            border-radius: var(--mat-input-border-radius, 4px);
+          }
+
+          #native {
+            box-sizing: border-box;
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            box-sizing: border-box;
+            display: block;
+            border-radius: var(--mat-input-border-radius, 4px 4px 0 0);
+            border-width: 0;
+            border-style: solid;
+            border-color: transparent;
+            border-bottom: var(--mat-input-border, var(--mat-theme-border));
+            color: var(--mat-input-color, inherit);
+            background-color: var(--mat-background, #eee);
+            width: 100%;
+            font-size: 14px;
+            padding:  var(--mat-form-element-padding, 20px 16px 0);
+            height: var(--mat-form-element-height);
+            box-shadow: var(--mat-theme-box-shadow);
+          }
+
+          #native:focus,
+          #native:active {
+            outline: none
+          }
+
+          #native::selection {
+            background-color: var(--mat-background-dark);
+          }
+
+          #native:invalid {
+            background-color: var(--mat-error-color);
+            color: var(--mat-error-text);
+            border-color: var(--mat-error-text);
+          }
+
+          #native:disabled {
+            filter: saturate(0);
+            opacity: 0.85;
+          }
+
+          #native:disabled:hover {
+            background-color: initial !important;
+          }
+
+          /* this.hoverStyle */
+          :host(:hover) {
+            --mat-theme-box-shadow: var(--mat-theme-box-shadow2);
+          }
+
+          :host([disabled]:hover) {
+            --mat-theme-box-shadow: none;
+          }
+
+          /* this.focusStyle */
+          :host([has-focus]), :host([has-focus][outlined]) {
+            --mat-theme-border: 2px solid var(--mat-primary-color);
+            --mat-label-color: var(--mat-primary-color);
+          }
+
+          :host([has-focus]) #native {
+            padding-bottom: -1px;
+          }
+        `,
+
+        inputLabel: css`
+           label {
+            position: absolute;
+            display: inline-flex;
+            font-size: 16px;
+            border: var(--mat-label-border, none);
+            color: var(--mat-label-color,  var(--mat-primary-color-light));
+            padding-left: 6px;
+            padding-right: 6px;
+            margin-left: 8px;
+            min-width: fit-content;
+            white-space: nowrap;
+            --half-height: calc(var(--mat-form-element-height) / 2);
+            top: var(--half-height);
+            transform: translateY(-50%);
+            left: 12px;
+            will-change: transform;
+            transition: transform 0.1s ease-in-out;
+          }
+
+          #native:invalid + label,
+          #native:invalid ~ label {
+            background-color: none;
+            --mat-label-color: darkred;
+          }
+        `,
+
+        floatingLabel: css`
+          :host([has-value]) label,
+          #native:focus ~ label,
+          #native:placeholder-shown ~ label {
+            transform: translateY(calc(var(--half-height) / -1)) translateX(-10px) scale(0.8);
+            transition: transform 0.1s ease-in-out, background 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          }
+
+          :host([dense][has-value]) label,
+          :host([dense]) #native:focus ~ label,
+          :host([dense]) #native:placeholder-shown ~ label {
+            background: var(--mat-label-background, transparent)
+          }
+
+          :host([outlined]:not([dense][has-value]) label,
+          :host([outlined]:not([dense]) #native:focus ~ label,
+          :host([outlined]:not([dense]) #native:placeholder-shown ~ label {
+            transform: translateY(calc(var(--half-height) / -1)) translateX(-10px) scale(0.8);
+            background: var(--mat-label-background, transparent);
+          }
+        `,
+
+        fixedLabel: css`
+          label, #native:focus ~ label,
+          :host([has-value]) label,
+          #native:placeholder-shown ~ label {
+            top: 12px !important;
+            transform: translateY(-50%) scale(0.8);
+          }
+
+        `,
+
+        errorMessage: css`
+          span.error-message {
+            position: absolute;
+            bottom: 0;
+            left: 16px;
+            font-size: 80%;
+            white-space: nowrap;
+            opacity: 0;
+            line-height: 0.8;
+          }
+
+          #native:invalid ~ span.error-message {
+            opacity: 1;
+          }
+        `,
+
+        hideNativeWidget: css`
+          input {
+            position: unset;
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+          }
+        `
+      }
+    }
+
     static get styles () {
+      const css = super.lit.css;
       return [
         super.styles || [],
         css`
@@ -287,7 +317,7 @@ const EeDrawer = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
         `
       ]
     }
@@ -299,7 +329,7 @@ const EeNetwork = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
         `
       ]
     }
@@ -311,7 +341,7 @@ const EeSnackBar = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
         `
       ]
     }
@@ -323,7 +353,7 @@ const EeTabs = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
         :host {
           --ee-tabs-selected-color: var(--mat-primary-color);
           --ee-tabs-color: var(--mat-primary-text);
@@ -334,7 +364,7 @@ const EeTabs = (base) => {
         }
 
         :host nav > ::slotted(*) {
-          border-bottom: 0 !important; 
+          border-bottom: 0 !important;
           transition: all 0.3s ease-in-out;
           position: relative;
           box-sizing: border-box;
@@ -361,9 +391,9 @@ const EeTabs = (base) => {
           left: 50%;
           right: 50%;
           height: 1px;
-          background-color: var(--ee-tabs-selected-color); 
+          background-color: var(--ee-tabs-selected-color);
         }
-        
+
         :host nav > ::slotted(*:focus)::after,
         :host nav > ::slotted(*:hover)::after {
           height: 1px;
@@ -374,7 +404,7 @@ const EeTabs = (base) => {
 
         :host nav > ::slotted(*[active])::after {
           content: '';
-          background-color: var(--ee-tabs-selected-color); 
+          background-color: var(--ee-tabs-selected-color);
           left: 0.5px;
           right: 0.5px;
           bottom: 0;
@@ -399,7 +429,7 @@ const EeFab = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
           button:focus, button:active {
             outline:0 ;
           }
@@ -480,7 +510,7 @@ const EeToolbar = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
         `
       ]
     }
@@ -492,7 +522,7 @@ const EeHeader = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
         `
       ]
     }
@@ -504,7 +534,7 @@ const EnForm = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
           :invalid {
             border: unset;
             border-bottom: var(--mat-input-border, var(--mat-theme-border));
@@ -526,209 +556,6 @@ const EnForm = (base) => {
   }
 };
 
-// This is a light implementation of material guidelines.
-// It does not aim to be a complete, comprehensive, Material Design components library, but to showcase the flexiblity of the TPE theming system.
-// Guidelines can be found in: https://material.io/components
-
-const requiredLabelAsterisk = css`
-  #native:required ~ label div#label-text::after {
-    content: '*';
-    padding-left: 2px;
-    position: relative;
-  }
-`;
-
-const hoverStyle = css`
-  :host(:hover) {
-    --mat-theme-box-shadow: var(--mat-theme-box-shadow2);
-  }
-
-  :host([disabled]:hover) {
-    --mat-theme-box-shadow: none;
-  }
-`;
-const focusStyle = css`
-  :host([has-focus]), :host([has-focus][outlined]) {
-    --mat-theme-border: 2px solid var(--mat-primary-color);
-    --mat-label-color: var(--mat-primary-color);
-  }
-
-  :host([has-focus]) #native {
-    padding-bottom: -1px;
-  }
-`;
-
-const inputField = css`
-  :host {
-    position: relative;
-    padding: 0 12px;
-    padding-bottom: 16px;
-    margin: 5px;
-    min-width: var(--mat-form-element-min-width, fit-content);
-    font-family: var(--font-family);
-  }
-
-  :host([disabled]) {
-    --mat-input-color: var(--mat-boundaries-color, #999)
-  }
-
-  :host([dense]) {
-    --mat-form-element-height: 40px;
-    padding-bottom: 8px;
-  }
-
-  :host([dense]) #native {
-    padding: var(--mat-form-element-padding, 14px 10px 0);
-  }
-
-  :host([outlined]) {
-    --mat-background: white;
-    --mat-background-dark: white;
-    --mat-theme-border: 2px solid #ccc;
-  }
-
-  :host([outlined]) #native {
-    border-bottom: unset;
-    border: var(--mat-input-border, var(--mat-theme-border));
-    border-radius: var(--mat-input-border-radius, 4px);
-  }
-
-  #native {
-    box-sizing: border-box;
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    box-sizing: border-box;
-    display: block;
-    border-radius: var(--mat-input-border-radius, 4px 4px 0 0);
-    border-width: 0;
-    border-style: solid;
-    border-color: transparent;
-    border-bottom: var(--mat-input-border, var(--mat-theme-border));
-    color: var(--mat-input-color, inherit);
-    background-color: var(--mat-background, #eee);
-    width: 100%;
-    font-size: 14px;
-    padding:  var(--mat-form-element-padding, 20px 16px 0);
-    height: var(--mat-form-element-height);
-    box-shadow: var(--mat-theme-box-shadow);
-  }
-
-  #native:focus,
-  #native:active {
-    outline: none
-  }
-
-  #native::selection {
-    background-color: var(--mat-background-dark);
-  }
-
-  #native:invalid {
-    background-color: var(--mat-error-color);
-    color: var(--mat-error-text);
-    border-color: var(--mat-error-text);
-  }
-
-  #native:disabled {
-    filter: saturate(0);
-    opacity: 0.85;
-  }
-
-  #native:disabled:hover {
-    background-color: initial !important;
-  }
-
-  ${hoverStyle}
-  ${focusStyle}
-`;
-
-const inputLabel = css`
-   label {
-    position: absolute;
-    display: inline-flex;
-    font-size: 16px;
-    border: var(--mat-label-border, none);
-    color: var(--mat-label-color,  var(--mat-primary-color-light));
-    padding-left: 6px;
-    padding-right: 6px;
-    margin-left: 8px;
-    min-width: fit-content;
-    white-space: nowrap;
-    --half-height: calc(var(--mat-form-element-height) / 2);
-    top: var(--half-height);
-    transform: translateY(-50%);
-    left: 12px;
-    will-change: transform;
-    transition: transform 0.1s ease-in-out;
-  }
-
-  #native:invalid + label,
-  #native:invalid ~ label {
-    background-color: none;
-    --mat-label-color: darkred;
-  }
-`;
-
-const floatingLabel = css`
-
-  :host([has-value]) label,
-  #native:focus ~ label,
-  #native:placeholder-shown ~ label {
-    transform: translateY(calc(var(--half-height) / -1)) translateX(-10px) scale(0.8);
-    transition: transform 0.1s ease-in-out, background 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-
-  :host([dense][has-value]) label,
-  :host([dense]) #native:focus ~ label,
-  :host([dense]) #native:placeholder-shown ~ label {
-    background: var(--mat-label-background, transparent)
-  }
-
-  :host([outlined]:not([dense][has-value]) label,
-  :host([outlined]:not([dense]) #native:focus ~ label,
-  :host([outlined]:not([dense]) #native:placeholder-shown ~ label {
-    transform: translateY(calc(var(--half-height) / -1)) translateX(-10px) scale(0.8);
-    background: var(--mat-label-background, transparent);
-  }
-`;
-
-const fixedLabel = css`
-  label, #native:focus ~ label,
-  :host([has-value]) label,
-  #native:placeholder-shown ~ label {
-    top: 12px !important;
-    transform: translateY(-50%) scale(0.8);
-  }
-
-`;
-
-const errorMessage = css`
-  span.error-message {
-    position: absolute;
-    bottom: 0;
-    left: 16px;
-    font-size: 80%;
-    white-space: nowrap;
-    opacity: 0;
-    line-height: 0.8;
-  }
-
-  #native:invalid ~ span.error-message {
-    opacity: 1;
-  }
-`;
-
-const hideNativeWidget = css`
-  input {
-    position: unset;
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-`;
-
 const EnInputRange = (base) => {
   return class Base extends base {
     // Style depends on CSS being able to find label as sibling of the #native element.
@@ -749,9 +576,9 @@ const EnInputRange = (base) => {
     static get styles () {
       return [
         super.styles,
-        inputField,
-        errorMessage,
-        css`
+        super.stylePatterns.inputField,
+        super.stylePatterns.errorMessage,
+        super.lit.css`
 
         ::slotted(#range-amount) {}
         `
@@ -840,11 +667,11 @@ const NnInputText = (base) => {
     static get styles () {
       return [
         super.styles,
-        inputField,
-        inputLabel,
-        floatingLabel,
-        errorMessage,
-        css`
+        super.stylePatterns.inputField,
+        super.stylePatterns.inputLabel,
+        super.stylePatterns.floatingLabel,
+        super.stylePatterns.errorMessage,
+        super.lit.css`
           #native[has-leading] {
             padding-left: 36px;
           }
@@ -882,7 +709,7 @@ const NnInputButton = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
           :host {
             display: inline-block;
             width: fit-content;
@@ -971,7 +798,7 @@ const NnButton = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
           :host {
             width: fit-content;
             padding: 4px 10px;
@@ -1100,7 +927,7 @@ const NnForm = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
         `
       ]
     }
@@ -1133,10 +960,10 @@ const NnInputCheckBox = (base) => {
     static get styles () {
       return [
         super.styles,
-        errorMessage,
-        hideNativeWidget,
-        requiredLabelAsterisk,
-        css`
+        super.stylePatterns.errorMessage,
+        super.stylePatterns.hideNativeWidget,
+        super.stylePatterns.requiredLabelAsterisk,
+        super.lit.css`
           :host {
             display: block;
             position: relative;
@@ -1257,9 +1084,9 @@ const NnInputColor = (base) => {
     static get styles () {
       return [
         super.styles,
-        hoverStyle,
-        focusStyle,
-        css`
+        super.stylePatterns.hoverStyle,
+        super.stylePatterns.focusStyle,
+        super.lit.css`
          :host {
             position: relative;
             padding: 0 12px;
@@ -1314,10 +1141,10 @@ const NnInputDatalist = (base) => {
     static get styles () {
       return [
         super.styles,
-        inputField,
-        inputLabel,
-        floatingLabel,
-        css`
+        super.stylePatterns.inputField,
+        super.stylePatterns.inputLabel,
+        super.stylePatterns.floatingLabel,
+        super.lit.css`
           :host::after {
             position: absolute;
             content: '';
@@ -1357,10 +1184,10 @@ const NnInputDate = (base) => {
     static get styles () {
       return [
         super.styles,
-        inputField,
-        inputLabel,
-        fixedLabel,
-        errorMessage
+        super.stylePatterns.inputField,
+        super.stylePatterns.inputLabel,
+        super.stylePatterns.fixedLabel,
+        super.stylePatterns.errorMessage
       ]
     }
   }
@@ -1386,10 +1213,10 @@ const NnInputDateTimeLocal = (base) => {
     static get styles () {
       return [
         super.styles,
-        inputField,
-        inputLabel,
-        fixedLabel,
-        errorMessage
+        super.stylePatterns.inputField,
+        super.stylePatterns.inputLabel,
+        super.stylePatterns.fixedLabel,
+        super.stylePatterns.errorMessage
       ]
     }
   }
@@ -1400,7 +1227,7 @@ const NnInputEmail = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
         `
       ]
     }
@@ -1412,7 +1239,7 @@ const NnInputFile = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
         `
       ]
     }
@@ -1424,7 +1251,7 @@ const NnInputMonth = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
         `
       ]
     }
@@ -1436,7 +1263,7 @@ const NnInputNumber = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
         `
       ]
     }
@@ -1448,7 +1275,7 @@ const NnInputPassword = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
         `
       ]
     }
@@ -1473,18 +1300,18 @@ const NnInputRadio = (base) => {
       this.label = '';
     }
 
-    firstUpdated() {
+    firstUpdated () {
       if (super.firstUpdated) super.firstUpdated();
-      this.shadowRoot.querySelector('label').addEventListener('click', (e) => {e.preventDefault();});
+      this.shadowRoot.querySelector('label').addEventListener('click', (e) => { e.preventDefault(); });
     }
 
     static get styles () {
       return [
         super.styles,
-        errorMessage,
-        hideNativeWidget,
-        requiredLabelAsterisk,
-        css`
+        super.stylePatterns.errorMessage,
+        super.stylePatterns.hideNativeWidget,
+        super.stylePatterns.requiredLabelAsterisk,
+        super.lit.css`
           :host {
             display: block;
             position: relative;
@@ -1614,7 +1441,7 @@ const NnInputRange = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
         `
       ]
     }
@@ -1626,7 +1453,7 @@ const NnInputSearch = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
         `
       ]
     }
@@ -1638,7 +1465,7 @@ const NnInputSubmit = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
         `
       ]
     }
@@ -1650,7 +1477,7 @@ const NnInputTel = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
         `
       ]
     }
@@ -1662,7 +1489,7 @@ const NnInputTime = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
         `
       ]
     }
@@ -1674,7 +1501,7 @@ const NnInputUrl = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
         `
       ]
     }
@@ -1686,7 +1513,7 @@ const NnInputWeek = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
         `
       ]
     }
@@ -1698,7 +1525,7 @@ const NnMeter = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
         `
       ]
     }
@@ -1710,7 +1537,7 @@ const NnProgress = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
         `
       ]
     }
@@ -1742,10 +1569,10 @@ const NnSelect = (base) => {
     static get styles () {
       return [
         super.styles,
-        inputField,
-        inputLabel,
-        floatingLabel,
-        css`
+        super.stylePatterns.inputField,
+        super.stylePatterns.inputLabel,
+        super.stylePatterns.floatingLabel,
+        super.lit.css`
           :host::after {
             position: absolute;
             content: '';
@@ -1785,11 +1612,11 @@ const NnTextArea = (base) => {
     static get styles () {
       return [
         super.styles,
-        inputField,
-        inputLabel,
-        floatingLabel,
-        errorMessage,
-        css`
+        super.stylePatterns.inputField,
+        super.stylePatterns.inputLabel,
+        super.stylePatterns.floatingLabel,
+        super.stylePatterns.errorMessage,
+        super.lit.css`
           :host {
             --mat-form-element-height: 80px;
           }
@@ -1813,7 +1640,7 @@ const EeAutocomplete = (base) => {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
         `
       ]
     }
@@ -1825,8 +1652,8 @@ const EeAutocompleteInputSpans = (base) => {
     static get styles () {
       return [
         super.styles,
-        inputField,
-        css`
+        super.stylePatterns.inputField,
+        super.lit.css`
         `
       ]
     }
@@ -1834,7 +1661,7 @@ const EeAutocompleteInputSpans = (base) => {
 };
 
 window.TP_THEME = {
-  common: Global,
+  common: Common,
 
   'ee-drawer': EeDrawer,
   'ee-network': EeNetwork,

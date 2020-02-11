@@ -1,4 +1,4 @@
-import { Global } from './global.js'
+import { Common } from './common.js'
 
 import { EeDrawer } from './elements/ee-drawer.js'
 import { EeNetwork } from './elements/ee-network.js'
@@ -42,7 +42,7 @@ import { EeAutocomplete } from './elements/ee-autocomplete.js'
 import { EeAutocompleteInputSpans } from './elements/ee-autocomplete-input-spans.js'
 
 window.TP_THEME = {
-  common: Global,
+  common: Common,
 
   'ee-drawer': EeDrawer,
   'ee-network': EeNetwork,

@@ -1,11 +1,9 @@
-import { css } from 'lit-element'
-
 export const NnButton = (base) => {
   return class Base extends base {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
           :host {
             width: fit-content;
             padding: 4px 10px;

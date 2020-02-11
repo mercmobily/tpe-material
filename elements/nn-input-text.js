@@ -1,7 +1,4 @@
-import { css } from 'lit-element'
-import { classMap } from 'lit-html/directives/class-map'
 import { AddHasValueAttributeMixin } from '../mixins/AddHasValueAttributeMixin'
-import { inputLabel, inputField, floatingLabel, errorMessage } from '../style-patterns.js'
 
 export const NnInputText = (base) => {
   return class Base extends AddHasValueAttributeMixin(base) {
@@ -48,11 +45,11 @@ export const NnInputText = (base) => {
     static get styles () {
       return [
         super.styles,
-        inputField,
-        inputLabel,
-        floatingLabel,
-        errorMessage,
-        css`
+        super.stylePatterns.inputField,
+        super.stylePatterns.inputLabel,
+        super.stylePatterns.floatingLabel,
+        super.stylePatterns.errorMessage,
+        super.lit.css`
           #native[has-leading] {
             padding-left: 36px;
           }

@@ -1,6 +1,4 @@
-import { css } from 'lit-element'
 import { AddHasValueAttributeMixin } from '../mixins/AddHasValueAttributeMixin'
-import { inputLabel, inputField, floatingLabel } from '../style-patterns.js'
 
 export const NnInputDatalist = (base) => {
   return class Base extends AddHasValueAttributeMixin(base) {
@@ -25,10 +23,10 @@ export const NnInputDatalist = (base) => {
     static get styles () {
       return [
         super.styles,
-        inputField,
-        inputLabel,
-        floatingLabel,
-        css`
+        super.stylePatterns.inputField,
+        super.stylePatterns.inputLabel,
+        super.stylePatterns.floatingLabel,
+        super.lit.css`
           :host::after {
             position: absolute;
             content: '';

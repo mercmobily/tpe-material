@@ -1,11 +1,9 @@
-import { css } from 'lit-element'
-
 export const EnForm = (base) => {
   return class Base extends base {
     static get styles () {
       return [
         super.styles,
-        css`
+        super.lit.css`
           :invalid {
             border: unset;
             border-bottom: var(--mat-input-border, var(--mat-theme-border));
