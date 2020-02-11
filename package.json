@@ -24,8 +24,7 @@
     "url": "https://github.com/mobily-enterprises/nn/issues"
   },
   "homepage": "https://github.com/mobily-enterprises/nn#readme",
-  "dependencies": {
-  },
+  "dependencies": {},
   "standard": {
     "globals": [
       "customElements",
