@@ -150,11 +150,16 @@ export const Common = (base) => {
             min-width: fit-content;
             white-space: nowrap;
             --half-height: calc(var(--mat-form-element-height) / 2);
-            top: var(--half-height);
+            top: calc(var(--half-height) + 8px);
             transform: translateY(-50%);
             left: 12px;
             will-change: transform;
             transition: transform 0.1s ease-in-out;
+          }
+
+          :host([dense]) label {
+            top: var(--half-height);
+            left: 8px;
           }
 
           #native:invalid + label,
@@ -168,7 +173,8 @@ export const Common = (base) => {
           :host([has-value]) label,
           #native:focus ~ label,
           #native:placeholder-shown ~ label {
-            transform: translateY(calc(var(--half-height) / -1)) translateX(-10px) scale(0.8);
+            transform: translateY(calc(var(--half-height) / -1)) scale(0.8);
+            transform-origin: 0 0;
             transition: transform 0.1s ease-in-out, background 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
           }
 
@@ -181,7 +187,8 @@ export const Common = (base) => {
           :host([outlined]:not([dense][has-value]) label,
           :host([outlined]:not([dense]) #native:focus ~ label,
           :host([outlined]:not([dense]) #native:placeholder-shown ~ label {
-            transform: translateY(calc(var(--half-height) / -1)) translateX(-10px) scale(0.8);
+            transform: translateY(calc(var(--half-height) / -1)) scale(0.8);
+            transform-origin: 0 0;
             background: var(--mat-label-background, transparent);
           }
         `,
@@ -192,6 +199,7 @@ export const Common = (base) => {
           #native:placeholder-shown ~ label {
             top: 12px !important;
             transform: translateY(-50%) scale(0.8);
+            transform-origin: 0 0;
           }
 
         `,
