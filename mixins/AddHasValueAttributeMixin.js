@@ -3,7 +3,7 @@ export const AddHasValueAttributeMixin = (base) => {
   return class Base extends base {
     _observeInput (e) {
       const target = e.currentTarget
-      this.toggleAttribute('has-value', !!target.value.length)
+      this.toggleAttribute('has-value', typeof target !== 'undefined')
     }
 
     _observeFocus (e) {
@@ -18,7 +18,7 @@ export const AddHasValueAttributeMixin = (base) => {
       super.afterSettingProperty()
 
       if (prop === 'value') {
-        this.toggleAttribute('has-value', !!newValue)
+        this.toggleAttribute('has-value', typeof newValue !== 'undefined')
       }
     }
 
@@ -29,7 +29,7 @@ export const AddHasValueAttributeMixin = (base) => {
       this.native.addEventListener('focus', this._observeFocus)
       this.native.addEventListener('blur', this._observeBlur)
 
-      this.toggleAttribute('has-value', !!this.value)
+      this.toggleAttribute('has-value', typeof this.value !== 'undefined')
     }
   }
 }
