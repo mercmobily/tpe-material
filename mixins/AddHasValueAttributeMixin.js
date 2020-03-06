@@ -3,7 +3,7 @@ export const AddHasValueAttributeMixin = (base) => {
   return class Base extends base {
     _observeInput (e) {
       const target = e.currentTarget
-      this.toggleAttribute('has-value', typeof target !== 'undefined')
+      this.toggleAttribute('has-value', __hasValue(target.value))
     }
 
     _observeFocus (e) {
@@ -11,6 +11,8 @@ export const AddHasValueAttributeMixin = (base) => {
     }
 
     _observeBlur (e) {
+      console.log(this)
+
       this.toggleAttribute('has-focus', false)
     }
 
@@ -18,18 +20,22 @@ export const AddHasValueAttributeMixin = (base) => {
       super.afterSettingProperty()
 
       if (prop === 'value') {
-        this.toggleAttribute('has-value', typeof newValue !== 'undefined')
+        this.toggleAttribute('has-value', __hasValue(newValue))
       }
     }
 
     firstUpdated () {
       super.firstUpdated()
 
-      this.native.addEventListener('input', this._observeInput)
-      this.native.addEventListener('focus', this._observeFocus)
-      this.native.addEventListener('blur', this._observeBlur)
+      this.native.addEventListener('input', this._observeInput.bind(this))
+      this.native.addEventListener('focus', this._observeFocus.bind(this))
+      this.native.addEventListener('blur', this._observeBlur.bind(this))
 
-      this.toggleAttribute('has-value', typeof this.value !== 'undefined')
+      this.toggleAttribute('has-value', __hasValue(this.value))
     }
   }
+}
+
+function __hasValue (v) {
+  return v !== 'undefined' && v !== 'null' && v !== ''
 }
