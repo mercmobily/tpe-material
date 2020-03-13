@@ -5,7 +5,7 @@ export const NnButton = (base) => {
         super.styles,
         super.lit.css`
           :host {
-            width: fit-content;
+            width: max-content;
             padding: 4px 10px;
           }
 
@@ -42,7 +42,8 @@ export const NnButton = (base) => {
           }
 
           #native:disabled:hover {
-            background-color: initial !important;
+            background-color: grey;
+            filter: brightness(130%);
           }
 
           button:hover {
