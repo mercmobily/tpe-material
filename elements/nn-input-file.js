@@ -5,7 +5,20 @@ export const NnInputFile = (base) => {
       return [
         super.styles,
         super.lit.css`
+          :host {
+            min-width: 130px;
+          }
 
+          #filename {
+            box-sizing: border-box;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background-color: whitesmoke;
+          }
         `
       ]
     }
@@ -31,7 +44,12 @@ export const NnInputFile = (base) => {
         <nn-button @click=${this._chooseFile}>${this.buttonLabel}</nn-button>
         <input type="file" id="native" @change="${this.fileNameChanged}" ?hidden=${this.hideNative}>
         ${this.ifValidationMessageAfter}
-        <div id="filename">${this.fileName}</div>
+        ${this.fileName
+        ? html`
+            <div id="filename" title="${this.fileName}">${this.fileName}</div>
+          `
+        : ''
+        }
         ${this.ifLabelAfter}
       `
     }
