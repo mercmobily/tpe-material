@@ -1,4 +1,3 @@
-import { html } from 'lit-element'
 export const NnInputFile = (base) => {
   return class Base extends base {
     static get styles () {
@@ -27,7 +26,7 @@ export const NnInputFile = (base) => {
       return {
         labelPosition: { type: String, attribute: false },
         validationMessagePosition: { type: String, attribute: false },
-        buttonLabel: { type: String, attribute: 'button-label'}
+        buttonLabel: { type: String, attribute: 'button-label' }
       }
     }
 
@@ -40,7 +39,7 @@ export const NnInputFile = (base) => {
     }
 
     themeRender () {
-      return html`
+      return this.lit.html`
         <nn-button @click=${this._chooseFile}>${this.buttonLabel}</nn-button>
         <input type="file" id="native" @change="${this.fileNameChanged}" ?hidden=${this.hideNative}>
         ${this.ifValidationMessageAfter}
@@ -55,7 +54,7 @@ export const NnInputFile = (base) => {
     }
 
     _chooseFile (e) {
-      this.shadowRoot.querySelector('#native').click() 
+      this.shadowRoot.querySelector('#native').click()
     }
   }
 }
