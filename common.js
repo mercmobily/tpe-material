@@ -212,7 +212,7 @@ export const Common = (base) => {
             font-size: 80%;
             white-space: nowrap;
             opacity: 0;
-            line-height: 0.8;
+            line-height: 0;
           }
 
           #native:invalid ~ span.error-message {
