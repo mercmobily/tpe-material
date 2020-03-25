@@ -10,7 +10,7 @@ export const NnButton = (base) => {
           }
 
           button {
-            display: inline-block;
+            display: flex;
             white-space: nowrap;
             height: var(--nn-button-height, 30px);
             -webkit-appearance: none;
@@ -31,9 +31,15 @@ export const NnButton = (base) => {
             vertical-align: middle;
           }
 
-          :host ::slotted(svg) {
-            display: inline-block;
-            vertical-align: middle;
+          :host ::slotted(svg:first-child) {
+            margin: auto;
+            margin-inline-end: 10px;
+          }
+
+          :host ::slotted(.last :last-child) {
+            margin: auto;
+            margin-inline-end: unset;
+            margin-inline-start: 10px;
           }
 
           #native:disabled {
