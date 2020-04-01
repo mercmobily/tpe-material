@@ -197,7 +197,7 @@ export const Common = (base) => {
           label, #native:focus ~ label,
           :host([has-value]) label,
           #native:placeholder-shown ~ label {
-            transform: translateY(calc(var(--half-height) / -1)) scale(0.8);;
+            transform: translateY(calc(var(--half-height) / -1)) scale(0.8);
             transform-origin: 0 0;
           }
 
@@ -207,6 +207,7 @@ export const Common = (base) => {
           :host([dense]) #native:placeholder-shown ~ label
            {
             top: var(--half-height);
+            transform: translateY(calc(var(--half-height) / -1)) scale(0.8);
             left: 8px;
           }
 
