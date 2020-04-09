@@ -141,12 +141,11 @@ export const Common = (base) => {
            label {
             position: absolute;
             display: inline-flex;
-            font-size: 16px;
+            font-size: var(--mat-label-font-size, 14px);
             border: var(--mat-label-border, none);
             color: var(--mat-label-color,  var(--mat-primary-color-light));
-            padding-left: 6px;
-            padding-right: 6px;
-            margin-left: 8px;
+            padding: var(--mat-label-padding, 0 6px)
+            margin-left: var(--mat-label-margin-left, 8px);
             min-width: fit-content;
             white-space: nowrap;
             --half-height: calc(var(--mat-form-element-height) / 2);
@@ -159,7 +158,7 @@ export const Common = (base) => {
 
           :host([dense]) label {
             top: var(--half-height);
-            left: 8px;
+            left: var(--mat-label-margin-left, 8px);
           }
 
           #native:invalid + label,

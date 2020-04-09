@@ -10,7 +10,7 @@ export const NnButton = (base) => {
           }
 
           button {
-            display: inline;
+            display: var(--nn-button-display, inline);
             white-space: nowrap;
             height: var(--nn-button-height, 30px);
             -webkit-appearance: none;
