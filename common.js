@@ -144,7 +144,7 @@ export const Common = (base) => {
             font-size: var(--mat-label-font-size, 14px);
             border: var(--mat-label-border, none);
             color: var(--mat-label-color,  var(--mat-primary-color-light));
-            padding: var(--mat-label-padding, 0 6px)
+            padding: var(--mat-label-padding, 0 6px);
             margin-left: var(--mat-label-margin-left, 8px);
             min-width: fit-content;
             white-space: nowrap;
