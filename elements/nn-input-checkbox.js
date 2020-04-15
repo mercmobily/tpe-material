@@ -68,7 +68,7 @@ export const NnInputCheckBox = (base) => {
           }
 
           div#label-text {
-            padding: var(----nn-checkbox-label-padding);
+            padding: var(--nn-checkbox-label-padding);
           }
 
           #native:invalid + label, #native:invalid ~ label {
