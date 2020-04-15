@@ -38,6 +38,7 @@ export const NnSelect = (base) => {
             right: 20px;
             bottom: 50%;
             user-select: none;
+            pointer-events: none;
           }
 
           #native {
