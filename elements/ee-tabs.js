@@ -54,7 +54,7 @@ export const EeTabs = (base) => {
 
         :host nav > ::slotted(*[active])::after {
           content: '';
-          background-color: var(--ee-tabs-selected-color);
+          background-color: var(--ee-tabs-active-color);
           left: 0.5px;
           right: 0.5px;
           bottom: 0;
