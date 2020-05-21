@@ -44,7 +44,7 @@ export const NnInputFile = (base) => {
         <input type="file" id="native" @change="${this.fileNameChanged}" ?hidden=${this.hideNative}>
         ${this.ifValidationMessageAfter}
         ${this.fileName
-        ? html`
+        ? this.lit.html`
             <div id="filename" title="${this.fileName}">${this.fileName}</div>
           `
         : ''
