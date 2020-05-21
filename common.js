@@ -62,7 +62,6 @@ export const Common = (base) => {
 
           :host([outlined]) {
             --mat-background: white;
-            --mat-background-dark: white;
             --mat-theme-border: 2px solid #ccc;
           }
 
