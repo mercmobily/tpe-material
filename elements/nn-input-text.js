@@ -49,6 +49,7 @@ export const NnInputText = (base) => {
         super.stylePatterns.inputLabel,
         super.stylePatterns.floatingLabel,
         super.stylePatterns.errorMessage,
+        super.stylePatterns.requiredLabelAsterisk,
         super.lit.css`
           #native[has-leading] {
             padding-left: 36px;
