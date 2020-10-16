@@ -29,6 +29,7 @@ export const NnSelect = (base) => {
         super.stylePatterns.inputLabel,
         super.stylePatterns.fixedLabel,
         super.stylePatterns.errorMessage,
+        super.stylePatterns.requiredLabelAsterisk,
         super.lit.css`
           :host::after {
             position: absolute;

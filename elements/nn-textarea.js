@@ -24,6 +24,7 @@ export const NnTextArea = (base) => {
         super.stylePatterns.inputLabel,
         super.stylePatterns.floatingLabel,
         super.stylePatterns.errorMessage,
+        super.stylePatterns.requiredLabelAsterisk,
         super.lit.css`
           :host {
             --mat-form-element-height: 80px;

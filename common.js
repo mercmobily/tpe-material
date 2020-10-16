@@ -10,7 +10,8 @@ export const Common = (base) => {
         // Guidelines can be found in: https://material.io/components
 
         requiredLabelAsterisk: css`
-          #native:required ~ label div#label-text::after {
+           #native:required ~ label div#label-text::after,
+          :host([required]) label div#label-text::after {
             content: '*';
             padding-left: 2px;
             position: relative;
