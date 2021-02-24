@@ -2,22 +2,6 @@ import { AddHasValueAttributeMixin } from '../mixins/AddHasValueAttributeMixin'
 
 export const NnInputText = (base) => {
   return class Base extends AddHasValueAttributeMixin(base) {
-    // render () {
-    //   if (this.themeRender) return this.themeRender()
-    //   const class = {
-    //     'has-value': !!this.value,
-    //     'has-leading': !!this.leading,
-    //     'has-trailing': !!this.trailing
-    //   };
-    //   return html`
-    //     ${this.ifLabelBefore}
-    //     ${this.ifValidationMessageBefore}
-    //     <input class=${classMap(class)} type="text" id="native" real-time-event="input">
-    //     ${this.ifValidationMessageAfter}
-    //     ${this.ifLabelAfter}
-    //     <slot id="datalist-slot" name="datalist"></slot>
-    //   `
-    // }
     // Style depends on CSS being able to find label as sibling of the #native element.
     // CSS can select next siblings, but not previous.  This guarantees label is rendered after #native in the shadowDOM
     static get properties () {
@@ -48,6 +32,8 @@ export const NnInputText = (base) => {
         super.stylePatterns.inputField,
         super.stylePatterns.inputLabel,
         super.stylePatterns.floatingLabel,
+        super.stylePatterns.hoverStyle,
+        super.stylePatterns.focusStyle,
         super.stylePatterns.errorMessage,
         super.stylePatterns.requiredLabelAsterisk,
         super.lit.css`
@@ -73,10 +59,9 @@ export const NnInputText = (base) => {
             right: var( --mat-input-icon-right, 16px);
           }
 
-          :host([has-leading]:not([has-value])) label{
-            margin-left: 36px
+          :host([has-leading]) label{
+            margin-left: 30px
           }
-
         `
       ]
     }

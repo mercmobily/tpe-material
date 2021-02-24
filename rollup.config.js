@@ -1,7 +1,7 @@
 import resolve from 'rollup-plugin-node-resolve'
 // import allFiles from './rollup/allFiles.js'
 // import babel from 'rollup-plugin-babel'
-import minify from 'rollup-plugin-babel-minify'
+// import minify from 'rollup-plugin-babel-minify'
 
 module.exports = [
 
@@ -11,7 +11,7 @@ module.exports = [
       file: 'distr/material.js', // IIFE ONE FILE
       format: 'iife'
     },
-    plugins: [resolve({}), minify({})]
+    plugins: [resolve({})]
   },
 
   {

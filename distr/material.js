@@ -1,127 +1,2529 @@
-"use strict";function _templateObject45(){var t=_taggedTemplateLiteral(["\n        "]);return _templateObject45=function(){return t},t}function _templateObject44(){var t=_taggedTemplateLiteral(["\n        "]);return _templateObject44=function(){return t},t}function _templateObject43(){var t=_taggedTemplateLiteral(["\n          :host {\n            --mat-form-element-height: 80px;\n          }\n          /* Following material design guidelines, non-resizeable textarea */\n          textarea#native {\n            font-family: var(--mat-font-family);\n            padding-top: 12px;\n            min-height: 80px;\n            height: unset;\n            padding-top: 30px;\n            width: -webkit-fill-available;\n          }\n        "]);return _templateObject43=function(){return t},t}function _templateObject42(){var t=_taggedTemplateLiteral(["\n          :host::after {\n            position: absolute;\n            content: '';\n            border: 4px solid transparent;\n            border-top-color: var(--mat-boundaries-color);\n            right: 20px;\n            bottom: 50%;\n            user-select: none;\n          }\n\n          #native {\n            width: 100%;\n          }\n        "]);return _templateObject42=function(){return t},t}function _templateObject41(){var t=_taggedTemplateLiteral(["\n        "]);return _templateObject41=function(){return t},t}function _templateObject40(){var t=_taggedTemplateLiteral(["\n        "]);return _templateObject40=function(){return t},t}function _templateObject39(){var t=_taggedTemplateLiteral(["\n        "]);return _templateObject39=function(){return t},t}function _templateObject38(){var t=_taggedTemplateLiteral(["\n        "]);return _templateObject38=function(){return t},t}function _templateObject37(){var t=_taggedTemplateLiteral(["\n        "]);return _templateObject37=function(){return t},t}function _templateObject36(){var t=_taggedTemplateLiteral(["\n        "]);return _templateObject36=function(){return t},t}function _templateObject35(){var t=_taggedTemplateLiteral(["\n        "]);return _templateObject35=function(){return t},t}function _templateObject34(){var t=_taggedTemplateLiteral(["\n        "]);return _templateObject34=function(){return t},t}function _templateObject33(){var t=_taggedTemplateLiteral(["\n        "]);return _templateObject33=function(){return t},t}function _templateObject32(){var t=_taggedTemplateLiteral(["\n          :host {\n            display: block;\n            position: relative;\n            padding-left: 24px;\n            margin-bottom: 12px;\n            cursor: pointer;\n            -webkit-user-select: none;\n            -moz-user-select: none;\n            -ms-user-select: none;\n            user-select: none;\n          }\n\n          :host::after {\n            content: '';\n            user-select: none;\n            position: absolute;\n            height: 8px;\n            width: 8px;\n            border-radius: 50%;\n            left: 5px;\n            top: 5px;\n            will-change: transform;\n            z-index: 0;\n          }\n\n          :host(:hover)::after {\n            background: var(--mat-primary-color);\n            opacity: 0.1;\n            transform: scale(4);\n            transition: all 0.3s ease-in-out;\n          }\n\n          :host([has-focus])::after {\n            background: var(--mat-primary-color);\n            opacity: 0.3;\n            transform: scale(4);\n            transition: all 0.3s ease-in-out;\n          }\n\n          div#label-text {\n            padding-left: 16px;\n          }\n\n          #native:invalid {\n            background-color: var(--mat-error-color);\n            color: var(--mat-error-text);\n            border-color: var(--mat-error-text);\n          }\n\n          :invalid {\n            border: unset;\n            border-bottom: var(--mat-input-border, var(--mat-theme-border));\n          }\n\n          #native:invalid + label, #native:invalid ~ label {\n            background-color: none;\n            --mat-label-color: darkred;\n          }\n\n          label::before { /* Background box */\n            content: '';\n            position: absolute;\n            top: 0;\n            left: 0;\n            height: 15px;\n            width: 15px;\n            border: 2px solid var(--mat-boundaries-color);\n            border-radius: 50%;\n            transition: background-color 0.3s ease-in-out;\n            z-index: 1;\n          }\n\n          #native:checked ~ label::before {\n            border-color: var(--mat-primary-color);\n            background-color: transparent;\n            transition: background-color 0.3s ease-in-out;\n          }\n\n          #native:hover ~ label::before {\n            filter: brightness(115%);\n            transition: filter 0.3s ease-in-out;\n          }\n\n          #native:focus ~ label::before {\n            box-shadow: var(--mat-theme-box-shadow2);\n            border-color: var(--mat-primary-color);\n            filter: brightness(115%);\n          }\n\n          #native:not([checked]):hover ~ label::before {\n            filter: brightness(130%);\n            transition: background-color 0.3s ease-in-out;\n          }\n\n          label::after { /* Checkmark */\n            content: \"\";\n            position: absolute;\n            opacity: 0;\n            width: 19px;\n            height: 19px;\n            will-change: transform, opacity;\n            transition: opacity 0.3s ease-out;\n            z-index: 2;\n          }\n\n          #native:checked ~ label::after {\n            display: block;\n            left: 0;\n            top: 0;\n            opacity: 1;\n            background-color:  var(--mat-primary-color);\n            border-radius: 50%;\n            -webkit-transform: scale(0.5);\n            -ms-transform: scale(0.5);\n            transform: scale(0.5);\n            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in;\n          }\n\n        "]);return _templateObject32=function(){return t},t}function _templateObject31(){var t=_taggedTemplateLiteral(["\n        "]);return _templateObject31=function(){return t},t}function _templateObject30(){var t=_taggedTemplateLiteral(["\n        "]);return _templateObject30=function(){return t},t}function _templateObject29(){var t=_taggedTemplateLiteral(["\n        "]);return _templateObject29=function(){return t},t}function _templateObject28(){var t=_taggedTemplateLiteral(["\n        "]);return _templateObject28=function(){return t},t}function _templateObject27(){var t=_taggedTemplateLiteral(["\n        "]);return _templateObject27=function(){return t},t}function _templateObject26(){var t=_taggedTemplateLiteral(["\n          :host::after {\n            position: absolute;\n            content: '';\n            border: 4px solid transparent;\n            border-top-color: var(--mat-boundaries-color);\n            right: 20px;\n            bottom: 50%;\n            user-select: none;\n          }\n\n          #native {\n            width: 100%;\n          }\n        "]);return _templateObject26=function(){return t},t}function _templateObject25(){var t=_taggedTemplateLiteral(["\n         :host {\n            position: relative;\n            padding: 0 12px;\n            padding-bottom: 16px;\n            margin: 10px;\n          }\n\n          #native {\n            appearance: none;\n            -moz-appearance: none;\n            -webkit-appearance: none;\n            box-sizing: border-box;\n            display: block;\n            border-radius: var(--mat-input-border-radius, 4px 4px 0 0);\n            border-width: 0;\n            border-style: none;\n            border-color: transparent;\n            background-color: var(--mat-background, #eee);\n            padding: 6px;\n            height: 40px;\n            box-shadow: var(--mat-theme-box-shadow);\n            transition: background-color 0.3s ease-in-out,\n                        color 0.3s ease-in-out,\n                        box-shadow 0.3s ease-in-out;\n          }\n        "]);return _templateObject25=function(){return t},t}function _templateObject24(){var t=_taggedTemplateLiteral(["\n          :host {\n            display: block;\n            position: relative;\n            padding-left: 24px;\n            margin-bottom: 12px;\n            cursor: pointer;\n            -webkit-user-select: none;\n            -moz-user-select: none;\n            -ms-user-select: none;\n            user-select: none;\n          }\n\n          :host::after:not(:disabled) {\n            content: '';\n            user-select: none;\n            position: absolute;\n            height: 8px;\n            width: 8px;\n            border-radius: 50%;\n            left: 5px;\n            top: 5px;\n            will-change: transform;\n            z-index: 0;\n          }\n\n          :host(:hover:not(:disabled))::after {\n            background: var(--mat-primary-color);\n            opacity: 0.1;\n            transform: scale(4);\n            transition: all 0.3s ease-in-out;\n          }\n\n          :host([has-focus])::after {\n            background: var(--mat-primary-color);\n            opacity: 0.4 !important;\n            transform: scale(4);\n            transition: all 0.3s ease-in-out;\n          }\n\n          div#label-text {\n            padding: var(----nn-checkbox-label-padding);\n          }\n\n          #native:invalid + label, #native:invalid ~ label {\n            background-color: none;\n            --mat-label-color: darkred;\n          }\n\n          label::before { /* Background box */\n            content: '';\n            position: absolute;\n            top: 0;\n            left: 0;\n            height: 15px;\n            width: 15px;\n            border: 2px solid var(--mat-boundaries-color);\n            border-radius: 3px;\n            transition: background-color 0.3s ease-in-out;\n            z-index: 1;\n          }\n\n          #native:checked ~ label::before {\n            border-color: var(--mat-primary-color);\n            background-color:  var(--mat-primary-color);\n            transition: background-color 0.3s ease-in-out;\n          }\n\n          :host(:hover:not(:disabled)) label::before {\n            filter: brightness(135%);\n            transition: filter 0.3s ease-in-out;\n            box-shadow: var(--mat-theme-box-shadow2);\n          }\n\n          #native:focus ~ label::before {\n            box-shadow: var(--mat-theme-box-shadow2);\n            border-color: var(--mat-primary-color);\n            filter: brightness(135%);\n          }\n\n          #native:not([checked]):hover:not(:disabled) ~ label::before {\n            filter: brightness(150%);\n            background-color: var(--mat-primary-color);\n            transition: background-color 0.3s ease-in-out;\n          }\n\n          label::after { /* Checkmark */\n            content: \"\";\n            position: absolute;\n            opacity: 0;\n            will-change: transform, opacity;\n            transition: opacity 0.3s ease-out;\n            z-index: 2;\n          }\n\n          #native:checked ~ label::after {\n            display: block;\n            left: 6px;\n            top: 2px;\n            width: 5px;\n            height: 10px;\n            opacity: 1;\n            border: solid white;\n            border-radius: 2px;\n            border-width: 0 3px 3px 0;\n            -webkit-transform: rotate(405deg);\n            -ms-transform: rotate(405deg);\n            transform: rotate(405deg);\n            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in;\n          }\n        "]);return _templateObject24=function(){return t},t}function _templateObject23(){var t=_taggedTemplateLiteral(["\n        "]);return _templateObject23=function(){return t},t}function _templateObject22(){var t=_taggedTemplateLiteral(["\n          :host {\n            width: fit-content;\n            padding: 4px 10px;\n          }\n\n          button {\n            display: inline-block;\n            white-space: nowrap;\n            height: var(--nn-button-height, 30px);\n            -webkit-appearance: none;\n            background-color: var(--mat-primary-color);\n            border-radius: var(--nn-button-border-radius, 4px);\n            border: var(--nn-button-border, var(--mat-theme-border));\n            border-color: transparent;\n            text-transform: uppercase;\n            font-size: 14px;\n            color: var(--nn-button-color, var(--mat-text-on-dark));\n            fill: var(--nn-button-color, var(--mat-text-on-dark));\n            border-image: none;\n            width: 100%;\n            align-items: center;\n          }\n\n          :host ::slotted(*) {\n            vertical-align: middle;\n          }\n\n          :host ::slotted(svg) {\n            display: inline-block;\n            vertical-align: middle;\n          }\n\n          #native:disabled {\n            filter: saturate(0);\n            opacity: 0.85;\n          }\n\n          #native:disabled:hover {\n            background-color: initial !important;\n          }\n\n          button:hover {\n            filter: brightness(130%);\n          }\n\n          button:active {\n            outline: none;\n          }\n\n          button:focus {\n            border-color: var(--mat-primary-color, rgba(255, 255, 255, 0.7));\n            background-color: var(--mat-primary-color-light);\n            filter: brightness(115%);\n          }\n\n          button:active {\n            transition: all 0.2s ease-out;\n            border-style: inset;\n            border-color: var(--mat-primary-color);\n          }\n\n          :host([text]:not([outlined])) button,\n          :host([text]:not([raised])) button {\n            background-color: transparent;\n            color: var(--nn-button-color, var(--mat-primary-color));\n            fill: var(--nn-button-color, var(--mat-primary-color));\n          }\n\n          :host([text]:not([outlined])) button:focus,\n          :host([text]:not([raised])) button:focus {\n            background-color: transparent;\n            color: var(--nn-button-color, var(--mat-primary-color));\n            fill: var(--nn-button-color, var(--mat-primary-color));\n            box-shadow: var(--mat-theme-box-shadow2);\n          }\n\n          :host([text]:not([outlined])) button:active,\n          :host([text]:not([raised])) button:active {\n            border-style: solid;\n            border-width: 1px;\n            border-color: transparent;\n          }\n\n          :host([text]:not([outlined])) button:hover,\n          :host([text]:not([raised])) button:hover {\n            background-color: var(--mat-primary-color-light);\n            color: var(--mat-primary-color-dark);\n            fill: var(--mat-primary-color-dark);\n          }\n\n          :host([outlined]:not([text])) button,\n          :host([outlined]:not([raised])) button {\n            background-color: transparent;\n            color: var(--nn-button-color, var(--mat-primary-color));\n            fill: var(--nn-button-color, var(--mat-primary-color));\n            border: var(--nn-button-border, var(--mat-theme-border));\n          }\n\n          :host([outlined]:not([text])) button:hover,\n          :host([outlined]:not([raised])) button:hover {\n            background-color: var(--mat-primary-color-light);\n            color: var(--mat-primary-color-dark);\n            fill: var(--mat-primary-color-dark);\n          }\n\n          :host([raised]:not([text])) button,\n          :host([raised]:not([outlined])) button {\n            box-shadow: var(--mat-theme-box-shadow3);\n            transition: box-shadow 0.2s ease-out;\n          }\n\n          :host([raised]:not([text])) button:active,\n          :host([raised]:not([outlined])) button:active {\n            box-shadow: none;\n            transition: box-shadow 0.2s ease-out;\n            filter: brightness(90%);\n          }\n        "]);return _templateObject22=function(){return t},t}function _templateObject21(){var t=_taggedTemplateLiteral(["\n          :host {\n            display: inline-block;\n            width: fit-content;\n            padding: 10px;\n          }\n\n          :host > input {\n            height: var(--button-height, 30px);\n            -webkit-appearance: none;\n            background-color: var(--nn-input-button-background, var(--mat-primary-color));\n            border-radius: var(--nn-input-button-border-radius, 4px);\n            border: var(--nn-input-button-border, var(--mat-theme-border));\n            border-color: transparent;\n            text-transform: uppercase;\n            color: var(--nn-input-button-color, var(--mat-text-on-dark));\n            border-image: none;\n          }\n\n          input:hover {\n            filter: brightness(130%);\n          }\n\n          input:active, input:focus {\n            outline: none;\n          }\n\n          input:active, :host([outlined]:not([text])) input:active {\n            transition: all 0.2s ease-out;\n            border-color: rgba(0, 0, 0, 0.1);\n            border-style: inset;\n            border-color: var(--mat-primary-color);\n          }\n\n          :host([text]:not([outlined])) input,\n          :host([text]:not([raised])) input {\n            background-color: transparent;\n            color: var(--nn-input-button-color, var(--mat-primary-color));\n          }\n\n          :host([text]:not([outlined])) input:active,\n          :host([text]:not([raised])) input:active {\n            border-style: solid;\n            border-width: 1px;\n            border-color: transparent;\n          }\n\n          :host([text]:not([outlined])) input:hover,\n          :host([text]:not([raised])) input:hover {\n            background-color: var(--mat-primary-color-light);\n            color: var(--mat-primary-color-dark)\n          }\n\n          :host([outlined]:not([text])) input,\n          :host([outlined]:not([raised])) input {\n            background-color: transparent;\n            color: var(--nn-input-button-color, var(--mat-primary-color));\n            border: var(--nn-input-button-border, var(--mat-theme-border));\n          }\n\n          :host([outlined]:not([text])) input:hover,\n          :host([outlined]:not([raised])) input:hover {\n            background-color: var(--mat-primary-color-light);\n            color: var(--mat-primary-color-dark)\n          }\n\n          :host([raised]:not([text])) input,\n          :host([raised]:not([outlined])) input {\n            box-shadow: var(--mat-theme-box-shadow2);\n            transition: box-shadow 0.2s ease-out;\n          }\n\n          :host([raised]:not([text])) input:active,\n          :host([raised]:not([outlined])) input:active {\n            box-shadow: none;\n            transition: box-shadow 0.2s ease-out;\n            filter: brightness(90%);\n          }\n        "]);return _templateObject21=function(){return t},t}function _templateObject20(){var t=_taggedTemplateLiteral(["\n          #native[has-leading] {\n            padding-left: 36px;\n          }\n\n          #native[has-trailing] {\n            padding-right: 36px;\n          }\n\n          ::slotted([slot=leading]),\n          ::slotted([slot=trailing]) {\n            position: absolute;\n            top: var( --mat-input-icon-top, 16px);\n            left: var( --mat-input-icon-left, 16px);\n            height: var( --mat-input-icon-height, 24px);\n            width: var( --mat-input-icon-width, 24px);\n          }\n\n          ::slotted([slot=trailing]) {\n            left: unset;\n            right: var( --mat-input-icon-right, 16px);\n          }\n\n          :host([has-leading]:not([has-value])) label{\n            margin-left: 36px\n          }\n\n        "]);return _templateObject20=function(){return t},t}function _templateObject19(){var t=_taggedTemplateLiteral(["\n\n        ::slotted(#range-amount) {}\n        "]);return _templateObject19=function(){return t},t}function _templateObject18(){var t=_taggedTemplateLiteral(["\n          :invalid {\n            border: unset;\n            border-bottom: var(--mat-input-border, var(--mat-theme-border));\n          }\n\n          ::slotted(*) fieldset {\n            border-radius: 5px;\n            border-style: solid;\n            padding: 16px;\n          }\n\n          ::slotted(*) legend {\n            padding-inline-start: 10px;\n            padding-inline-end: 10px;\n          }\n        "]);return _templateObject18=function(){return t},t}function _templateObject17(){var t=_taggedTemplateLiteral(["\n        "]);return _templateObject17=function(){return t},t}function _templateObject16(){var t=_taggedTemplateLiteral(["\n        "]);return _templateObject16=function(){return t},t}function _templateObject15(){var t=_taggedTemplateLiteral(["\n          button:focus, button:active {\n            outline:0 ;\n          }\n\n          button:active {\n            border: none;\n            filter: brightness(130%);\n          }\n\n          button[disabled] {\n            box-shadow: none;\n            opacity: 0.5;\n            pointer-events: none;\n          }\n\n          button.icon:active {\n            background: #cccccc;\n            border: unset;\n          }\n\n          button {\n            cursor: pointer;\n            height: 56px;\n            width: 56px;\n            margin: 6px;\n            border-radius: 50%;\n            box-shadow: 4px 2px 10px 0 rgba(0,0,0,0.12);\n            padding-top: 5px;\n            fill: var(--mat-fab-color, white);\n            background-color: var(--mat-fab-background, black);\n            color: var(--mat-fab-color, white);\n          }\n\n          :host([mini]) button {\n            height: 40px;\n            width: 40px;\n          }\n\n          button[data-descr]::after {\n            content: '';\n            right: 0;\n            display: inline-block;\n            opacity: 0;\n            position: absolute;\n            width: 0;\n            transform: translateY(-50%);\n            top: 50%;\n            text-align: center;\n            white-space: nowrap;\n            padding: 10px 16px;\n          }\n\n          button[data-descr]:hover::after {\n            content: attr(data-descr);\n            width: fit-content;\n            opacity: 1;\n            background-color: var(--mat-fab-background, black);\n            color: var(--mat-fab-color, white);\n            border-radius: calc(1em + 20px);\n            z-index: 1;\n            right: 105%;\n            font-size: 1em;\n            transition: all 0.3s ease-in-out;\n          }\n\n          button svg {\n            width: var(--mat-fab-icon-width, 24px);\n            height: var(--mat-fab-icon-height, 24px);\n          }\n        "]);return _templateObject15=function(){return t},t}function _templateObject14(){var t=_taggedTemplateLiteral(["\n        :host {\n          --ee-tabs-selected-color: var(--mat-primary-color);\n          --ee-tabs-color: var(--mat-primary-text);\n        }\n\n        :host nav > ::slotted(*:hover) {\n          box-shadow: var(--mat-theme-box-shadow4);\n        }\n\n        :host nav > ::slotted(*) {\n          border-bottom: 0 !important;\n          transition: all 0.3s ease-in-out;\n          position: relative;\n          box-sizing: border-box;\n        }\n\n        :host nav > ::slotted(*[active]) {\n          color: var(--ee-tabs-selected-color);\n          border-bottom: 0;\n        }\n\n        :host nav > ::slotted(*:focus),\n        :host nav > ::slotted(*:hover) {\n          outline:0 ;\n          border-bottom: 0;\n          filter: brightness(150%);\n        }\n\n        :host nav > ::slotted(*)::after,\n        :host nav > ::slotted(*:not([active]))::after {\n          content: '';\n          position: absolute;\n          transition: height 0.3s ease-in-out, left 0.3s ease-in-out, right 0.3s ease-in-out;\n          bottom: 0;\n          left: 50%;\n          right: 50%;\n          height: 1px;\n          background-color: var(--ee-tabs-selected-color);\n        }\n\n        :host nav > ::slotted(*:focus)::after,\n        :host nav > ::slotted(*:hover)::after {\n          height: 1px;\n          left: 0.5px;\n          right: 0.5px;\n          transition: height 0.3s ease-in-out, left 0.3s ease-in-out, right 0.3s ease-in-out;\n        }\n\n        :host nav > ::slotted(*[active])::after {\n          content: '';\n          background-color: var(--ee-tabs-selected-color);\n          left: 0.5px;\n          right: 0.5px;\n          bottom: 0;\n          height: 4px;\n          transition: height 0.3s ease-in-out, left 0.3s ease-in-out, right 0.3s ease-in-out;;\n        }\n\n        :host nav > ::slotted(*:active) {\n          background: #cccccc;\n          border-bottom: 0;\n          box-shadow: none;\n        }\n\n        "]);return _templateObject14=function(){return t},t}function _templateObject13(){var t=_taggedTemplateLiteral(["\n        "]);return _templateObject13=function(){return t},t}function _templateObject12(){var t=_taggedTemplateLiteral(["\n        "]);return _templateObject12=function(){return t},t}function _templateObject11(){var t=_taggedTemplateLiteral(["\n        "]);return _templateObject11=function(){return t},t}function _templateObject10(){var t=_taggedTemplateLiteral(["\n          @-webkit-keyframes fadeIn {\n            0%   { opacity: 0; }\n            100% { opacity: 1; }\n          }\n          @-moz-keyframes fadeIn {\n            0%   { opacity: 0; }\n            100% { opacity: 1; }\n          }\n          @-o-keyframes fadeIn {\n            0%   { opacity: 0; }\n            100% { opacity: 1; }\n          }\n          @keyframes fadeIn {\n            0%   { opacity: 0; }\n            100% { opacity: 1; }\n          }\n\n          @-webkit-keyframes fadeOut {\n            0%   { opacity: 1; }\n            100% { opacity: 0; }\n          }\n          @-moz-keyframes fadeOut {\n            0%   { opacity: 1; }\n            100% { opacity: 0; }\n          }\n          @-o-keyframes fadeOut {\n            0%   { opacity: 1; }\n            100% { opacity: 0; }\n          }\n          @keyframes fadeOut {\n            0%   { opacity: 1; }\n            100% { opacity: 0; }\n          }\n\n          :host {\n            display: block;\n            appearance: none;\n            -moz-appearance: none;\n            -webkit-appearance: none;\n            box-sizing: border-box;\n            --mat-font-family: Roboto, sans-serif;\n            --mat-primary-color: #455a64;\n            --mat-primary-color-light: #718792;\n            --mat-primary-color-dark: #1c313a;\n            --mat-secondary-color: #512da8;\n            --mat-secondary-color-light: #8559da;\n            --mat-secondary-color-dark: #140078;\n            --mat-boundaries-color: #999;\n            --mat-primary-text: #333;\n            --mat-secondary-text: #000;\n            --mat-text-on-dark: #fff;\n            --mat-text-on-light: #000;\n            --mat-error-color: pink;\n            --mat-error-text: darkred;\n            --mat-theme-border-style: solid;\n            --mat-theme-border-width: 1px;\n            --mat-theme-border-color: var(--mat-boundaries-color);\n            --mat-theme-border-radius: 4px;\n            --mat-theme-border: var(--mat-theme-border-width) var(--mat-theme-border-style) var(--mat-theme-border-color);\n            --mat-theme-box-shadow: none;\n            --mat-theme-box-shadow1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);\n            --mat-theme-box-shadow2: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);\n            --mat-theme-box-shadow3: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);\n            --mat-theme-box-shadow4: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);\n            --mat-theme-box-shadow5: 0 25px 50px -12px rgba(0, 0, 0, 0.25));\n            --mat-theme-shadow-transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1);\n            --mat-form-element-height: 56px;\n            --mat-form-element-min-width: 280px;\n            --mat-background: white;\n            --mat-background-dark: #ccc;\n            --mat-label-background: transparent;\n          }\n\n          :host([hidden]) {\n            display: none;\n          }\n        "]);return _templateObject10=function(){return t},t}function _templateObject9(){var t=_taggedTemplateLiteral(["\n          input {\n            position: unset;\n            position: absolute;\n            opacity: 0;\n            cursor: pointer;\n            height: 0;\n            width: 0;\n          }\n        "]);return _templateObject9=function(){return t},t}function _templateObject8(){var t=_taggedTemplateLiteral(["\n          span.error-message {\n            position: absolute;\n            bottom: 0;\n            left: 16px;\n            font-size: 80%;\n            white-space: nowrap;\n            opacity: 0;\n            line-height: 0.8;\n          }\n\n          #native:invalid ~ span.error-message {\n            opacity: 1;\n          }\n        "]);return _templateObject8=function(){return t},t}function _templateObject7(){var t=_taggedTemplateLiteral(["\n          label, #native:focus ~ label,\n          :host([has-value]) label,\n          #native:placeholder-shown ~ label {\n            top: 12px !important;\n            transform: translateY(-50%) scale(0.8);\n          }\n\n        "]);return _templateObject7=function(){return t},t}function _templateObject6(){var t=_taggedTemplateLiteral(["\n          :host([has-value]) label,\n          #native:focus ~ label,\n          #native:placeholder-shown ~ label {\n            transform: translateY(calc(var(--half-height) / -1)) translateX(-10px) scale(0.8);\n            transition: transform 0.1s ease-in-out, background 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);\n          }\n\n          :host([dense][has-value]) label,\n          :host([dense]) #native:focus ~ label,\n          :host([dense]) #native:placeholder-shown ~ label {\n            background: var(--mat-label-background, transparent)\n          }\n\n          :host([outlined]:not([dense][has-value]) label,\n          :host([outlined]:not([dense]) #native:focus ~ label,\n          :host([outlined]:not([dense]) #native:placeholder-shown ~ label {\n            transform: translateY(calc(var(--half-height) / -1)) translateX(-10px) scale(0.8);\n            background: var(--mat-label-background, transparent);\n          }\n        "]);return _templateObject6=function(){return t},t}function _templateObject5(){var t=_taggedTemplateLiteral(["\n           label {\n            position: absolute;\n            display: inline-flex;\n            font-size: 16px;\n            border: var(--mat-label-border, none);\n            color: var(--mat-label-color,  var(--mat-primary-color-light));\n            padding-left: 6px;\n            padding-right: 6px;\n            margin-left: 8px;\n            min-width: fit-content;\n            white-space: nowrap;\n            --half-height: calc(var(--mat-form-element-height) / 2);\n            top: var(--half-height);\n            transform: translateY(-50%);\n            left: 12px;\n            will-change: transform;\n            transition: transform 0.1s ease-in-out;\n          }\n\n          #native:invalid + label,\n          #native:invalid ~ label {\n            background-color: none;\n            --mat-label-color: darkred;\n          }\n        "]);return _templateObject5=function(){return t},t}function _templateObject4(){var t=_taggedTemplateLiteral(["\n          :host {\n            position: relative;\n            padding: 0 12px;\n            padding-bottom: 16px;\n            margin: 5px;\n            min-width: var(--mat-form-element-min-width, fit-content);\n            font-family: var(--font-family);\n          }\n\n          :host([disabled]) {\n            --mat-input-color: var(--mat-boundaries-color, #999)\n          }\n\n          :host([dense]) {\n            --mat-form-element-height: 40px;\n            padding-bottom: 8px;\n          }\n\n          :host([dense]) #native {\n            padding: var(--mat-form-element-padding, 14px 10px 0);\n          }\n\n          :host([outlined]) {\n            --mat-background: white;\n            --mat-background-dark: white;\n            --mat-theme-border: 2px solid #ccc;\n          }\n\n          :host([outlined]) #native {\n            border-bottom: unset;\n            border: var(--mat-input-border, var(--mat-theme-border));\n            border-radius: var(--mat-input-border-radius, 4px);\n          }\n\n          #native {\n            box-sizing: border-box;\n            appearance: none;\n            -moz-appearance: none;\n            -webkit-appearance: none;\n            box-sizing: border-box;\n            display: block;\n            border-radius: var(--mat-input-border-radius, 4px 4px 0 0);\n            border-width: 0;\n            border-style: solid;\n            border-color: transparent;\n            border-bottom: var(--mat-input-border, var(--mat-theme-border));\n            color: var(--mat-input-color, inherit);\n            background-color: var(--mat-background, #eee);\n            width: 100%;\n            font-size: 14px;\n            padding:  var(--mat-form-element-padding, 20px 16px 0);\n            height: var(--mat-form-element-height);\n            box-shadow: var(--mat-theme-box-shadow);\n          }\n\n          #native:focus,\n          #native:active {\n            outline: none\n          }\n\n          #native::selection {\n            background-color: var(--mat-background-dark);\n          }\n\n          #native:invalid {\n            background-color: var(--mat-error-color);\n            color: var(--mat-error-text);\n            border-color: var(--mat-error-text);\n          }\n\n          #native:disabled {\n            filter: saturate(0);\n            opacity: 0.85;\n          }\n\n          #native:disabled:hover {\n            background-color: initial !important;\n          }\n\n          /* this.hoverStyle */\n          :host(:hover) {\n            --mat-theme-box-shadow: var(--mat-theme-box-shadow2);\n          }\n\n          :host([disabled]:hover) {\n            --mat-theme-box-shadow: none;\n          }\n\n          /* this.focusStyle */\n          :host([has-focus]), :host([has-focus][outlined]) {\n            --mat-theme-border: 2px solid var(--mat-primary-color);\n            --mat-label-color: var(--mat-primary-color);\n          }\n\n          :host([has-focus]) #native {\n            padding-bottom: -1px;\n          }\n        "]);return _templateObject4=function(){return t},t}function _templateObject3(){var t=_taggedTemplateLiteral(["\n          :host([has-focus]), :host([has-focus][outlined]) {\n            --mat-theme-border: 2px solid var(--mat-primary-color);\n            --mat-label-color: var(--mat-primary-color);\n          }\n\n          :host([has-focus]) #native {\n            padding-bottom: -1px;\n          }\n        "]);return _templateObject3=function(){return t},t}function _templateObject2(){var t=_taggedTemplateLiteral(["\n          :host(:hover) {\n            --mat-theme-box-shadow: var(--mat-theme-box-shadow2);\n          }\n\n          :host([disabled]:hover) {\n            --mat-theme-box-shadow: none;\n          }\n        "]);return _templateObject2=function(){return t},t}function _templateObject(){var t=_taggedTemplateLiteral(["\n          #native:required ~ label div#label-text::after {\n            content: '*';\n            padding-left: 2px;\n            position: relative;\n          }\n        "]);return _templateObject=function(){return t},t}function _taggedTemplateLiteral(t,e){return e||(e=t.slice(0)),Object.freeze(Object.defineProperties(t,{raw:{value:Object.freeze(e)}}))}function _classCallCheck(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function _defineProperties(t,e){for(var o,a=0;a<e.length;a++)o=e[a],o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(t,o.key,o)}function _createClass(t,e,o){return e&&_defineProperties(t.prototype,e),o&&_defineProperties(t,o),t}function _possibleConstructorReturn(t,e){return e&&("object"===_typeof(e)||"function"==typeof e)?e:_assertThisInitialized(t)}function _assertThisInitialized(t){if(void 0===t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t}function _get(t,e,o){return _get="undefined"!=typeof Reflect&&Reflect.get?Reflect.get:function(t,e,o){var a=_superPropBase(t,e);if(a){var r=Object.getOwnPropertyDescriptor(a,e);return r.get?r.get.call(o):r.value}},_get(t,e,o||t)}function _superPropBase(t,e){for(;!Object.prototype.hasOwnProperty.call(t,e)&&(t=_getPrototypeOf(t),null!==t););return t}function _getPrototypeOf(t){return _getPrototypeOf=Object.setPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__||Object.getPrototypeOf(t)},_getPrototypeOf(t)}function _inherits(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function");t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,writable:!0,configurable:!0}}),e&&_setPrototypeOf(t,e)}function _setPrototypeOf(t,e){return _setPrototypeOf=Object.setPrototypeOf||function(t,e){return t.__proto__=e,t},_setPrototypeOf(t,e)}function _typeof(t){return _typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},_typeof(t)}(function(){'use strict';/**
+(function () {
+  'use strict';
+
+  /**
    * Copyright (c) 2014-present, Facebook, Inc.
    *
    * This source code is licensed under the MIT license found in the
    * LICENSE file in the root directory of this source tree.
-   */var t=function(t){function e(t,e,o,r){// If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
-var n=e&&e.prototype instanceof a?e:a,i=Object.create(n.prototype),s=new b(r||[]);return i._invoke=l(t,o,s),i}// Try/catch helper to minimize deoptimizations. Returns a completion
-// record like context.tryEntries[i].completion. This interface could
-// have been (and was previously) designed to take a closure to be
-// invoked without arguments, but in all the cases we care about we
-// already have an existing method we want to call, so there's no need
-// to create a new function object. We can even get away with assuming
-// the method takes exactly one argument, since that happens to be true
-// in every case, so we don't have to touch the arguments object. The
-// only additional allocation required is the completion record, which
-// has a stable shape and so hopefully should be cheap to allocate.
-function o(t,e,o){try{return{type:"normal",arg:t.call(e,o)}}catch(t){return{type:"throw",arg:t}}}// Dummy constructor functions that we use as the .constructor and
-// .constructor.prototype properties for functions that return Generator
-// objects. For full spec compliance, you may wish to configure your
-// minifier not to mangle the names of these two functions.
-function a(){}function r(){}function n(){}// This is a polyfill for %IteratorPrototype% for environments that
-// don't natively support it.
-// Helper for defining the .next, .throw, and .return methods of the
-// Iterator interface in terms of a single ._invoke method.
-function i(t){["next","throw","return"].forEach(function(e){t[e]=function(t){return this._invoke(e,t)}})}function s(t){function e(a,r,n,i){var s=o(t[a],t,r);if("throw"===s.type)i(s.arg);else{var l=s.arg,d=l.value;return d&&"object"===_typeof(d)&&g.call(d,"__await")?Promise.resolve(d.__await).then(function(t){e("next",t,n,i)},function(t){e("throw",t,n,i)}):Promise.resolve(d).then(function(t){l.value=t,n(l)},function(t){// If a rejected Promise was yielded, throw the rejection back
-// into the async generator function so it can be handled there.
-return e("throw",t,n,i)})}}function a(t,o){function a(){return new Promise(function(a,r){e(t,o,a,r)})}return r=// If enqueue has been called before, then we want to wait until
-// all previous Promises have been resolved before calling invoke,
-// so that results are always delivered in the correct order. If
-// enqueue has not been called before, then it is important to
-// call invoke immediately, without waiting on a callback to fire,
-// so that the async generator function has the opportunity to do
-// any necessary setup in a predictable way. This predictability
-// is why the Promise constructor synchronously invokes its
-// executor callback, and why async functions synchronously
-// execute code before the first await. Since we implement simple
-// async functions in terms of async generators, it is especially
-// important to get this right, even though it requires care.
-r?r.then(a,// Avoid propagating failures to Promises returned by later
-// invocations of the iterator.
-a):a()}// Define the unified helper method that is used to implement .next,
-// .throw, and .return (see defineIteratorMethods).
-var r;this._invoke=a}function l(t,e,a){var r="suspendedStart";return function(n,i){if("executing"===r)throw new Error("Generator is already running");if("completed"===r){if("throw"===n)throw i;// Be forgiving, per 25.3.3.3.3 of the spec:
-// https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
-return h()}for(a.method=n,a.arg=i;;){var s=a.delegate;if(s){var l=d(s,a);if(l){if(l===w)continue;return l}}if("next"===a.method)a.sent=a._sent=a.arg;else if("throw"===a.method){if("suspendedStart"===r)throw r="completed",a.arg;a.dispatchException(a.arg)}else"return"===a.method&&a.abrupt("return",a.arg);r="executing";var p=o(t,e,a);if("normal"===p.type){if(r=a.done?"completed":"suspendedYield",p.arg===w)continue;return{value:p.arg,done:a.done}}"throw"===p.type&&(// Dispatch the exception by looping back around to the
-// context.dispatchException(context.arg) call above.
-r="completed",a.method="throw",a.arg=p.arg)}}}// Call delegate.iterator[context.method](context.arg) and handle the
-// result, either by returning a { value, done } result from the
-// delegate iterator, or by modifying context.method and context.arg,
-// setting context.delegate to null, and returning the ContinueSentinel.
-function d(t,e){var a=t.iterator[e.method];if(a===y){if(e.delegate=null,"throw"===e.method){// Note: ["return"] must be used for ES3 parsing compatibility.
-if(t.iterator["return"]&&(e.method="return",e.arg=y,d(t,e),"throw"===e.method))// If maybeInvokeDelegate(context) changed context.method from
-// "return" to "throw", let that override the TypeError below.
-return w;e.method="throw",e.arg=new TypeError("The iterator does not provide a 'throw' method")}return w}var r=o(a,t.iterator,e.arg);if("throw"===r.type)return e.method="throw",e.arg=r.arg,e.delegate=null,w;var n=r.arg;if(!n)return e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,w;if(n.done)e[t.resultName]=n.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=y);else// Re-yield the result returned by the delegate method.
-return n;// The delegate iterator is finished, so forget it and continue with
-// the outer generator.
-return e.delegate=null,w}// Define Generator.prototype.{next,throw,return} in terms of the
-// unified ._invoke helper method.
-function p(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function c(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function b(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(p,this),this.reset(!0)}function u(t){if(t){var e=t[f];if(e)return e.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var o=-1,a=function e(){for(;++o<t.length;)if(g.call(t,o))return e.value=t[o],e.done=!1,e;return e.value=y,e.done=!0,e};return a.next=a}}// Return an iterator with no values.
-return{next:h}}function h(){return{value:y,done:!0}}var y,m=Object.prototype,g=m.hasOwnProperty,v="function"==typeof Symbol?Symbol:{},f=v.iterator||"@@iterator",x=v.asyncIterator||"@@asyncIterator",k=v.toStringTag||"@@toStringTag";t.wrap=e;var w={},P={};P[f]=function(){return this};var L=Object.getPrototypeOf,_=L&&L(L(u([])));_&&_!==m&&g.call(_,f)&&(P=_);var z=n.prototype=a.prototype=Object.create(P);// Regardless of whether this script is executing as a CommonJS module
-// or not, return the runtime object so that we can declare the variable
-// regeneratorRuntime in the outer scope, which allows this module to be
-// injected easily by `bin/regenerator --include-runtime script.js`.
-return r.prototype=z.constructor=n,n.constructor=r,n[k]=r.displayName="GeneratorFunction",t.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===r||// For the native GeneratorFunction constructor, the best we can
-// do is to check its .name property.
-"GeneratorFunction"===(e.displayName||e.name))},t.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,n):(t.__proto__=n,!(k in t)&&(t[k]="GeneratorFunction")),t.prototype=Object.create(z),t},t.awrap=function(t){return{__await:t}},i(s.prototype),s.prototype[x]=function(){return this},t.AsyncIterator=s,t.async=function(o,a,r,n){var i=new s(e(o,a,r,n));return t.isGeneratorFunction(a)?i// If outerFn is a generator, return the full iterator.
-:i.next().then(function(t){return t.done?t.value:i.next()})},i(z),z[k]="Generator",z[f]=function(){return this},z.toString=function(){return"[object Generator]"},t.keys=function(t){var e=[];for(var o in t)e.push(o);// Rather than returning an object with a next method, we keep
-// things simple and return the next function itself.
-return e.reverse(),function o(){for(;e.length;){var a=e.pop();if(a in t)return o.value=a,o.done=!1,o}// To avoid creating an additional object, we just hang the .value
-// and .done properties off the next function object itself. This
-// also ensures that the minifier will not anonymize the function.
-return o.done=!0,o}},t.values=u,b.prototype={constructor:b,reset:function reset(t){if(this.prev=0,this.next=0,this.sent=this._sent=y,this.done=!1,this.delegate=null,this.method="next",this.arg=y,this.tryEntries.forEach(c),!t)for(var e in this)// Not sure about the optimal order of these conditions:
-"t"===e.charAt(0)&&g.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=y)},stop:function stop(){this.done=!0;var t=this.tryEntries[0],e=t.completion;if("throw"===e.type)throw e.arg;return this.rval},dispatchException:function dispatchException(t){function e(e,a){return n.type="throw",n.arg=t,o.next=e,a&&(o.method="next",o.arg=y),!!a}if(this.done)throw t;for(var o=this,a=this.tryEntries.length-1;0<=a;--a){var r=this.tryEntries[a],n=r.completion;if("root"===r.tryLoc)// Exception thrown outside of any try block that could handle
-// it, so set the completion value of the entire function to
-// throw the exception.
-return e("end");if(r.tryLoc<=this.prev){var s=g.call(r,"catchLoc"),l=g.call(r,"finallyLoc");if(s&&l){if(this.prev<r.catchLoc)return e(r.catchLoc,!0);if(this.prev<r.finallyLoc)return e(r.finallyLoc)}else if(s){if(this.prev<r.catchLoc)return e(r.catchLoc,!0);}else if(!l)throw new Error("try statement without catch or finally");else if(this.prev<r.finallyLoc)return e(r.finallyLoc)}}},abrupt:function abrupt(t,e){for(var o,a=this.tryEntries.length-1;0<=a;--a)if(o=this.tryEntries[a],o.tryLoc<=this.prev&&g.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var r=o;break}r&&("break"===t||"continue"===t)&&r.tryLoc<=e&&e<=r.finallyLoc&&(r=null);var n=r?r.completion:{};return n.type=t,n.arg=e,r?(this.method="next",this.next=r.finallyLoc,w):this.complete(n)},complete:function complete(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),w},finish:function finish(t){for(var e,o=this.tryEntries.length-1;0<=o;--o)if(e=this.tryEntries[o],e.finallyLoc===t)return this.complete(e.completion,e.afterLoc),c(e),w},catch:function _catch(t){for(var e,o=this.tryEntries.length-1;0<=o;--o)if(e=this.tryEntries[o],e.tryLoc===t){var a=e.completion;if("throw"===a.type){var r=a.arg;c(e)}return r}// The context.catch method must only be called with a location
-// argument that corresponds to a known catch block.
-throw new Error("illegal catch attempt")},delegateYield:function delegateYield(t,e,o){return this.delegate={iterator:u(t),resultName:e,nextLoc:o},"next"===this.method&&(this.arg=y),w}},t}(// If this script is executing as a CommonJS module, use module.exports
-// as the regeneratorRuntime namespace. Otherwise create a new empty
-// object. Either way, the resulting object will be used to initialize
-// the regeneratorRuntime variable at the top of this file.
-"object"===("undefined"==typeof module?"undefined":_typeof(module))?module.exports:{});try{regeneratorRuntime=t}catch(e){// This module should not be running in strict mode, so the above
-// assignment should always work unless something is misconfigured. Just
-// in case runtime.js accidentally runs in strict mode, we can escape
-// strict mode using a global Function call. This could conceivably fail
-// if a Content Security Policy forbids using Function, but in that case
-// the proper solution is to fix the accidental strict mode problem. If
-// you've misconfigured your bundler to force strict mode and applied a
-// CSP to forbid Function, and you're not willing to fix either of those
-// problems, please detail your unique predicament in a GitHub issue.
-Function("r","regeneratorRuntime = r")(t)}// In Material Design color tool: https://material.io/tools/color/#!/?view.left=0&view.right=0&primary.color=616161&secondary.color=512DA8
-var e=function(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,[{key:"_observeInput",value:function _observeInput(t){var e=t.currentTarget;this.toggleAttribute("has-value",!!e.value.length)}},{key:"_observeFocus",value:function _observeFocus(){this.toggleAttribute("has-focus",!0)}},{key:"_observeBlur",value:function _observeBlur(){this.toggleAttribute("has-focus",!1)}},{key:"afterSettingProperty",value:function afterSettingProperty(t,o){_get(_getPrototypeOf(e.prototype),"afterSettingProperty",this).call(this),"value"===t&&this.toggleAttribute("has-value",!!o)}},{key:"firstUpdated",value:function firstUpdated(){_get(_getPrototypeOf(e.prototype),"firstUpdated",this).call(this),this.native.addEventListener("input",this._observeInput),this.native.addEventListener("focus",this._observeFocus),this.native.addEventListener("blur",this._observeBlur),this.toggleAttribute("has-value",!!this.value)}}]),e}(t))};window.TP_THEME={common:function Common(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"stylePatterns",get:function get(){var t=_get(_getPrototypeOf(e),"lit",this).css;return{// This is a light implementation of material guidelines.
-// It does not aim to be a complete, comprehensive, Material Design components library, but to showcase the flexiblity of the TPE theming system.
-// Guidelines can be found in: https://material.io/components
-requiredLabelAsterisk:t(_templateObject()),hoverStyle:t(_templateObject2()),focusStyle:t(_templateObject3()),inputField:t(_templateObject4()),inputLabel:t(_templateObject5()),floatingLabel:t(_templateObject6()),fixedLabel:t(_templateObject7()),errorMessage:t(_templateObject8()),hideNativeWidget:t(_templateObject9())}}},{key:"styles",get:function get(){var t=_get(_getPrototypeOf(e),"lit",this).css;return[_get(_getPrototypeOf(e),"styles",this)||[],t(_templateObject10())]}}]),e}(t))},"ee-drawer":function EeDrawer(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject11())]}}]),e}(t))},"ee-network":function EeNetwork(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject12())]}}]),e}(t))},"ee-snack-bar":function EeSnackBar(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject13())]}}]),e}(t))},"ee-tabs":function EeTabs(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject14())]}}]),e}(t))},"ee-fab":function EeFab(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject15())]}}]),e}(t))},"ee-autocomplete":function EeAutocomplete(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject44())]}}]),e}(t))},"ee-autocomplete-input-spans":function EeAutocompleteInputSpans(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"stylePatterns",this).inputField,_get(_getPrototypeOf(e),"lit",this).css(_templateObject45())]}}]),e}(t))},"ee-toolbar":function EeToolbar(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject16())]}}]),e}(t))},"ee-header":function EeHeader(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject17())]}}]),e}(t))},"en-form":function EnForm(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject18())]}}]),e}(t))},"en-input-Range":function EnInputRange(t){return(/*#__PURE__*/function(t){function e(){var t;return _classCallCheck(this,e),t=_possibleConstructorReturn(this,_getPrototypeOf(e).call(this)),t.labelPosition="after",t.validationMessagePosition="after",t}return _inherits(e,t),_createClass(e,null,[{key:"properties",// Style depends on CSS being able to find label as sibling of the #native element.
-// CSS can select next siblings, but not previous.  This guarantees label is rendered after #native in the shadowDOM
-get:function get(){return{labelPosition:{type:String,attribute:!1},validationMessage:{type:String,attribute:!1}}}}]),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"stylePatterns",this).inputField,_get(_getPrototypeOf(e),"stylePatterns",this).errorMessage,_get(_getPrototypeOf(e),"lit",this).css(_templateObject19())]}}]),e}(t))},"nn-button":function NnButton(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject22())]}}]),e}(t))},"nn-form":function NnForm(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject23())]}}]),e}(t))},"nn-input-button":function NnInputButton(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject21())]}}]),e}(t))},"nn-input-checkbox":function NnInputCheckBox(t){return(/*#__PURE__*/function(t){function e(){var t;return _classCallCheck(this,e),t=_possibleConstructorReturn(this,_getPrototypeOf(e).call(this)),t.labelPosition="after",t.validationMessagePosition="after",t.label="",t}return _inherits(e,t),_createClass(e,null,[{key:"properties",// Style depends on CSS being able to find label as sibling of the #native element.
-// CSS can select next siblings, but not previous.  This guarantees label is rendered after #native in the shadowDOM
-get:function get(){return{labelPosition:{type:String,attribute:!1},validationMessage:{type:String,attribute:!1}}}}]),_createClass(e,[{key:"firstUpdated",value:function firstUpdated(){_get(_getPrototypeOf(e.prototype),"firstUpdated",this)&&_get(_getPrototypeOf(e.prototype),"firstUpdated",this).call(this),this.shadowRoot.querySelector("label").addEventListener("click",function(t){t.stopPropagation()})}}],[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"stylePatterns",this).errorMessage,_get(_getPrototypeOf(e),"stylePatterns",this).hideNativeWidget,_get(_getPrototypeOf(e),"stylePatterns",this).requiredLabelAsterisk,_get(_getPrototypeOf(e),"lit",this).css(_templateObject24())]}}]),e}(t))},"nn-input-color":function NnInputColor(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"stylePatterns",this).hoverStyle,_get(_getPrototypeOf(e),"stylePatterns",this).focusStyle,_get(_getPrototypeOf(e),"lit",this).css(_templateObject25())]}}]),e}(t))},"nn-input-datalist":function NnInputDatalist(t){return(/*#__PURE__*/function(t){function e(){var t;return _classCallCheck(this,e),t=_possibleConstructorReturn(this,_getPrototypeOf(e).call(this)),t.labelPosition="after",t.validationMessagePosition="after",t}return _inherits(e,t),_createClass(e,null,[{key:"properties",get:function get(){return{labelPosition:{type:String,attribute:!1},validationMessage:{type:String,attribute:!1}}}}]),_createClass(e,[{key:"connectedCallback",value:function connectedCallback(){var t=this;_get(_getPrototypeOf(e.prototype),"connectedCallback",this).call(this),this.onclick=function(){t.native.click()}}}],[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"stylePatterns",this).inputField,_get(_getPrototypeOf(e),"stylePatterns",this).inputLabel,_get(_getPrototypeOf(e),"stylePatterns",this).floatingLabel,_get(_getPrototypeOf(e),"lit",this).css(_templateObject26())]}}]),e}(e(t)))},"nn-input-date":function NnInputDate(t){return(/*#__PURE__*/function(t){function e(){var t;return _classCallCheck(this,e),t=_possibleConstructorReturn(this,_getPrototypeOf(e).call(this)),t.labelPosition="after",t.validationMessagePosition="after",t}return _inherits(e,t),_createClass(e,null,[{key:"properties",// Style depends on CSS being able to find label as sibling of the #native element.
-// CSS can select next siblings, but not previous.  This guarantees label is rendered after #native in the shadowDOM
-get:function get(){return{labelPosition:{type:String,attribute:!1},validationMessage:{type:String,attribute:!1}}}}]),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"stylePatterns",this).inputField,_get(_getPrototypeOf(e),"stylePatterns",this).inputLabel,_get(_getPrototypeOf(e),"stylePatterns",this).fixedLabel,_get(_getPrototypeOf(e),"stylePatterns",this).errorMessage]}}]),e}(t))},"nn-input-date-time-local":function NnInputDateTimeLocal(t){return(/*#__PURE__*/function(t){function e(){var t;return _classCallCheck(this,e),t=_possibleConstructorReturn(this,_getPrototypeOf(e).call(this)),t.labelPosition="after",t.validationMessagePosition="after",t}return _inherits(e,t),_createClass(e,null,[{key:"properties",// Style depends on CSS being able to find label as sibling of the #native element.
-// CSS can select next siblings, but not previous.  This guarantees label is rendered after #native in the shadowDOM
-get:function get(){return{labelPosition:{type:String,attribute:!1},validationMessage:{type:String,attribute:!1}}}}]),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"stylePatterns",this).inputField,_get(_getPrototypeOf(e),"stylePatterns",this).inputLabel,_get(_getPrototypeOf(e),"stylePatterns",this).fixedLabel,_get(_getPrototypeOf(e),"stylePatterns",this).errorMessage]}}]),e}(t))},"nn-input-email":function NnInputEmail(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject27())]}}]),e}(t))},"nn-input-file":function NnInputFile(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject28())]}}]),e}(t))},"nn-input-month":function NnInputMonth(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject29())]}}]),e}(t))},"nn-input-number":function NnInputNumber(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject30())]}}]),e}(t))},"nn-input-password":function NnInputPassword(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject31())]}}]),e}(t))},"nn-input-radio":function NnInputRadio(t){return(/*#__PURE__*/function(t){function e(){var t;return _classCallCheck(this,e),t=_possibleConstructorReturn(this,_getPrototypeOf(e).call(this)),t.labelPosition="after",t.validationMessagePosition="after",t.label="",t}return _inherits(e,t),_createClass(e,null,[{key:"properties",// Style depends on CSS being able to find label as sibling of the #native element.
-// CSS can select next siblings, but not previous.  This guarantees label is rendered after #native in the shadowDOM
-get:function get(){return{labelPosition:{type:String,attribute:!1},validationMessage:{type:String,attribute:!1}}}}]),_createClass(e,[{key:"firstUpdated",value:function firstUpdated(){_get(_getPrototypeOf(e.prototype),"firstUpdated",this)&&_get(_getPrototypeOf(e.prototype),"firstUpdated",this).call(this),this.shadowRoot.querySelector("label").addEventListener("click",function(t){t.preventDefault()})}}],[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"stylePatterns",this).errorMessage,_get(_getPrototypeOf(e),"stylePatterns",this).hideNativeWidget,_get(_getPrototypeOf(e),"stylePatterns",this).requiredLabelAsterisk,_get(_getPrototypeOf(e),"lit",this).css(_templateObject32())]}}]),e}(t))},"nn-input-range":function NnInputRange(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject33())]}}]),e}(t))},"nn-input-search":function NnInputSearch(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject34())]}}]),e}(t))},"nn-input-submit":function NnInputSubmit(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject35())]}}]),e}(t))},"nn-input-tel":function NnInputTel(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject36())]}}]),e}(t))},"nn-input-text":function NnInputText(t){return(/*#__PURE__*/function(t){function e(){var t;return _classCallCheck(this,e),t=_possibleConstructorReturn(this,_getPrototypeOf(e).call(this)),t.labelPosition="after",t.validationMessagePosition="after",t}return _inherits(e,t),_createClass(e,null,[{key:"properties",// render () {
-//   if (this.themeRender) return this.themeRender()
-//   const class = {
-//     'has-value': !!this.value,
-//     'has-leading': !!this.leading,
-//     'has-trailing': !!this.trailing
-//   };
-//   return html`
-//     ${this.ifLabelBefore}
-//     ${this.ifValidationMessageBefore}
-//     <input class=${classMap(class)} type="text" id="native" real-time-event="input">
-//     ${this.ifValidationMessageAfter}
-//     ${this.ifLabelAfter}
-//     <slot id="datalist-slot" name="datalist"></slot>
-//   `
-// }
-// Style depends on CSS being able to find label as sibling of the #native element.
-// CSS can select next siblings, but not previous.  This guarantees label is rendered after #native in the shadowDOM
-get:function get(){return{labelPosition:{type:String,attribute:!1},validationMessagePosition:{type:String,attribute:!1}}}}]),_createClass(e,[{key:"firstUpdated",value:function firstUpdated(){_get(_getPrototypeOf(e.prototype),"firstUpdated",this).call(this);for(var t=0,o=["leading","trailing"];t<o.length;t++){var a=o[t],r=document.createElement("slot");r.setAttribute("name",a),this.shadowRoot.appendChild(r)}}}],[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"stylePatterns",this).inputField,_get(_getPrototypeOf(e),"stylePatterns",this).inputLabel,_get(_getPrototypeOf(e),"stylePatterns",this).floatingLabel,_get(_getPrototypeOf(e),"stylePatterns",this).errorMessage,_get(_getPrototypeOf(e),"lit",this).css(_templateObject20())]}}]),e}(e(t)))},"nn-input-time":function NnInputTime(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject37())]}}]),e}(t))},"nn-input-url":function NnInputUrl(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject38())]}}]),e}(t))},"nn-input-week":function NnInputWeek(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject39())]}}]),e}(t))},"nn-meter":function NnMeter(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject40())]}}]),e}(t))},"nn-progress":function NnProgress(t){return(/*#__PURE__*/function(t){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,_getPrototypeOf(e).apply(this,arguments))}return _inherits(e,t),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"lit",this).css(_templateObject41())]}}]),e}(t))},"nn-select":function NnSelect(t){return(/*#__PURE__*/function(t){function e(){var t;return _classCallCheck(this,e),t=_possibleConstructorReturn(this,_getPrototypeOf(e).call(this)),t.labelPosition="after",t.validationMessagePosition="after",t}return _inherits(e,t),_createClass(e,null,[{key:"properties",// Style depends on CSS being able to find label as sibling of the #native element.
-// CSS can select next siblings, but not previous.  This guarantees label is rendered after #native in the shadowDOM
-get:function get(){return{labelPosition:{type:String,attribute:!1},validationMessage:{type:String,attribute:!1}}}}]),_createClass(e,[{key:"connectedCallback",value:function connectedCallback(){var t=this;_get(_getPrototypeOf(e.prototype),"connectedCallback",this).call(this),this.onclick=function(){t.native.click()}}}],[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"stylePatterns",this).inputField,_get(_getPrototypeOf(e),"stylePatterns",this).inputLabel,_get(_getPrototypeOf(e),"stylePatterns",this).floatingLabel,_get(_getPrototypeOf(e),"lit",this).css(_templateObject42())]}}]),e}(e(t)))},"nn-textarea":function NnTextArea(t){return(/*#__PURE__*/function(t){function e(){var t;return _classCallCheck(this,e),t=_possibleConstructorReturn(this,_getPrototypeOf(e).call(this)),t.labelPosition="after",t.validationMessagePosition="after",t}return _inherits(e,t),_createClass(e,null,[{key:"properties",// Style depends on CSS being able to find label as sibling of the #native element.
-// CSS can select next siblings, but not previous.  This guarantees label is rendered after #native in the shadowDOM
-get:function get(){return{labelPosition:{type:String,attribute:!1},validationMessage:{type:String,attribute:!1}}}}]),_createClass(e,null,[{key:"styles",get:function get(){return[_get(_getPrototypeOf(e),"styles",this),_get(_getPrototypeOf(e),"stylePatterns",this).inputField,_get(_getPrototypeOf(e),"stylePatterns",this).inputLabel,_get(_getPrototypeOf(e),"stylePatterns",this).floatingLabel,_get(_getPrototypeOf(e),"stylePatterns",this).errorMessage,_get(_getPrototypeOf(e),"lit",this).css(_templateObject43())]}}]),e}(e(t)))}}})();
+   */
+
+  var runtime = (function (exports) {
+
+    var Op = Object.prototype;
+    var hasOwn = Op.hasOwnProperty;
+    var undefined$1; // More compressible than void 0.
+    var $Symbol = typeof Symbol === "function" ? Symbol : {};
+    var iteratorSymbol = $Symbol.iterator || "@@iterator";
+    var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
+    var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+
+    function wrap(innerFn, outerFn, self, tryLocsList) {
+      // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
+      var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
+      var generator = Object.create(protoGenerator.prototype);
+      var context = new Context(tryLocsList || []);
+
+      // The ._invoke method unifies the implementations of the .next,
+      // .throw, and .return methods.
+      generator._invoke = makeInvokeMethod(innerFn, self, context);
+
+      return generator;
+    }
+    exports.wrap = wrap;
+
+    // Try/catch helper to minimize deoptimizations. Returns a completion
+    // record like context.tryEntries[i].completion. This interface could
+    // have been (and was previously) designed to take a closure to be
+    // invoked without arguments, but in all the cases we care about we
+    // already have an existing method we want to call, so there's no need
+    // to create a new function object. We can even get away with assuming
+    // the method takes exactly one argument, since that happens to be true
+    // in every case, so we don't have to touch the arguments object. The
+    // only additional allocation required is the completion record, which
+    // has a stable shape and so hopefully should be cheap to allocate.
+    function tryCatch(fn, obj, arg) {
+      try {
+        return { type: "normal", arg: fn.call(obj, arg) };
+      } catch (err) {
+        return { type: "throw", arg: err };
+      }
+    }
+
+    var GenStateSuspendedStart = "suspendedStart";
+    var GenStateSuspendedYield = "suspendedYield";
+    var GenStateExecuting = "executing";
+    var GenStateCompleted = "completed";
+
+    // Returning this object from the innerFn has the same effect as
+    // breaking out of the dispatch switch statement.
+    var ContinueSentinel = {};
+
+    // Dummy constructor functions that we use as the .constructor and
+    // .constructor.prototype properties for functions that return Generator
+    // objects. For full spec compliance, you may wish to configure your
+    // minifier not to mangle the names of these two functions.
+    function Generator() {}
+    function GeneratorFunction() {}
+    function GeneratorFunctionPrototype() {}
+
+    // This is a polyfill for %IteratorPrototype% for environments that
+    // don't natively support it.
+    var IteratorPrototype = {};
+    IteratorPrototype[iteratorSymbol] = function () {
+      return this;
+    };
+
+    var getProto = Object.getPrototypeOf;
+    var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+    if (NativeIteratorPrototype &&
+        NativeIteratorPrototype !== Op &&
+        hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
+      // This environment has a native %IteratorPrototype%; use it instead
+      // of the polyfill.
+      IteratorPrototype = NativeIteratorPrototype;
+    }
+
+    var Gp = GeneratorFunctionPrototype.prototype =
+      Generator.prototype = Object.create(IteratorPrototype);
+    GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
+    GeneratorFunctionPrototype.constructor = GeneratorFunction;
+    GeneratorFunctionPrototype[toStringTagSymbol] =
+      GeneratorFunction.displayName = "GeneratorFunction";
+
+    // Helper for defining the .next, .throw, and .return methods of the
+    // Iterator interface in terms of a single ._invoke method.
+    function defineIteratorMethods(prototype) {
+      ["next", "throw", "return"].forEach(function(method) {
+        prototype[method] = function(arg) {
+          return this._invoke(method, arg);
+        };
+      });
+    }
+
+    exports.isGeneratorFunction = function(genFun) {
+      var ctor = typeof genFun === "function" && genFun.constructor;
+      return ctor
+        ? ctor === GeneratorFunction ||
+          // For the native GeneratorFunction constructor, the best we can
+          // do is to check its .name property.
+          (ctor.displayName || ctor.name) === "GeneratorFunction"
+        : false;
+    };
+
+    exports.mark = function(genFun) {
+      if (Object.setPrototypeOf) {
+        Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
+      } else {
+        genFun.__proto__ = GeneratorFunctionPrototype;
+        if (!(toStringTagSymbol in genFun)) {
+          genFun[toStringTagSymbol] = "GeneratorFunction";
+        }
+      }
+      genFun.prototype = Object.create(Gp);
+      return genFun;
+    };
+
+    // Within the body of any async function, `await x` is transformed to
+    // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
+    // `hasOwn.call(value, "__await")` to determine if the yielded value is
+    // meant to be awaited.
+    exports.awrap = function(arg) {
+      return { __await: arg };
+    };
+
+    function AsyncIterator(generator) {
+      function invoke(method, arg, resolve, reject) {
+        var record = tryCatch(generator[method], generator, arg);
+        if (record.type === "throw") {
+          reject(record.arg);
+        } else {
+          var result = record.arg;
+          var value = result.value;
+          if (value &&
+              typeof value === "object" &&
+              hasOwn.call(value, "__await")) {
+            return Promise.resolve(value.__await).then(function(value) {
+              invoke("next", value, resolve, reject);
+            }, function(err) {
+              invoke("throw", err, resolve, reject);
+            });
+          }
+
+          return Promise.resolve(value).then(function(unwrapped) {
+            // When a yielded Promise is resolved, its final value becomes
+            // the .value of the Promise<{value,done}> result for the
+            // current iteration.
+            result.value = unwrapped;
+            resolve(result);
+          }, function(error) {
+            // If a rejected Promise was yielded, throw the rejection back
+            // into the async generator function so it can be handled there.
+            return invoke("throw", error, resolve, reject);
+          });
+        }
+      }
+
+      var previousPromise;
+
+      function enqueue(method, arg) {
+        function callInvokeWithMethodAndArg() {
+          return new Promise(function(resolve, reject) {
+            invoke(method, arg, resolve, reject);
+          });
+        }
+
+        return previousPromise =
+          // If enqueue has been called before, then we want to wait until
+          // all previous Promises have been resolved before calling invoke,
+          // so that results are always delivered in the correct order. If
+          // enqueue has not been called before, then it is important to
+          // call invoke immediately, without waiting on a callback to fire,
+          // so that the async generator function has the opportunity to do
+          // any necessary setup in a predictable way. This predictability
+          // is why the Promise constructor synchronously invokes its
+          // executor callback, and why async functions synchronously
+          // execute code before the first await. Since we implement simple
+          // async functions in terms of async generators, it is especially
+          // important to get this right, even though it requires care.
+          previousPromise ? previousPromise.then(
+            callInvokeWithMethodAndArg,
+            // Avoid propagating failures to Promises returned by later
+            // invocations of the iterator.
+            callInvokeWithMethodAndArg
+          ) : callInvokeWithMethodAndArg();
+      }
+
+      // Define the unified helper method that is used to implement .next,
+      // .throw, and .return (see defineIteratorMethods).
+      this._invoke = enqueue;
+    }
+
+    defineIteratorMethods(AsyncIterator.prototype);
+    AsyncIterator.prototype[asyncIteratorSymbol] = function () {
+      return this;
+    };
+    exports.AsyncIterator = AsyncIterator;
+
+    // Note that simple async functions are implemented on top of
+    // AsyncIterator objects; they just return a Promise for the value of
+    // the final result produced by the iterator.
+    exports.async = function(innerFn, outerFn, self, tryLocsList) {
+      var iter = new AsyncIterator(
+        wrap(innerFn, outerFn, self, tryLocsList)
+      );
+
+      return exports.isGeneratorFunction(outerFn)
+        ? iter // If outerFn is a generator, return the full iterator.
+        : iter.next().then(function(result) {
+            return result.done ? result.value : iter.next();
+          });
+    };
+
+    function makeInvokeMethod(innerFn, self, context) {
+      var state = GenStateSuspendedStart;
+
+      return function invoke(method, arg) {
+        if (state === GenStateExecuting) {
+          throw new Error("Generator is already running");
+        }
+
+        if (state === GenStateCompleted) {
+          if (method === "throw") {
+            throw arg;
+          }
+
+          // Be forgiving, per 25.3.3.3.3 of the spec:
+          // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
+          return doneResult();
+        }
+
+        context.method = method;
+        context.arg = arg;
+
+        while (true) {
+          var delegate = context.delegate;
+          if (delegate) {
+            var delegateResult = maybeInvokeDelegate(delegate, context);
+            if (delegateResult) {
+              if (delegateResult === ContinueSentinel) continue;
+              return delegateResult;
+            }
+          }
+
+          if (context.method === "next") {
+            // Setting context._sent for legacy support of Babel's
+            // function.sent implementation.
+            context.sent = context._sent = context.arg;
+
+          } else if (context.method === "throw") {
+            if (state === GenStateSuspendedStart) {
+              state = GenStateCompleted;
+              throw context.arg;
+            }
+
+            context.dispatchException(context.arg);
+
+          } else if (context.method === "return") {
+            context.abrupt("return", context.arg);
+          }
+
+          state = GenStateExecuting;
+
+          var record = tryCatch(innerFn, self, context);
+          if (record.type === "normal") {
+            // If an exception is thrown from innerFn, we leave state ===
+            // GenStateExecuting and loop back for another invocation.
+            state = context.done
+              ? GenStateCompleted
+              : GenStateSuspendedYield;
+
+            if (record.arg === ContinueSentinel) {
+              continue;
+            }
+
+            return {
+              value: record.arg,
+              done: context.done
+            };
+
+          } else if (record.type === "throw") {
+            state = GenStateCompleted;
+            // Dispatch the exception by looping back around to the
+            // context.dispatchException(context.arg) call above.
+            context.method = "throw";
+            context.arg = record.arg;
+          }
+        }
+      };
+    }
+
+    // Call delegate.iterator[context.method](context.arg) and handle the
+    // result, either by returning a { value, done } result from the
+    // delegate iterator, or by modifying context.method and context.arg,
+    // setting context.delegate to null, and returning the ContinueSentinel.
+    function maybeInvokeDelegate(delegate, context) {
+      var method = delegate.iterator[context.method];
+      if (method === undefined$1) {
+        // A .throw or .return when the delegate iterator has no .throw
+        // method always terminates the yield* loop.
+        context.delegate = null;
+
+        if (context.method === "throw") {
+          // Note: ["return"] must be used for ES3 parsing compatibility.
+          if (delegate.iterator["return"]) {
+            // If the delegate iterator has a return method, give it a
+            // chance to clean up.
+            context.method = "return";
+            context.arg = undefined$1;
+            maybeInvokeDelegate(delegate, context);
+
+            if (context.method === "throw") {
+              // If maybeInvokeDelegate(context) changed context.method from
+              // "return" to "throw", let that override the TypeError below.
+              return ContinueSentinel;
+            }
+          }
+
+          context.method = "throw";
+          context.arg = new TypeError(
+            "The iterator does not provide a 'throw' method");
+        }
+
+        return ContinueSentinel;
+      }
+
+      var record = tryCatch(method, delegate.iterator, context.arg);
+
+      if (record.type === "throw") {
+        context.method = "throw";
+        context.arg = record.arg;
+        context.delegate = null;
+        return ContinueSentinel;
+      }
+
+      var info = record.arg;
+
+      if (! info) {
+        context.method = "throw";
+        context.arg = new TypeError("iterator result is not an object");
+        context.delegate = null;
+        return ContinueSentinel;
+      }
+
+      if (info.done) {
+        // Assign the result of the finished delegate to the temporary
+        // variable specified by delegate.resultName (see delegateYield).
+        context[delegate.resultName] = info.value;
+
+        // Resume execution at the desired location (see delegateYield).
+        context.next = delegate.nextLoc;
+
+        // If context.method was "throw" but the delegate handled the
+        // exception, let the outer generator proceed normally. If
+        // context.method was "next", forget context.arg since it has been
+        // "consumed" by the delegate iterator. If context.method was
+        // "return", allow the original .return call to continue in the
+        // outer generator.
+        if (context.method !== "return") {
+          context.method = "next";
+          context.arg = undefined$1;
+        }
+
+      } else {
+        // Re-yield the result returned by the delegate method.
+        return info;
+      }
+
+      // The delegate iterator is finished, so forget it and continue with
+      // the outer generator.
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    // Define Generator.prototype.{next,throw,return} in terms of the
+    // unified ._invoke helper method.
+    defineIteratorMethods(Gp);
+
+    Gp[toStringTagSymbol] = "Generator";
+
+    // A Generator should always return itself as the iterator object when the
+    // @@iterator function is called on it. Some browsers' implementations of the
+    // iterator prototype chain incorrectly implement this, causing the Generator
+    // object to not be returned from this call. This ensures that doesn't happen.
+    // See https://github.com/facebook/regenerator/issues/274 for more details.
+    Gp[iteratorSymbol] = function() {
+      return this;
+    };
+
+    Gp.toString = function() {
+      return "[object Generator]";
+    };
+
+    function pushTryEntry(locs) {
+      var entry = { tryLoc: locs[0] };
+
+      if (1 in locs) {
+        entry.catchLoc = locs[1];
+      }
+
+      if (2 in locs) {
+        entry.finallyLoc = locs[2];
+        entry.afterLoc = locs[3];
+      }
+
+      this.tryEntries.push(entry);
+    }
+
+    function resetTryEntry(entry) {
+      var record = entry.completion || {};
+      record.type = "normal";
+      delete record.arg;
+      entry.completion = record;
+    }
+
+    function Context(tryLocsList) {
+      // The root entry object (effectively a try statement without a catch
+      // or a finally block) gives us a place to store values thrown from
+      // locations where there is no enclosing try statement.
+      this.tryEntries = [{ tryLoc: "root" }];
+      tryLocsList.forEach(pushTryEntry, this);
+      this.reset(true);
+    }
+
+    exports.keys = function(object) {
+      var keys = [];
+      for (var key in object) {
+        keys.push(key);
+      }
+      keys.reverse();
+
+      // Rather than returning an object with a next method, we keep
+      // things simple and return the next function itself.
+      return function next() {
+        while (keys.length) {
+          var key = keys.pop();
+          if (key in object) {
+            next.value = key;
+            next.done = false;
+            return next;
+          }
+        }
+
+        // To avoid creating an additional object, we just hang the .value
+        // and .done properties off the next function object itself. This
+        // also ensures that the minifier will not anonymize the function.
+        next.done = true;
+        return next;
+      };
+    };
+
+    function values(iterable) {
+      if (iterable) {
+        var iteratorMethod = iterable[iteratorSymbol];
+        if (iteratorMethod) {
+          return iteratorMethod.call(iterable);
+        }
+
+        if (typeof iterable.next === "function") {
+          return iterable;
+        }
+
+        if (!isNaN(iterable.length)) {
+          var i = -1, next = function next() {
+            while (++i < iterable.length) {
+              if (hasOwn.call(iterable, i)) {
+                next.value = iterable[i];
+                next.done = false;
+                return next;
+              }
+            }
+
+            next.value = undefined$1;
+            next.done = true;
+
+            return next;
+          };
+
+          return next.next = next;
+        }
+      }
+
+      // Return an iterator with no values.
+      return { next: doneResult };
+    }
+    exports.values = values;
+
+    function doneResult() {
+      return { value: undefined$1, done: true };
+    }
+
+    Context.prototype = {
+      constructor: Context,
+
+      reset: function(skipTempReset) {
+        this.prev = 0;
+        this.next = 0;
+        // Resetting context._sent for legacy support of Babel's
+        // function.sent implementation.
+        this.sent = this._sent = undefined$1;
+        this.done = false;
+        this.delegate = null;
+
+        this.method = "next";
+        this.arg = undefined$1;
+
+        this.tryEntries.forEach(resetTryEntry);
+
+        if (!skipTempReset) {
+          for (var name in this) {
+            // Not sure about the optimal order of these conditions:
+            if (name.charAt(0) === "t" &&
+                hasOwn.call(this, name) &&
+                !isNaN(+name.slice(1))) {
+              this[name] = undefined$1;
+            }
+          }
+        }
+      },
+
+      stop: function() {
+        this.done = true;
+
+        var rootEntry = this.tryEntries[0];
+        var rootRecord = rootEntry.completion;
+        if (rootRecord.type === "throw") {
+          throw rootRecord.arg;
+        }
+
+        return this.rval;
+      },
+
+      dispatchException: function(exception) {
+        if (this.done) {
+          throw exception;
+        }
+
+        var context = this;
+        function handle(loc, caught) {
+          record.type = "throw";
+          record.arg = exception;
+          context.next = loc;
+
+          if (caught) {
+            // If the dispatched exception was caught by a catch block,
+            // then let that catch block handle the exception normally.
+            context.method = "next";
+            context.arg = undefined$1;
+          }
+
+          return !! caught;
+        }
+
+        for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+          var entry = this.tryEntries[i];
+          var record = entry.completion;
+
+          if (entry.tryLoc === "root") {
+            // Exception thrown outside of any try block that could handle
+            // it, so set the completion value of the entire function to
+            // throw the exception.
+            return handle("end");
+          }
+
+          if (entry.tryLoc <= this.prev) {
+            var hasCatch = hasOwn.call(entry, "catchLoc");
+            var hasFinally = hasOwn.call(entry, "finallyLoc");
+
+            if (hasCatch && hasFinally) {
+              if (this.prev < entry.catchLoc) {
+                return handle(entry.catchLoc, true);
+              } else if (this.prev < entry.finallyLoc) {
+                return handle(entry.finallyLoc);
+              }
+
+            } else if (hasCatch) {
+              if (this.prev < entry.catchLoc) {
+                return handle(entry.catchLoc, true);
+              }
+
+            } else if (hasFinally) {
+              if (this.prev < entry.finallyLoc) {
+                return handle(entry.finallyLoc);
+              }
+
+            } else {
+              throw new Error("try statement without catch or finally");
+            }
+          }
+        }
+      },
+
+      abrupt: function(type, arg) {
+        for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+          var entry = this.tryEntries[i];
+          if (entry.tryLoc <= this.prev &&
+              hasOwn.call(entry, "finallyLoc") &&
+              this.prev < entry.finallyLoc) {
+            var finallyEntry = entry;
+            break;
+          }
+        }
+
+        if (finallyEntry &&
+            (type === "break" ||
+             type === "continue") &&
+            finallyEntry.tryLoc <= arg &&
+            arg <= finallyEntry.finallyLoc) {
+          // Ignore the finally entry if control is not jumping to a
+          // location outside the try/catch block.
+          finallyEntry = null;
+        }
+
+        var record = finallyEntry ? finallyEntry.completion : {};
+        record.type = type;
+        record.arg = arg;
+
+        if (finallyEntry) {
+          this.method = "next";
+          this.next = finallyEntry.finallyLoc;
+          return ContinueSentinel;
+        }
+
+        return this.complete(record);
+      },
+
+      complete: function(record, afterLoc) {
+        if (record.type === "throw") {
+          throw record.arg;
+        }
+
+        if (record.type === "break" ||
+            record.type === "continue") {
+          this.next = record.arg;
+        } else if (record.type === "return") {
+          this.rval = this.arg = record.arg;
+          this.method = "return";
+          this.next = "end";
+        } else if (record.type === "normal" && afterLoc) {
+          this.next = afterLoc;
+        }
+
+        return ContinueSentinel;
+      },
+
+      finish: function(finallyLoc) {
+        for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+          var entry = this.tryEntries[i];
+          if (entry.finallyLoc === finallyLoc) {
+            this.complete(entry.completion, entry.afterLoc);
+            resetTryEntry(entry);
+            return ContinueSentinel;
+          }
+        }
+      },
+
+      "catch": function(tryLoc) {
+        for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+          var entry = this.tryEntries[i];
+          if (entry.tryLoc === tryLoc) {
+            var record = entry.completion;
+            if (record.type === "throw") {
+              var thrown = record.arg;
+              resetTryEntry(entry);
+            }
+            return thrown;
+          }
+        }
+
+        // The context.catch method must only be called with a location
+        // argument that corresponds to a known catch block.
+        throw new Error("illegal catch attempt");
+      },
+
+      delegateYield: function(iterable, resultName, nextLoc) {
+        this.delegate = {
+          iterator: values(iterable),
+          resultName: resultName,
+          nextLoc: nextLoc
+        };
+
+        if (this.method === "next") {
+          // Deliberately forget the last sent value so that we don't
+          // accidentally pass it on to the delegate.
+          this.arg = undefined$1;
+        }
+
+        return ContinueSentinel;
+      }
+    };
+
+    // Regardless of whether this script is executing as a CommonJS module
+    // or not, return the runtime object so that we can declare the variable
+    // regeneratorRuntime in the outer scope, which allows this module to be
+    // injected easily by `bin/regenerator --include-runtime script.js`.
+    return exports;
+
+  }(
+    // If this script is executing as a CommonJS module, use module.exports
+    // as the regeneratorRuntime namespace. Otherwise create a new empty
+    // object. Either way, the resulting object will be used to initialize
+    // the regeneratorRuntime variable at the top of this file.
+    typeof module === "object" ? module.exports : {}
+  ));
+
+  try {
+    regeneratorRuntime = runtime;
+  } catch (accidentalStrictMode) {
+    // This module should not be running in strict mode, so the above
+    // assignment should always work unless something is misconfigured. Just
+    // in case runtime.js accidentally runs in strict mode, we can escape
+    // strict mode using a global Function call. This could conceivably fail
+    // if a Content Security Policy forbids using Function, but in that case
+    // the proper solution is to fix the accidental strict mode problem. If
+    // you've misconfigured your bundler to force strict mode and applied a
+    // CSP to forbid Function, and you're not willing to fix either of those
+    // problems, please detail your unique predicament in a GitHub issue.
+    Function("r", "regeneratorRuntime = r")(runtime);
+  }
+
+  // TPE Material Theme
+  // ==================
+  //
+  // This is a light implementation of material guidelines. It does not aim to be
+  // a comprehensive, completely accurate Material Design components library, but to
+  // showcase the flexiblity of the TPE theming system and serve as a reference
+  // for theme development. Guidelines can be found in:
+  // https://material.io/components.
+  //
+  // The main objective of this approach it to use as much of plain CSS power as
+  // possible to achieve the look and feel of material design. This keeps the
+  // theming system lightweight and approacheable to beginner developers and
+  // designers used to work with CSS, but not really with CSS preprocessors or
+  // advanced bundling tools.
+  //
+  // ## The shared theme styles
+  //
+  // First of all, the _Shared_ mixin is defined. It is required by the TPE Theme
+  // system, and applied to all elements, so it is not meant to force the actual
+  // styles directly to the elements, but to provide the shared patterns, global
+  // definitions and the CSS custom properties that will allow
+  //
+  const Shared = (base) => {
+    return class Base extends base {
+      // The _stylePatterns_ object is a collection of CSS styles that implement
+      // Material Design guidelines visual patterns and behaviors. The
+      // CSSTemplateResults are added accordingly in the static styles getter in
+      // the theme mixin for each of the TPE elements.
+      //
+      // For example, to style the native input fields, the mixin assigned to `window.TP_THEME["nn-input-text"]" would have this minimum static styles getter:
+      //
+      // ```
+      // static get styles () {
+      //    return [
+      //        this.stylesPatterns.inputField,
+      //        this.stylesPatterns.inputLabel
+      //    ]
+      // }
+      //
+      // ```
+      //
+      // This version features styles 
+      static get stylePatterns () {
+        const css = super.lit.css;
+        return {
+          // This adds a "*" character after the label for input fields that have the required attribute present.
+          requiredLabelAsterisk: css`
+           #native:required ~ label div#label-text::after,
+          :host([required]) label div#label-text::after {
+            content: '*';
+            padding-left: 2px;
+            position: relative;
+          }
+        `,
+          // Changes elevation on mouse hover
+          hoverStyle: css`
+          :host(:hover) {
+            --mat-theme-box-shadow: var(--mat-theme-box-shadow2);
+          }
+
+          :host([disabled]:hover) {
+            --mat-theme-box-shadow: none;
+          }
+        `,
+          // Styles can be adjusted on focused elements.
+          focusStyle: css`
+          :host([has-focus]), :host([has-focus][outlined]) {
+            --mat-theme-border: 2px solid var(--mat-primary-color);
+            --mat-label-color: var(--mat-primary-color);
+          }
+
+          :host([has-focus]) #native {
+            padding-bottom: -1px;
+          }
+        `,
+          // Text input field specific material implementation. This template is
+          // responsible for the default, dense and outlined styles. (Material Text Fields)[https://material.io/components/text-fields#specs]
+          inputField: css`
+          :host {
+            position: relative;
+            padding: 0 12px;
+            padding-bottom: 16px;
+            margin: 5px;
+            min-width: var(--mat-form-element-min-width, fit-content);
+            font-family: var(--font-family);
+          }
+
+          :host([disabled]) {
+            --mat-input-color: var(--mat-boundaries-color, #999)
+          }
+
+          :host([dense]) {
+            --mat-form-element-height: 40px;
+            padding-bottom: 8px;
+          }
+
+          :host([dense]) #native {
+            padding: var(--mat-form-element-padding, 14px 10px 0);
+          }
+
+          :host([outlined]) {
+            --mat-background: white;
+            --mat-theme-border: 2px solid #ccc;
+          }
+
+          :host([outlined]) #native {
+            border-bottom: unset;
+            border: var(--mat-input-border, var(--mat-theme-border));
+            border-radius: var(--mat-input-border-radius, 4px);
+          }
+
+          #native {
+            box-sizing: border-box;
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            box-sizing: border-box;
+            display: block;
+            border-radius: var(--mat-input-border-radius, 4px 4px 0 0);
+            border-width: 0;
+            border-style: solid;
+            border-color: transparent;
+            border-bottom: var(--mat-input-border, var(--mat-theme-border));
+            color: var(--mat-input-color, inherit);
+            background-color: var(--mat-background, #eee);
+            width: 100%;
+            font-size: 14px;
+            padding:  var(--mat-form-element-padding, 20px 16px 0);
+            height: var(--mat-form-element-height);
+            box-shadow: var(--mat-theme-box-shadow);
+          }
+
+          #native:focus,
+          #native:active {
+            outline: none
+          }
+
+          #native::selection {
+            background-color: var(--mat-background-dark);
+          }
+
+          #native:invalid {
+            background-color: var(--mat-error-color);
+            color: var(--mat-error-text);
+            border-color: var(--mat-error-text);
+          }
+
+          #native:disabled {
+            filter: saturate(0);
+            opacity: 0.85;
+          }
+
+          #native:disabled:hover {
+            background-color: initial !important;
+          }
+        `,
+
+          // Base style for input labels.
+          inputLabel: css`
+           label {
+            position: absolute;
+            display: inline-flex;
+            font-size: var(--mat-label-font-size, 14px);
+            border: var(--mat-label-border, none);
+            color: var(--mat-label-color,  var(--mat-primary-color-light));
+            padding: var(--mat-label-padding, 0 6px);
+            margin-left: var(--mat-label-margin-left, 8px);
+            min-width: fit-content;
+            white-space: nowrap;
+            --half-height: calc(var(--mat-form-element-height) / 2);
+            top: calc(var(--half-height) + 8px);
+            transform: translateY(-50%);
+            left: 12px;
+            will-change: transform;
+            transition: transform 0.1s ease-in-out;
+          }
+
+          :host([dense]) label {
+            top: var(--half-height);
+            left: var(--mat-label-margin-left, 8px);
+          }
+
+          #native:invalid + label,
+          #native:invalid ~ label {
+            background-color: none;
+            --mat-label-color: darkred;
+          }
+        `,
+          // When applicable (i.e. text input fields), `floatingLabel` should be
+          // used to enable the typical mateiral design label animation.
+          floatingLabel: css`
+          :host([has-value]) label,
+          #native:focus ~ label,
+          #native:placeholder-shown ~ label {
+            transform: translateY(calc(var(--half-height) / -1)) scale(0.8);
+            transform-origin: 0 0;
+            transition: transform 0.1s ease-in-out, background 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          }
+
+          :host([dense][has-value]) label,
+          :host([dense]) #native:focus ~ label,
+          :host([dense]) #native:placeholder-shown ~ label {
+            background: var(--mat-label-background, transparent)
+          }
+
+          :host([outlined]:not([dense][has-value]) label,
+          :host([outlined]:not([dense]) #native:focus ~ label,
+          :host([outlined]:not([dense]) #native:placeholder-shown ~ label {
+            transform: translateY(calc(var(--half-height) / -1)) scale(0.8);
+            transform-origin: 0 0;
+            background: var(--mat-label-background, transparent);
+          }
+        `,
+          // Alternative label style, fixed in the floating position, useful in
+          // cases where the default position might clash with native features,
+          // like the date input placeholder text.
+          fixedLabel: css`
+          label, #native:focus ~ label,
+          :host([has-value]) label,
+          #native:placeholder-shown ~ label {
+            transform: translateY(calc(var(--half-height) / -1)) scale(0.8);
+            transform-origin: 0 0;
+          }
+
+          :host([dense]) label, 
+          :host([dense]) #native:focus ~ label,
+          :host([dense]) :host([has-value]) label,
+          :host([dense]) #native:placeholder-shown ~ label
+           {
+            top: var(--half-height);
+            transform: translateY(calc(var(--half-height) / -1)) scale(0.8);
+            left: 8px;
+          }
+
+        `,
+          // Styling fo the error messages for the input fields.
+          errorMessage: css`
+          span.error-message {
+            position: absolute;
+            bottom: 0;
+            left: 16px;
+            font-size: 80%;
+            white-space: nowrap;
+            opacity: 0;
+            line-height: 0;
+          }
+
+          #native:invalid ~ span.error-message {
+            opacity: 1;
+          }
+        `,
+          // Auxiliary style that will hide the native element, for cases in which
+          // the broser style is not flexible enough for material design
+          // implementation, as is the case for checkboxes and radio inputs.
+          hideNativeWidget: css`
+          input {
+            position: unset;
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+          }
+        `
+        }
+      }
+
+      static get styles () {
+        const css = super.lit.css;
+        return [
+          super.styles || [],
+          css`
+          @-webkit-keyframes fadeIn {
+            0%   { opacity: 0; }
+            100% { opacity: 1; }
+          }
+          @-moz-keyframes fadeIn {
+            0%   { opacity: 0; }
+            100% { opacity: 1; }
+          }
+          @-o-keyframes fadeIn {
+            0%   { opacity: 0; }
+            100% { opacity: 1; }
+          }
+          @keyframes fadeIn {
+            0%   { opacity: 0; }
+            100% { opacity: 1; }
+          }
+
+          @-webkit-keyframes fadeOut {
+            0%   { opacity: 1; }
+            100% { opacity: 0; }
+          }
+          @-moz-keyframes fadeOut {
+            0%   { opacity: 1; }
+            100% { opacity: 0; }
+          }
+          @-o-keyframes fadeOut {
+            0%   { opacity: 1; }
+            100% { opacity: 0; }
+          }
+          @keyframes fadeOut {
+            0%   { opacity: 1; }
+            100% { opacity: 0; }
+          }
+
+          :host {
+            /* These properties as common to all elements and important to enable proper styling of native elements. */
+            display: block;
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            box-sizing: border-box;
+            /* These are the custom properties that make it possible to apply light themes, by changing colors and a few properties, like borders and shadows. */
+            /* Default font */
+            --mat-font-family: Roboto, sans-serif;
+            /* The primary and secondary colors are applied to color accents and help with visual context. (Color Guidelines)[https://material.io/design/color/the-color-system.html#color-theme-creation] */
+            --mat-primary-color: #455a64;
+            --mat-primary-color-light: #718792;
+            --mat-primary-color-dark: #1c313a;
+            --mat-secondary-color: #512da8;
+            --mat-secondary-color-light: #8559da;
+            --mat-secondary-color-dark: #140078;
+            --mat-boundaries-color: #999;
+            --mat-primary-text: #333;
+            --mat-secondary-text: #000;
+            --mat-text-on-dark: #fff;
+            --mat-text-on-light: #000;
+             --mat-error-color: pink;
+            --mat-error-text: darkred;
+            /* Other aspects of the elements are used to convey the general look and feel of the theme. Material Design leans heavily on border and shadows. These are the default values taken from the guidelines. */
+            --mat-theme-border-style: solid;
+            --mat-theme-border-width: 1px;
+            --mat-theme-border-color: var(--mat-boundaries-color);
+            --mat-theme-border-radius: 4px;
+            --mat-theme-border: var(--mat-theme-border-width) var(--mat-theme-border-style) var(--mat-theme-border-color);
+            /* TPE uses five elevation levels */
+            --mat-theme-box-shadow: none;
+            --mat-theme-box-shadow1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --mat-theme-box-shadow2: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --mat-theme-box-shadow3: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --mat-theme-box-shadow4: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --mat-theme-box-shadow5: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --mat-theme-shadow-transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
+            --mat-form-element-height: 56px;
+            --mat-form-element-min-width: 280px;
+            --mat-background: white;
+            --mat-background-dark: #ccc;
+            --mat-label-background: transparent;
+          }
+
+          :host([hidden]) {
+            display: none;
+          }
+
+        `
+        ]
+      }
+    }
+  };
+
+  // Default theme colors in Material Design color tool:
+  // https://material.io/tools/color/#!/?view.left=0&view.right=0&primary.color=616161&secondary.color=512DA8
+
+  const EeDrawer = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+        `
+        ]
+      }
+    }
+  };
+
+  const EeNetwork = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+        `
+        ]
+      }
+    }
+  };
+
+  const EeSnackBar = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+        `
+        ]
+      }
+    }
+  };
+
+  const EeTabs = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+        :host {
+          --ee-tabs-selected-color: var(--mat-primary-color);
+          --ee-tabs-color: var(--mat-primary-text);
+        }
+
+        :host nav > ::slotted(*:hover) {
+          box-shadow: var(--mat-theme-box-shadow4);
+        }
+
+        :host nav > ::slotted(*) {
+          border-bottom: 0 !important;
+          transition: all 0.3s ease-in-out;
+          position: relative;
+          box-sizing: border-box;
+        }
+
+        :host nav > ::slotted(*[active]) {
+          color: var(--ee-tabs-selected-color);
+          border-bottom: 0;
+        }
+
+        :host nav > ::slotted(*:focus),
+        :host nav > ::slotted(*:hover) {
+          outline:0 ;
+          border-bottom: 0;
+          filter: brightness(150%);
+        }
+
+        :host nav > ::slotted(*)::after,
+        :host nav > ::slotted(*:not([active]))::after {
+          content: '';
+          position: absolute;
+          transition: height 0.3s ease-in-out, left 0.3s ease-in-out, right 0.3s ease-in-out;
+          bottom: 0;
+          left: 50%;
+          right: 50%;
+          height: 1px;
+          background-color: var(--ee-tabs-selected-color);
+        }
+
+        :host nav > ::slotted(*:focus)::after,
+        :host nav > ::slotted(*:hover)::after {
+          height: 1px;
+          left: 0.5px;
+          right: 0.5px;
+          transition: height 0.3s ease-in-out, left 0.3s ease-in-out, right 0.3s ease-in-out;
+        }
+
+        :host nav > ::slotted(*[active])::after {
+          content: '';
+          background-color: var(--ee-tabs-active-color);
+          left: 0.5px;
+          right: 0.5px;
+          bottom: 0;
+          height: 4px;
+          transition: height 0.3s ease-in-out, left 0.3s ease-in-out, right 0.3s ease-in-out;;
+        }
+
+        :host nav > ::slotted(*:active) {
+          background: #cccccc;
+          border-bottom: 0;
+          box-shadow: none;
+        }
+
+        `
+        ]
+      }
+    }
+  };
+
+  const EeFab = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+          button:focus, button:active {
+            outline:0 ;
+          }
+
+          button:active {
+            border: none;
+            filter: brightness(130%);
+          }
+
+          button[disabled] {
+            box-shadow: none;
+            opacity: 0.5;
+            pointer-events: none;
+          }
+
+          button.icon:active {
+            background: #cccccc;
+            border: unset;
+          }
+
+          button {
+            cursor: pointer;
+            height: 56px;
+            width: 56px;
+            margin: 6px;
+            border-radius: 50%;
+            box-shadow: 4px 2px 10px 0 rgba(0,0,0,0.12);
+            padding-top: 5px;
+            fill: var(--mat-fab-color, white);
+            background-color: var(--mat-fab-background, black);
+            color: var(--mat-fab-color, white);
+          }
+
+          :host([mini]) button {
+            height: 40px;
+            width: 40px;
+          }
+
+          button[data-descr]::after {
+            content: '';
+            right: 0;
+            display: inline-block;
+            opacity: 0;
+            position: absolute;
+            width: 0;
+            transform: translateY(-50%);
+            top: 50%;
+            text-align: center;
+            white-space: nowrap;
+            padding: 10px 16px;
+          }
+
+          button[data-descr]:hover::after {
+            content: attr(data-descr);
+            width: fit-content;
+            opacity: 1;
+            background-color: var(--mat-fab-background, black);
+            color: var(--mat-fab-color, white);
+            border-radius: calc(1em + 20px);
+            z-index: 1;
+            right: 105%;
+            font-size: 1em;
+            transition: all 0.3s ease-in-out;
+          }
+
+          button svg {
+            width: var(--mat-fab-icon-width, 24px);
+            height: var(--mat-fab-icon-height, 24px);
+          }
+        `
+        ]
+      }
+    }
+  };
+
+  const EeToolbar = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+        `
+        ]
+      }
+    }
+  };
+
+  const EeHeader = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+        `
+        ]
+      }
+    }
+  };
+
+  const EnForm = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+          :invalid {
+            border: unset;
+            border-bottom: var(--mat-input-border, var(--mat-theme-border));
+          }
+
+          ::slotted(*) fieldset {
+            border-radius: 5px;
+            border-style: solid;
+            padding: 16px;
+          }
+
+          ::slotted(*) legend {
+            padding-inline-start: 10px;
+            padding-inline-end: 10px;
+          }
+        `
+        ]
+      }
+    }
+  };
+
+  const EnInputRange = (base) => {
+    return class Base extends base {
+      // Style depends on CSS being able to find label as sibling of the #native element.
+      // CSS can select next siblings, but not previous.  This guarantees label is rendered after #native in the shadowDOM
+      static get properties () {
+        return {
+          labelPosition: { type: String, attribute: false },
+          validationMessage: { type: String, attribute: false }
+        }
+      }
+
+      constructor () {
+        super();
+        this.labelPosition = 'after';
+        this.validationMessagePosition = 'after';
+      }
+
+      static get styles () {
+        return [
+          super.styles,
+          super.stylePatterns.inputField,
+          super.stylePatterns.errorMessage,
+          super.lit.css`
+
+        ::slotted(#range-amount) {}
+        `
+        ]
+      }
+    }
+  };
+
+  const AddHasValueAttributeMixin = (base) => {
+    return class Base extends base {
+      _observeInput (e) {
+        const target = e.currentTarget;
+        this.toggleAttribute('has-value', __hasValue(target.value));
+      }
+
+      _observeFocus (e) {
+        this.toggleAttribute('has-focus', true);
+      }
+
+      _observeBlur (e) {
+        console.log(this);
+
+        this.toggleAttribute('has-focus', false);
+      }
+
+      afterSettingProperty (prop, newValue) {
+        super.afterSettingProperty();
+
+        if (prop === 'value') {
+          this.toggleAttribute('has-value', __hasValue(newValue));
+        }
+      }
+
+      firstUpdated () {
+        super.firstUpdated();
+
+        this.native.addEventListener('input', this._observeInput.bind(this));
+        this.native.addEventListener('focus', this._observeFocus.bind(this));
+        this.native.addEventListener('blur', this._observeBlur.bind(this));
+
+        this.toggleAttribute('has-value', __hasValue(this.value));
+      }
+    }
+  };
+
+  function __hasValue (v) {
+    return v !== 'undefined' && v !== 'null' && v !== ''
+  }
+
+  const NnInputText = (base) => {
+    return class Base extends AddHasValueAttributeMixin(base) {
+      // Style depends on CSS being able to find label as sibling of the #native element.
+      // CSS can select next siblings, but not previous.  This guarantees label is rendered after #native in the shadowDOM
+      static get properties () {
+        return {
+          labelPosition: { type: String, attribute: false },
+          validationMessagePosition: { type: String, attribute: false }
+        }
+      }
+
+      constructor () {
+        super();
+        this.labelPosition = 'after';
+        this.validationMessagePosition = 'after';
+      }
+
+      firstUpdated () {
+        super.firstUpdated();
+        for (const k of ['leading', 'trailing']) {
+          const el = document.createElement('slot');
+          el.setAttribute('name', k);
+          this.shadowRoot.appendChild(el);
+        }
+      }
+
+      static get styles () {
+        return [
+          super.styles,
+          super.stylePatterns.inputField,
+          super.stylePatterns.inputLabel,
+          super.stylePatterns.floatingLabel,
+          super.stylePatterns.hoverStyle,
+          super.stylePatterns.focusStyle,
+          super.stylePatterns.errorMessage,
+          super.stylePatterns.requiredLabelAsterisk,
+          super.lit.css`
+          #native[has-leading] {
+            padding-left: 36px;
+          }
+
+          #native[has-trailing] {
+            padding-right: 36px;
+          }
+
+          ::slotted([slot=leading]),
+          ::slotted([slot=trailing]) {
+            position: absolute;
+            top: var( --mat-input-icon-top, 16px);
+            left: var( --mat-input-icon-left, 16px);
+            height: var( --mat-input-icon-height, 24px);
+            width: var( --mat-input-icon-width, 24px);
+          }
+
+          ::slotted([slot=trailing]) {
+            left: unset;
+            right: var( --mat-input-icon-right, 16px);
+          }
+
+          :host([has-leading]) label{
+            margin-left: 30px
+          }
+        `
+        ]
+      }
+    }
+  };
+
+  const NnInputButton = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+          :host {
+            display: inline-block;
+            width: fit-content;
+            padding: 10px;
+          }
+
+          :host > input {
+            height: var(--button-height, 30px);
+            -webkit-appearance: none;
+            background-color: var(--nn-input-button-background, var(--mat-primary-color));
+            border-radius: var(--nn-input-button-border-radius, 4px);
+            border: var(--nn-input-button-border, var(--mat-theme-border));
+            border-color: transparent;
+            text-transform: uppercase;
+            color: var(--nn-input-button-color, var(--mat-text-on-dark));
+            border-image: none;
+          }
+
+          input:hover {
+            filter: brightness(130%);
+          }
+
+          input:active, input:focus {
+            outline: none;
+          }
+
+          input:active, :host([outlined]:not([text])) input:active {
+            transition: all 0.2s ease-out;
+            border-color: rgba(0, 0, 0, 0.1);
+            border-style: inset;
+            border-color: var(--mat-primary-color);
+          }
+
+          :host([text]:not([outlined])) input,
+          :host([text]:not([raised])) input {
+            background-color: transparent;
+            color: var(--nn-input-button-color, var(--mat-primary-color));
+          }
+
+          :host([text]:not([outlined])) input:active,
+          :host([text]:not([raised])) input:active {
+            border-style: solid;
+            border-width: 1px;
+            border-color: transparent;
+          }
+
+          :host([text]:not([outlined])) input:hover,
+          :host([text]:not([raised])) input:hover {
+            background-color: var(--mat-primary-color-light);
+            color: var(--mat-primary-color-dark)
+          }
+
+          :host([outlined]:not([text])) input,
+          :host([outlined]:not([raised])) input {
+            background-color: transparent;
+            color: var(--nn-input-button-color, var(--mat-primary-color));
+            border: var(--nn-input-button-border, var(--mat-theme-border));
+          }
+
+          :host([outlined]:not([text])) input:hover,
+          :host([outlined]:not([raised])) input:hover {
+            background-color: var(--mat-primary-color-light);
+            color: var(--mat-primary-color-dark)
+          }
+
+          :host([raised]:not([text])) input,
+          :host([raised]:not([outlined])) input {
+            box-shadow: var(--mat-theme-box-shadow2);
+            transition: box-shadow 0.2s ease-out;
+          }
+
+          :host([raised]:not([text])) input:active,
+          :host([raised]:not([outlined])) input:active {
+            box-shadow: none;
+            transition: box-shadow 0.2s ease-out;
+            filter: brightness(90%);
+          }
+        `
+        ]
+      }
+    }
+  };
+
+  const NnButton = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+          :host {
+            width: max-content;
+            padding: 4px 10px;
+          }
+
+          button {
+            display: var(--nn-button-display, inline);
+            white-space: nowrap;
+            height: var(--nn-button-height, 30px);
+            -webkit-appearance: none;
+            background-color: var(--mat-primary-color);
+            border-radius: var(--nn-button-border-radius, 4px);
+            border: var(--nn-button-border, var(--mat-theme-border));
+            border-color: transparent;
+            text-transform: uppercase;
+            font-size: 14px;
+            color: var(--nn-button-color, var(--mat-text-on-dark));
+            fill: var(--nn-button-color, var(--mat-text-on-dark));
+            border-image: none;
+            width: 100%;
+            align-items: center;
+          }
+
+          :host ::slotted(*) {
+            vertical-align: middle;
+            text-decoration: none !important;
+          }
+
+          #native:disabled {
+            filter: saturate(0);
+            opacity: 0.85;
+          }
+
+          #native:disabled:hover {
+            background-color: grey;
+            filter: brightness(130%);
+          }
+
+          button:hover {
+            filter: brightness(130%);
+          }
+
+          button:active {
+            outline: none;
+          }
+
+          button:focus {
+            border-color: var(--mat-primary-color, rgba(255, 255, 255, 0.7));
+            background-color: var(--mat-primary-color-light);
+            filter: brightness(115%);
+          }
+
+          button:active {
+            transition: all 0.2s ease-out;
+            border-style: inset;
+            border-color: var(--mat-primary-color);
+          }
+
+          :host([text]:not([outlined])) button,
+          :host([text]:not([raised])) button {
+            background-color: transparent;
+            color: var(--nn-button-color, var(--mat-primary-color));
+            fill: var(--nn-button-color, var(--mat-primary-color));
+          }
+
+          :host([text]:not([outlined])) button:focus,
+          :host([text]:not([raised])) button:focus {
+            background-color: transparent;
+            color: var(--nn-button-color, var(--mat-primary-color));
+            fill: var(--nn-button-color, var(--mat-primary-color));
+            box-shadow: var(--mat-theme-box-shadow2);
+          }
+
+          :host([text]:not([outlined])) button:active,
+          :host([text]:not([raised])) button:active {
+            border-style: solid;
+            border-width: 1px;
+            border-color: transparent;
+          }
+
+          :host([text]:not([outlined])) button:hover,
+          :host([text]:not([raised])) button:hover {
+            background-color: var(--mat-primary-color-light);
+            color: var(--mat-primary-color-dark);
+            fill: var(--mat-primary-color-dark);
+          }
+
+          :host([outlined]:not([text])) button,
+          :host([outlined]:not([raised])) button {
+            background-color: transparent;
+            color: var(--nn-button-color, var(--mat-primary-color));
+            fill: var(--nn-button-color, var(--mat-primary-color));
+            border: var(--nn-button-border, var(--mat-theme-border));
+          }
+
+          :host([outlined]:not([text])) button:hover,
+          :host([outlined]:not([raised])) button:hover {
+            background-color: var(--mat-primary-color-light);
+            color: var(--mat-primary-color-dark);
+            fill: var(--mat-primary-color-dark);
+          }
+
+          :host([raised]:not([text])) button,
+          :host([raised]:not([outlined])) button {
+            box-shadow: var(--mat-theme-box-shadow3);
+            transition: box-shadow 0.2s ease-out;
+          }
+
+          :host([raised]:not([text])) button:active,
+          :host([raised]:not([outlined])) button:active {
+            box-shadow: none;
+            transition: box-shadow 0.2s ease-out;
+            filter: brightness(90%);
+          }
+        `
+        ]
+      }
+    }
+  };
+
+  const NnForm = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+        `
+        ]
+      }
+    }
+  };
+
+  const NnInputCheckBox = (base) => {
+    return class Base extends base {
+      // Style depends on CSS being able to find label as sibling of the #native element.
+      // CSS can select next siblings, but not previous.  This guarantees label is rendered after #native in the shadowDOM
+      static get properties () {
+        return {
+          labelPosition: { type: String, attribute: false },
+          validationMessage: { type: String, attribute: false }
+        }
+      }
+
+      constructor () {
+        super();
+        this.labelPosition = 'after';
+        this.validationMessagePosition = 'after';
+        this.label = '';
+      }
+
+      firstUpdated () {
+        if (super.firstUpdated) super.firstUpdated();
+        this.shadowRoot.querySelector('label').addEventListener('click', (e) => { e.stopPropagation(); });
+      }
+
+      static get styles () {
+        return [
+          super.styles,
+          super.stylePatterns.errorMessage,
+          super.stylePatterns.hideNativeWidget,
+          super.stylePatterns.requiredLabelAsterisk,
+          super.lit.css`
+          :host {
+            display: block;
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+          }
+
+          :host::after:not(:disabled) {
+            content: '';
+            user-select: none;
+            position: absolute;
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            left: 5px;
+            top: 5px;
+            will-change: transform;
+            z-index: 0;
+          }
+
+          :host(:hover:not(:disabled))::after {
+            background: var(--mat-primary-color);
+            opacity: 0.1;
+            transform: scale(4);
+            transition: all 0.3s ease-in-out;
+          }
+
+          :host([has-focus])::after {
+            background: var(--mat-primary-color);
+            opacity: 0.4 !important;
+            transform: scale(4);
+            transition: all 0.3s ease-in-out;
+          }
+
+          div#label-text {
+            padding: var(--nn-checkbox-label-padding);
+          }
+
+          #native:invalid + label, #native:invalid ~ label {
+            background-color: none;
+            --mat-label-color: darkred;
+          }
+
+          label::before { /* Background box */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 15px;
+            width: 15px;
+            border: 2px solid var(--mat-boundaries-color);
+            border-radius: 3px;
+            transition: background-color 0.3s ease-in-out;
+            z-index: 1;
+          }
+
+          #native:checked ~ label::before {
+            border-color: var(--mat-primary-color);
+            background-color:  var(--mat-primary-color);
+            transition: background-color 0.3s ease-in-out;
+          }
+
+          :host(:hover:not(:disabled)) label::before {
+            filter: brightness(135%);
+            transition: filter 0.3s ease-in-out;
+            box-shadow: var(--mat-theme-box-shadow2);
+          }
+
+          #native:focus ~ label::before {
+            box-shadow: var(--mat-theme-box-shadow2);
+            border-color: var(--mat-primary-color);
+            filter: brightness(135%);
+          }
+
+          #native:not([checked]):hover:not(:disabled) ~ label::before {
+            filter: brightness(150%);
+            background-color: var(--mat-primary-color);
+            transition: background-color 0.3s ease-in-out;
+          }
+
+          label::after { /* Checkmark */
+            content: "";
+            position: absolute;
+            opacity: 0;
+            will-change: transform, opacity;
+            transition: opacity 0.3s ease-out;
+            z-index: 2;
+          }
+
+          #native:checked ~ label::after {
+            display: block;
+            left: 6px;
+            top: 2px;
+            width: 5px;
+            height: 10px;
+            opacity: 1;
+            border: solid white;
+            border-radius: 2px;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(405deg);
+            -ms-transform: rotate(405deg);
+            transform: rotate(405deg);
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in;
+          }
+        `
+        ]
+      }
+    }
+  };
+
+  const NnInputColor = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.stylePatterns.hoverStyle,
+          super.stylePatterns.focusStyle,
+          super.lit.css`
+         :host {
+            position: relative;
+            padding: 0 12px;
+            padding-bottom: 16px;
+            margin: 10px;
+          }
+
+          #native {
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            box-sizing: border-box;
+            display: block;
+            border-radius: var(--mat-input-border-radius, 4px 4px 0 0);
+            border-width: 0;
+            border-style: none;
+            border-color: transparent;
+            background-color: var(--mat-background, #eee);
+            padding: 6px;
+            height: 40px;
+            box-shadow: var(--mat-theme-box-shadow);
+            transition: background-color 0.3s ease-in-out,
+                        color 0.3s ease-in-out,
+                        box-shadow 0.3s ease-in-out;
+          }
+        `
+        ]
+      }
+    }
+  };
+
+  const NnInputDatalist = (base) => {
+    return class Base extends AddHasValueAttributeMixin(base) {
+      static get properties () {
+        return {
+          labelPosition: { type: String, attribute: false },
+          validationMessage: { type: String, attribute: false }
+        }
+      }
+
+      constructor () {
+        super();
+        this.labelPosition = 'after';
+        this.validationMessagePosition = 'after';
+      }
+
+      connectedCallback () {
+        super.connectedCallback();
+        this.onclick = () => { this.native.click(); };
+      }
+
+      static get styles () {
+        return [
+          super.styles,
+          super.stylePatterns.inputField,
+          super.stylePatterns.inputLabel,
+          super.stylePatterns.floatingLabel,
+          super.lit.css`
+          :host::after {
+            position: absolute;
+            content: '';
+            border: 4px solid transparent;
+            border-top-color: var(--mat-boundaries-color);
+            right: 20px;
+            bottom: 50%;
+            user-select: none;
+          }
+
+          #native {
+            width: 100%;
+          }
+        `
+        ]
+      }
+    }
+  };
+
+  const NnInputDate = (base) => {
+    return class Base extends base {
+      // Style depends on CSS being able to find label as sibling of the #native element.
+      // CSS can select next siblings, but not previous.  This guarantees label is rendered after #native in the shadowDOM
+      static get properties () {
+        return {
+          labelPosition: { type: String, attribute: false },
+          validationMessage: { type: String, attribute: false }
+        }
+      }
+
+      constructor () {
+        super();
+        this.labelPosition = 'after';
+        this.validationMessagePosition = 'after';
+      }
+
+      static get styles () {
+        return [
+          super.styles,
+          super.stylePatterns.inputField,
+          super.stylePatterns.inputLabel,
+          super.stylePatterns.fixedLabel,
+          super.stylePatterns.errorMessage
+        ]
+      }
+    }
+  };
+
+  const NnInputDateTimeLocal = (base) => {
+    return class Base extends base {
+      // Style depends on CSS being able to find label as sibling of the #native element.
+      // CSS can select next siblings, but not previous.  This guarantees label is rendered after #native in the shadowDOM
+      static get properties () {
+        return {
+          labelPosition: { type: String, attribute: false },
+          validationMessage: { type: String, attribute: false }
+        }
+      }
+
+      constructor () {
+        super();
+        this.labelPosition = 'after';
+        this.validationMessagePosition = 'after';
+      }
+
+      static get styles () {
+        return [
+          super.styles,
+          super.stylePatterns.inputField,
+          super.stylePatterns.inputLabel,
+          super.stylePatterns.fixedLabel,
+          super.stylePatterns.errorMessage
+        ]
+      }
+    }
+  };
+
+  const NnInputEmail = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+        `
+        ]
+      }
+    }
+  };
+
+  const NnInputFile = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+          :host {
+            min-width: 130px;
+          }
+
+          #filename {
+            box-sizing: border-box;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background-color: whitesmoke;
+          }
+        `
+        ]
+      }
+
+      static get properties () {
+        return {
+          labelPosition: { type: String, attribute: false },
+          validationMessagePosition: { type: String, attribute: false },
+          buttonLabel: { type: String, attribute: 'button-label' }
+        }
+      }
+
+      constructor () {
+        super();
+        this.labelPosition = 'after';
+        this.validationMessagePosition = 'after';
+        this.hideNative = true;
+        this.buttonLabel = 'Choose File';
+      }
+
+      themeRender () {
+        return this.lit.html`
+        <nn-button @click=${this._chooseFile}>${this.buttonLabel}</nn-button>
+        <input type="file" id="native" @change="${this.fileNameChanged}" ?hidden=${this.hideNative}>
+        ${this.ifValidationMessageAfter}
+        ${this.fileName
+        ? this.lit.html`
+            <div id="filename" title="${this.fileName}">${this.fileName}</div>
+          `
+        : ''
+        }
+        ${this.ifLabelAfter}
+      `
+      }
+
+      _chooseFile (e) {
+        this.shadowRoot.querySelector('#native').click();
+      }
+    }
+  };
+
+  const NnInputMonth = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+        `
+        ]
+      }
+    }
+  };
+
+  const NnInputNumber = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+        `
+        ]
+      }
+    }
+  };
+
+  const NnInputPassword = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+        `
+        ]
+      }
+    }
+  };
+
+  const NnInputRadio = (base) => {
+    return class Base extends base {
+      // Style depends on CSS being able to find label as sibling of the #native element.
+      // CSS can select next siblings, but not previous.  This guarantees label is rendered after #native in the shadowDOM
+      static get properties () {
+        return {
+          labelPosition: { type: String, attribute: false },
+          validationMessage: { type: String, attribute: false }
+        }
+      }
+
+      constructor () {
+        super();
+        this.labelPosition = 'after';
+        this.validationMessagePosition = 'after';
+        this.label = '';
+      }
+
+      firstUpdated () {
+        if (super.firstUpdated) super.firstUpdated();
+        this.shadowRoot.querySelector('label').addEventListener('click', (e) => { e.preventDefault(); });
+      }
+
+      static get styles () {
+        return [
+          super.styles,
+          super.stylePatterns.errorMessage,
+          super.stylePatterns.hideNativeWidget,
+          super.stylePatterns.requiredLabelAsterisk,
+          super.lit.css`
+          :host {
+            display: block;
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+          }
+
+          :host::after {
+            content: '';
+            user-select: none;
+            position: absolute;
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            left: 5px;
+            top: 5px;
+            will-change: transform;
+            z-index: 0;
+          }
+
+          :host(:hover)::after {
+            background: var(--mat-primary-color);
+            opacity: 0.1;
+            transform: scale(4);
+            transition: all 0.3s ease-in-out;
+          }
+
+          :host([has-focus])::after {
+            background: var(--mat-primary-color);
+            opacity: 0.3;
+            transform: scale(4);
+            transition: all 0.3s ease-in-out;
+          }
+
+          div#label-text {
+            padding-left: 16px;
+          }
+
+          #native:invalid {
+            background-color: var(--mat-error-color);
+            color: var(--mat-error-text);
+            border-color: var(--mat-error-text);
+          }
+
+          :invalid {
+            border: unset;
+            border-bottom: var(--mat-input-border, var(--mat-theme-border));
+          }
+
+          #native:invalid + label, #native:invalid ~ label {
+            background-color: none;
+            --mat-label-color: darkred;
+          }
+
+          label::before { /* Background box */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 15px;
+            width: 15px;
+            border: 2px solid var(--mat-boundaries-color);
+            border-radius: 50%;
+            transition: background-color 0.3s ease-in-out;
+            z-index: 1;
+          }
+
+          #native:checked ~ label::before {
+            border-color: var(--mat-primary-color);
+            background-color: transparent;
+            transition: background-color 0.3s ease-in-out;
+          }
+
+          #native:hover ~ label::before {
+            filter: brightness(115%);
+            transition: filter 0.3s ease-in-out;
+          }
+
+          #native:focus ~ label::before {
+            box-shadow: var(--mat-theme-box-shadow2);
+            border-color: var(--mat-primary-color);
+            filter: brightness(115%);
+          }
+
+          #native:not([checked]):hover ~ label::before {
+            filter: brightness(130%);
+            transition: background-color 0.3s ease-in-out;
+          }
+
+          label::after { /* Checkmark */
+            content: "";
+            position: absolute;
+            opacity: 0;
+            width: 19px;
+            height: 19px;
+            will-change: transform, opacity;
+            transition: opacity 0.3s ease-out;
+            z-index: 2;
+          }
+
+          #native:checked ~ label::after {
+            display: block;
+            left: 0;
+            top: 0;
+            opacity: 1;
+            background-color:  var(--mat-primary-color);
+            border-radius: 50%;
+            -webkit-transform: scale(0.5);
+            -ms-transform: scale(0.5);
+            transform: scale(0.5);
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in;
+          }
+
+        `
+        ]
+      }
+    }
+  };
+
+  const NnInputRange = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+        `
+        ]
+      }
+    }
+  };
+
+  const NnInputSearch = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+        `
+        ]
+      }
+    }
+  };
+
+  const NnInputSubmit = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+        `
+        ]
+      }
+    }
+  };
+
+  const NnInputTel = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+        `
+        ]
+      }
+    }
+  };
+
+  const NnInputTime = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+        `
+        ]
+      }
+    }
+  };
+
+  const NnInputUrl = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+        `
+        ]
+      }
+    }
+  };
+
+  const NnInputWeek = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+        `
+        ]
+      }
+    }
+  };
+
+  const NnMeter = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+        `
+        ]
+      }
+    }
+  };
+
+  const NnProgress = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+        `
+        ]
+      }
+    }
+  };
+
+  const NnSelect = (base) => {
+    return class Base extends AddHasValueAttributeMixin(base) {
+      // Style depends on CSS being able to find label as sibling of the #native element.
+      // CSS can select next siblings, but not previous.  This guarantees label is rendered after #native in the shadowDOM
+      static get properties () {
+        return {
+          labelPosition: { type: String, attribute: false },
+          validationMessage: { type: String, attribute: false }
+        }
+      }
+
+      constructor () {
+        super();
+        this.labelPosition = 'after';
+        this.validationMessagePosition = 'after';
+      }
+
+      connectedCallback () {
+        super.connectedCallback();
+        this.onclick = () => { this.native.click(); };
+      }
+
+      static get styles () {
+        return [
+          super.styles,
+          super.stylePatterns.inputField,
+          super.stylePatterns.inputLabel,
+          super.stylePatterns.fixedLabel,
+          super.stylePatterns.errorMessage,
+          super.stylePatterns.requiredLabelAsterisk,
+          super.lit.css`
+          :host::after {
+            position: absolute;
+            content: '';
+            border: 4px solid transparent;
+            border-top-color: var(--mat-boundaries-color);
+            right: 20px;
+            bottom: 50%;
+            user-select: none;
+            pointer-events: none;
+          }
+
+          #native {
+            width: 100%;
+          }
+        `
+        ]
+      }
+    }
+  };
+
+  const NnTextArea = (base) => {
+    return class Base extends AddHasValueAttributeMixin(base) {
+      // Style depends on CSS being able to find label as sibling of the #native element.
+      // CSS can select next siblings, but not previous.  This guarantees label is rendered after #native in the shadowDOM
+      static get properties () {
+        return {
+          labelPosition: { type: String, attribute: false },
+          validationMessage: { type: String, attribute: false }
+        }
+      }
+
+      constructor () {
+        super();
+        this.labelPosition = 'after';
+        this.validationMessagePosition = 'after';
+      }
+
+      static get styles () {
+        return [
+          super.styles,
+          super.stylePatterns.inputField,
+          super.stylePatterns.inputLabel,
+          super.stylePatterns.floatingLabel,
+          super.stylePatterns.errorMessage,
+          super.stylePatterns.requiredLabelAsterisk,
+          super.lit.css`
+          :host {
+            --mat-form-element-height: 80px;
+          }
+          /* Following material design guidelines, non-resizeable textarea */
+          textarea#native {
+            font-family: var(--mat-font-family);
+            padding-top: 12px;
+            min-height: 80px;
+            height: unset;
+            padding-top: 30px;
+            width: -webkit-fill-available;
+          }
+        `
+        ]
+      }
+    }
+  };
+
+  const EeAutocomplete = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.lit.css`
+        `
+        ]
+      }
+    }
+  };
+
+  const EeAutocompleteInputSpans = (base) => {
+    return class Base extends base {
+      static get styles () {
+        return [
+          super.styles,
+          super.stylePatterns.inputField,
+          super.lit.css`
+        `
+        ]
+      }
+    }
+  };
+
+  window.TP_THEME = {
+    shared: Shared,
+
+    'ee-drawer': EeDrawer,
+    'ee-network': EeNetwork,
+    'ee-snack-bar': EeSnackBar,
+    'ee-tabs': EeTabs,
+    'ee-fab': EeFab,
+    'ee-autocomplete': EeAutocomplete,
+    'ee-autocomplete-input-spans': EeAutocompleteInputSpans,
+
+    'ee-toolbar': EeToolbar,
+    'ee-header': EeHeader,
+
+    'en-form': EnForm,
+    'en-input-Range': EnInputRange,
+
+    'nn-button': NnButton,
+    'nn-form': NnForm,
+    'nn-input-button': NnInputButton,
+    'nn-input-checkbox': NnInputCheckBox,
+    'nn-input-color': NnInputColor,
+    'nn-input-datalist': NnInputDatalist,
+    'nn-input-date': NnInputDate,
+    'nn-input-date-time-local': NnInputDateTimeLocal,
+    'nn-input-email': NnInputEmail,
+    'nn-input-file': NnInputFile,
+    'nn-input-month': NnInputMonth,
+    'nn-input-number': NnInputNumber,
+    'nn-input-password': NnInputPassword,
+    'nn-input-radio': NnInputRadio,
+    'nn-input-range': NnInputRange,
+    'nn-input-search': NnInputSearch,
+    'nn-input-submit': NnInputSubmit,
+    'nn-input-tel': NnInputTel,
+    'nn-input-text': NnInputText,
+    'nn-input-time': NnInputTime,
+    'nn-input-url': NnInputUrl,
+    'nn-input-week': NnInputWeek,
+    'nn-meter': NnMeter,
+    'nn-progress': NnProgress,
+    'nn-select': NnSelect,
+    'nn-textarea': NnTextArea
+  };
+
+}());

@@ -1,22 +1,58 @@
-// In Material Design color tool: https://material.io/tools/color/#!/?view.left=0&view.right=0&primary.color=616161&secondary.color=512DA8
-
-const Common = (base) => {
+// TPE Material Theme
+// ==================
+//
+// This is a light implementation of material guidelines. It does not aim to be
+// a comprehensive, completely accurate Material Design components library, but to
+// showcase the flexiblity of the TPE theming system and serve as a reference
+// for theme development. Guidelines can be found in:
+// https://material.io/components.
+//
+// The main objective of this approach it to use as much of plain CSS power as
+// possible to achieve the look and feel of material design. This keeps the
+// theming system lightweight and approacheable to beginner developers and
+// designers used to work with CSS, but not really with CSS preprocessors or
+// advanced bundling tools.
+//
+// ## The shared theme styles
+//
+// First of all, the _Shared_ mixin is defined. It is required by the TPE Theme
+// system, and applied to all elements, so it is not meant to force the actual
+// styles directly to the elements, but to provide the shared patterns, global
+// definitions and the CSS custom properties that will allow
+//
+const Shared = (base) => {
   return class Base extends base {
+    // The _stylePatterns_ object is a collection of CSS styles that implement
+    // Material Design guidelines visual patterns and behaviors. The
+    // CSSTemplateResults are added accordingly in the static styles getter in
+    // the theme mixin for each of the TPE elements.
+    //
+    // For example, to style the native input fields, the mixin assigned to `window.TP_THEME["nn-input-text"]" would have this minimum static styles getter:
+    //
+    // ```
+    // static get styles () {
+    //    return [
+    //        this.stylesPatterns.inputField,
+    //        this.stylesPatterns.inputLabel
+    //    ]
+    // }
+    //
+    // ```
+    //
+    // This version features styles 
     static get stylePatterns () {
       const css = super.lit.css;
       return {
-        // This is a light implementation of material guidelines.
-        // It does not aim to be a complete, comprehensive, Material Design components library, but to showcase the flexiblity of the TPE theming system.
-        // Guidelines can be found in: https://material.io/components
-
+        // This adds a "*" character after the label for input fields that have the required attribute present.
         requiredLabelAsterisk: css`
-          #native:required ~ label div#label-text::after {
+           #native:required ~ label div#label-text::after,
+          :host([required]) label div#label-text::after {
             content: '*';
             padding-left: 2px;
             position: relative;
           }
         `,
-
+        // Changes elevation on mouse hover
         hoverStyle: css`
           :host(:hover) {
             --mat-theme-box-shadow: var(--mat-theme-box-shadow2);
@@ -26,6 +62,7 @@ const Common = (base) => {
             --mat-theme-box-shadow: none;
           }
         `,
+        // Styles can be adjusted on focused elements.
         focusStyle: css`
           :host([has-focus]), :host([has-focus][outlined]) {
             --mat-theme-border: 2px solid var(--mat-primary-color);
@@ -36,7 +73,8 @@ const Common = (base) => {
             padding-bottom: -1px;
           }
         `,
-
+        // Text input field specific material implementation. This template is
+        // responsible for the default, dense and outlined styles. (Material Text Fields)[https://material.io/components/text-fields#specs]
         inputField: css`
           :host {
             position: relative;
@@ -62,7 +100,6 @@ const Common = (base) => {
 
           :host([outlined]) {
             --mat-background: white;
-            --mat-background-dark: white;
             --mat-theme-border: 2px solid #ccc;
           }
 
@@ -116,45 +153,31 @@ const Common = (base) => {
           #native:disabled:hover {
             background-color: initial !important;
           }
-
-          /* this.hoverStyle */
-          :host(:hover) {
-            --mat-theme-box-shadow: var(--mat-theme-box-shadow2);
-          }
-
-          :host([disabled]:hover) {
-            --mat-theme-box-shadow: none;
-          }
-
-          /* this.focusStyle */
-          :host([has-focus]), :host([has-focus][outlined]) {
-            --mat-theme-border: 2px solid var(--mat-primary-color);
-            --mat-label-color: var(--mat-primary-color);
-          }
-
-          :host([has-focus]) #native {
-            padding-bottom: -1px;
-          }
         `,
 
+        // Base style for input labels.
         inputLabel: css`
            label {
             position: absolute;
             display: inline-flex;
-            font-size: 16px;
+            font-size: var(--mat-label-font-size, 14px);
             border: var(--mat-label-border, none);
             color: var(--mat-label-color,  var(--mat-primary-color-light));
-            padding-left: 6px;
-            padding-right: 6px;
-            margin-left: 8px;
+            padding: var(--mat-label-padding, 0 6px);
+            margin-left: var(--mat-label-margin-left, 8px);
             min-width: fit-content;
             white-space: nowrap;
             --half-height: calc(var(--mat-form-element-height) / 2);
-            top: var(--half-height);
+            top: calc(var(--half-height) + 8px);
             transform: translateY(-50%);
             left: 12px;
             will-change: transform;
             transition: transform 0.1s ease-in-out;
+          }
+
+          :host([dense]) label {
+            top: var(--half-height);
+            left: var(--mat-label-margin-left, 8px);
           }
 
           #native:invalid + label,
@@ -163,12 +186,14 @@ const Common = (base) => {
             --mat-label-color: darkred;
           }
         `,
-
+        // When applicable (i.e. text input fields), `floatingLabel` should be
+        // used to enable the typical mateiral design label animation.
         floatingLabel: css`
           :host([has-value]) label,
           #native:focus ~ label,
           #native:placeholder-shown ~ label {
-            transform: translateY(calc(var(--half-height) / -1)) translateX(-10px) scale(0.8);
+            transform: translateY(calc(var(--half-height) / -1)) scale(0.8);
+            transform-origin: 0 0;
             transition: transform 0.1s ease-in-out, background 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
           }
 
@@ -181,21 +206,34 @@ const Common = (base) => {
           :host([outlined]:not([dense][has-value]) label,
           :host([outlined]:not([dense]) #native:focus ~ label,
           :host([outlined]:not([dense]) #native:placeholder-shown ~ label {
-            transform: translateY(calc(var(--half-height) / -1)) translateX(-10px) scale(0.8);
+            transform: translateY(calc(var(--half-height) / -1)) scale(0.8);
+            transform-origin: 0 0;
             background: var(--mat-label-background, transparent);
           }
         `,
-
+        // Alternative label style, fixed in the floating position, useful in
+        // cases where the default position might clash with native features,
+        // like the date input placeholder text.
         fixedLabel: css`
           label, #native:focus ~ label,
           :host([has-value]) label,
           #native:placeholder-shown ~ label {
-            top: 12px !important;
-            transform: translateY(-50%) scale(0.8);
+            transform: translateY(calc(var(--half-height) / -1)) scale(0.8);
+            transform-origin: 0 0;
+          }
+
+          :host([dense]) label, 
+          :host([dense]) #native:focus ~ label,
+          :host([dense]) :host([has-value]) label,
+          :host([dense]) #native:placeholder-shown ~ label
+           {
+            top: var(--half-height);
+            transform: translateY(calc(var(--half-height) / -1)) scale(0.8);
+            left: 8px;
           }
 
         `,
-
+        // Styling fo the error messages for the input fields.
         errorMessage: css`
           span.error-message {
             position: absolute;
@@ -204,14 +242,16 @@ const Common = (base) => {
             font-size: 80%;
             white-space: nowrap;
             opacity: 0;
-            line-height: 0.8;
+            line-height: 0;
           }
 
           #native:invalid ~ span.error-message {
             opacity: 1;
           }
         `,
-
+        // Auxiliary style that will hide the native element, for cases in which
+        // the broser style is not flexible enough for material design
+        // implementation, as is the case for checkboxes and radio inputs.
         hideNativeWidget: css`
           input {
             position: unset;
@@ -265,12 +305,16 @@ const Common = (base) => {
           }
 
           :host {
+            /* These properties as common to all elements and important to enable proper styling of native elements. */
             display: block;
             appearance: none;
             -moz-appearance: none;
             -webkit-appearance: none;
             box-sizing: border-box;
+            /* These are the custom properties that make it possible to apply light themes, by changing colors and a few properties, like borders and shadows. */
+            /* Default font */
             --mat-font-family: Roboto, sans-serif;
+            /* The primary and secondary colors are applied to color accents and help with visual context. (Color Guidelines)[https://material.io/design/color/the-color-system.html#color-theme-creation] */
             --mat-primary-color: #455a64;
             --mat-primary-color-light: #718792;
             --mat-primary-color-dark: #1c313a;
@@ -282,19 +326,21 @@ const Common = (base) => {
             --mat-secondary-text: #000;
             --mat-text-on-dark: #fff;
             --mat-text-on-light: #000;
-            --mat-error-color: pink;
+             --mat-error-color: pink;
             --mat-error-text: darkred;
+            /* Other aspects of the elements are used to convey the general look and feel of the theme. Material Design leans heavily on border and shadows. These are the default values taken from the guidelines. */
             --mat-theme-border-style: solid;
             --mat-theme-border-width: 1px;
             --mat-theme-border-color: var(--mat-boundaries-color);
             --mat-theme-border-radius: 4px;
             --mat-theme-border: var(--mat-theme-border-width) var(--mat-theme-border-style) var(--mat-theme-border-color);
+            /* TPE uses five elevation levels */
             --mat-theme-box-shadow: none;
             --mat-theme-box-shadow1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
             --mat-theme-box-shadow2: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
             --mat-theme-box-shadow3: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             --mat-theme-box-shadow4: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            --mat-theme-box-shadow5: 0 25px 50px -12px rgba(0, 0, 0, 0.25));
+            --mat-theme-box-shadow5: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
             --mat-theme-shadow-transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
             --mat-form-element-height: 56px;
             --mat-form-element-min-width: 280px;
@@ -306,11 +352,15 @@ const Common = (base) => {
           :host([hidden]) {
             display: none;
           }
+
         `
       ]
     }
   }
 };
+
+// Default theme colors in Material Design color tool:
+// https://material.io/tools/color/#!/?view.left=0&view.right=0&primary.color=616161&secondary.color=512DA8
 
 const EeDrawer = (base) => {
   return class Base extends base {
@@ -404,7 +454,7 @@ const EeTabs = (base) => {
 
         :host nav > ::slotted(*[active])::after {
           content: '';
-          background-color: var(--ee-tabs-selected-color);
+          background-color: var(--ee-tabs-active-color);
           left: 0.5px;
           right: 0.5px;
           bottom: 0;
@@ -591,7 +641,7 @@ const AddHasValueAttributeMixin = (base) => {
   return class Base extends base {
     _observeInput (e) {
       const target = e.currentTarget;
-      this.toggleAttribute('has-value', !!target.value.length);
+      this.toggleAttribute('has-value', __hasValue(target.value));
     }
 
     _observeFocus (e) {
@@ -599,6 +649,8 @@ const AddHasValueAttributeMixin = (base) => {
     }
 
     _observeBlur (e) {
+      console.log(this);
+
       this.toggleAttribute('has-focus', false);
     }
 
@@ -606,40 +658,28 @@ const AddHasValueAttributeMixin = (base) => {
       super.afterSettingProperty();
 
       if (prop === 'value') {
-        this.toggleAttribute('has-value', !!newValue);
+        this.toggleAttribute('has-value', __hasValue(newValue));
       }
     }
 
     firstUpdated () {
       super.firstUpdated();
 
-      this.native.addEventListener('input', this._observeInput);
-      this.native.addEventListener('focus', this._observeFocus);
-      this.native.addEventListener('blur', this._observeBlur);
+      this.native.addEventListener('input', this._observeInput.bind(this));
+      this.native.addEventListener('focus', this._observeFocus.bind(this));
+      this.native.addEventListener('blur', this._observeBlur.bind(this));
 
-      this.toggleAttribute('has-value', !!this.value);
+      this.toggleAttribute('has-value', __hasValue(this.value));
     }
   }
 };
 
+function __hasValue (v) {
+  return v !== 'undefined' && v !== 'null' && v !== ''
+}
+
 const NnInputText = (base) => {
   return class Base extends AddHasValueAttributeMixin(base) {
-    // render () {
-    //   if (this.themeRender) return this.themeRender()
-    //   const class = {
-    //     'has-value': !!this.value,
-    //     'has-leading': !!this.leading,
-    //     'has-trailing': !!this.trailing
-    //   };
-    //   return html`
-    //     ${this.ifLabelBefore}
-    //     ${this.ifValidationMessageBefore}
-    //     <input class=${classMap(class)} type="text" id="native" real-time-event="input">
-    //     ${this.ifValidationMessageAfter}
-    //     ${this.ifLabelAfter}
-    //     <slot id="datalist-slot" name="datalist"></slot>
-    //   `
-    // }
     // Style depends on CSS being able to find label as sibling of the #native element.
     // CSS can select next siblings, but not previous.  This guarantees label is rendered after #native in the shadowDOM
     static get properties () {
@@ -670,7 +710,10 @@ const NnInputText = (base) => {
         super.stylePatterns.inputField,
         super.stylePatterns.inputLabel,
         super.stylePatterns.floatingLabel,
+        super.stylePatterns.hoverStyle,
+        super.stylePatterns.focusStyle,
         super.stylePatterns.errorMessage,
+        super.stylePatterns.requiredLabelAsterisk,
         super.lit.css`
           #native[has-leading] {
             padding-left: 36px;
@@ -694,10 +737,9 @@ const NnInputText = (base) => {
             right: var( --mat-input-icon-right, 16px);
           }
 
-          :host([has-leading]:not([has-value])) label{
-            margin-left: 36px
+          :host([has-leading]) label{
+            margin-left: 30px
           }
-
         `
       ]
     }
@@ -800,12 +842,12 @@ const NnButton = (base) => {
         super.styles,
         super.lit.css`
           :host {
-            width: fit-content;
+            width: max-content;
             padding: 4px 10px;
           }
 
           button {
-            display: inline-block;
+            display: var(--nn-button-display, inline);
             white-space: nowrap;
             height: var(--nn-button-height, 30px);
             -webkit-appearance: none;
@@ -824,11 +866,7 @@ const NnButton = (base) => {
 
           :host ::slotted(*) {
             vertical-align: middle;
-          }
-
-          :host ::slotted(svg) {
-            display: inline-block;
-            vertical-align: middle;
+            text-decoration: none !important;
           }
 
           #native:disabled {
@@ -837,7 +875,8 @@ const NnButton = (base) => {
           }
 
           #native:disabled:hover {
-            background-color: initial !important;
+            background-color: grey;
+            filter: brightness(130%);
           }
 
           button:hover {
@@ -1004,7 +1043,7 @@ const NnInputCheckBox = (base) => {
           }
 
           div#label-text {
-            padding: var(----nn-checkbox-label-padding);
+            padding: var(--nn-checkbox-label-padding);
           }
 
           #native:invalid + label, #native:invalid ~ label {
@@ -1240,8 +1279,57 @@ const NnInputFile = (base) => {
       return [
         super.styles,
         super.lit.css`
+          :host {
+            min-width: 130px;
+          }
+
+          #filename {
+            box-sizing: border-box;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background-color: whitesmoke;
+          }
         `
       ]
+    }
+
+    static get properties () {
+      return {
+        labelPosition: { type: String, attribute: false },
+        validationMessagePosition: { type: String, attribute: false },
+        buttonLabel: { type: String, attribute: 'button-label' }
+      }
+    }
+
+    constructor () {
+      super();
+      this.labelPosition = 'after';
+      this.validationMessagePosition = 'after';
+      this.hideNative = true;
+      this.buttonLabel = 'Choose File';
+    }
+
+    themeRender () {
+      return this.lit.html`
+        <nn-button @click=${this._chooseFile}>${this.buttonLabel}</nn-button>
+        <input type="file" id="native" @change="${this.fileNameChanged}" ?hidden=${this.hideNative}>
+        ${this.ifValidationMessageAfter}
+        ${this.fileName
+        ? this.lit.html`
+            <div id="filename" title="${this.fileName}">${this.fileName}</div>
+          `
+        : ''
+        }
+        ${this.ifLabelAfter}
+      `
+    }
+
+    _chooseFile (e) {
+      this.shadowRoot.querySelector('#native').click();
     }
   }
 };
@@ -1571,7 +1659,9 @@ const NnSelect = (base) => {
         super.styles,
         super.stylePatterns.inputField,
         super.stylePatterns.inputLabel,
-        super.stylePatterns.floatingLabel,
+        super.stylePatterns.fixedLabel,
+        super.stylePatterns.errorMessage,
+        super.stylePatterns.requiredLabelAsterisk,
         super.lit.css`
           :host::after {
             position: absolute;
@@ -1581,6 +1671,7 @@ const NnSelect = (base) => {
             right: 20px;
             bottom: 50%;
             user-select: none;
+            pointer-events: none;
           }
 
           #native {
@@ -1616,6 +1707,7 @@ const NnTextArea = (base) => {
         super.stylePatterns.inputLabel,
         super.stylePatterns.floatingLabel,
         super.stylePatterns.errorMessage,
+        super.stylePatterns.requiredLabelAsterisk,
         super.lit.css`
           :host {
             --mat-form-element-height: 80px;
@@ -1661,7 +1753,7 @@ const EeAutocompleteInputSpans = (base) => {
 };
 
 window.TP_THEME = {
-  common: Common,
+  shared: Shared,
 
   'ee-drawer': EeDrawer,
   'ee-network': EeNetwork,
