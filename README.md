@@ -4,7 +4,7 @@ The system allows any developer to completely override the native components nat
 
 ## About this theme
 TPE does not have any constraints as to how a theme is structured, except for the main theme file, which needs to set window.TP_THEME with the correct key names.
-It also allows for a shared mixin set to window.TP_THEME.common. In TPE Material, the `material/global.js` file is assigned to that shared mixin. It contains all CSS custom properties defined and used across the theme.
+It also allows for a shared mixin set to window.TP_THEME.shared. In TPE Material, the `material/global.js` file is assigned to that shared mixin. It contains all CSS custom properties defined and used across the theme.
 Any of those properties can be redefined in the app scope, so the theme can be customised consistently. This is a summary of the contents:
 
 - primary and secondary colours, both with light and dark variants

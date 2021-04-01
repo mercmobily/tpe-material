@@ -39,7 +39,7 @@ export const Shared = (base) => {
     //
     // ```
     //
-    // This version features styles 
+    // This version features styles
     static get stylePatterns () {
       const css = super.lit.css
       return {
@@ -203,9 +203,9 @@ export const Shared = (base) => {
             background: var(--mat-label-background, transparent)
           }
 
-          :host([outlined]:not([dense][has-value]) label,
-          :host([outlined]:not([dense]) #native:focus ~ label,
-          :host([outlined]:not([dense]) #native:placeholder-shown ~ label {
+          :host([outlined]:not([dense][has-value])) label,
+          :host([outlined]:not([dense])) #native:focus ~ label,
+          :host([outlined]:not([dense])) #native:placeholder-shown ~ label {
             transform: translateY(calc(var(--half-height) / -1)) scale(0.8);
             transform-origin: 0 0;
             background: var(--mat-label-background, transparent);
