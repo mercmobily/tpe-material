@@ -11,8 +11,6 @@ export const AddHasValueAttributeMixin = (base) => {
     }
 
     _observeBlur (e) {
-      console.log(this)
-
       this.toggleAttribute('has-focus', false)
     }
 

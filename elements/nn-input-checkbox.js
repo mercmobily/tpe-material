@@ -50,7 +50,6 @@ export const NnInputCheckBox = (base) => {
             left: 5px;
             top: 5px;
             will-change: transform;
-            z-index: 0;
           }
 
           :host(:hover:not(:disabled))::after {
@@ -86,7 +85,6 @@ export const NnInputCheckBox = (base) => {
             border: 2px solid var(--mat-boundaries-color);
             border-radius: 3px;
             transition: background-color 0.3s ease-in-out;
-            z-index: 1;
           }
 
           #native:checked ~ label::before {
@@ -116,16 +114,15 @@ export const NnInputCheckBox = (base) => {
           label::after { /* Checkmark */
             content: "";
             position: absolute;
+            left: 6px;
+            top: 2px;
             opacity: 0;
             will-change: transform, opacity;
             transition: opacity 0.3s ease-out;
-            z-index: 2;
           }
 
           #native:checked ~ label::after {
             display: block;
-            left: 6px;
-            top: 2px;
             width: 5px;
             height: 10px;
             opacity: 1;
