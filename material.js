@@ -15,7 +15,6 @@ import { EnInputRange } from './elements/en-input-range.js'
 import { NnInputText } from './elements/nn-input-text.js'
 import { NnInputButton } from './elements/nn-input-button.js'
 import { NnButton } from './elements/nn-button.js'
-import { NnForm } from './elements/nn-form.js'
 import { NnInputCheckBox } from './elements/nn-input-checkbox.js'
 import { NnInputColor } from './elements/nn-input-color.js'
 import { NnInputDatalist } from './elements/nn-input-datalist.js'
@@ -59,7 +58,6 @@ window.TP_THEME = {
   'en-input-Range': EnInputRange,
 
   'nn-button': NnButton,
-  'nn-form': NnForm,
   'nn-input-button': NnInputButton,
   'nn-input-checkbox': NnInputCheckBox,
   'nn-input-color': NnInputColor,

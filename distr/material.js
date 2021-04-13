@@ -868,7 +868,7 @@
             background-color: var(--mat-background-dark);
           }
 
-          #native:invalid {
+          :host(:not([disabled])) #native:invalid {
             background-color: var(--mat-error-color);
             color: var(--mat-error-text);
             border-color: var(--mat-error-text);
@@ -909,8 +909,8 @@
             left: var(--mat-label-margin-left, 8px);
           }
 
-          #native:invalid + label,
-          #native:invalid ~ label {
+          :host(:not([disabled])) #native:invalid + label,
+          :host(:not([disabled])) #native:invalid ~ label {
             background-color: none;
             --mat-label-color: darkred;
           }
@@ -974,7 +974,7 @@
             line-height: 0;
           }
 
-          #native:invalid ~ span.error-message {
+          :host(:not([disabled])) #native:invalid ~ span.error-message {
             opacity: 1;
           }
         `,
