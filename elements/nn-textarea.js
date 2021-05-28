@@ -37,6 +37,7 @@ export const NnTextArea = (base) => {
             height: unset;
             padding-top: 30px;
             width: -webkit-fill-available;
+            resize: none;
           }
         `
       ]
