@@ -1688,18 +1688,6 @@
     }
   };
 
-  const NnForm = (base) => {
-    return class Base extends base {
-      static get styles () {
-        return [
-          super.styles,
-          super.lit.css`
-        `
-        ]
-      }
-    }
-  };
-
   const NnInputCheckBox = (base) => {
     return class Base extends base {
       // Style depends on CSS being able to find label as sibling of the #native element.
@@ -2548,6 +2536,7 @@
             height: unset;
             padding-top: 30px;
             width: -webkit-fill-available;
+            resize: none;
           }
         `
         ]
@@ -2598,7 +2587,6 @@
     'en-input-Range': EnInputRange,
 
     'nn-button': NnButton,
-    'nn-form': NnForm,
     'nn-input-button': NnInputButton,
     'nn-input-checkbox': NnInputCheckBox,
     'nn-input-color': NnInputColor,
