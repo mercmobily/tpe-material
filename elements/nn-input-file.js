@@ -41,11 +41,11 @@ export const NnInputFile = (base) => {
     themeRender () {
       return this.lit.html`
         <nn-button @click=${this._chooseFile}>${this.buttonLabel}</nn-button>
-        <input type="file" id="native" @change="${this.fileNameChanged}" ?hidden=${this.hideNative}>
+        <input type="file" id="native" @change="${this.fileNameChanged}" ?hidden=${this.hideNative} title=${this.title} >
         ${this.ifValidationMessageAfter}
         ${this.fileName
         ? this.lit.html`
-            <div id="filename" title="${this.fileName}">${this.fileName}</div>
+            <div id="filename" title="${this.title}">${this.fileName}</div>
           `
         : ''
         }
